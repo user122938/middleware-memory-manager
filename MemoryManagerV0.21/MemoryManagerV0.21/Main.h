@@ -4,6 +4,8 @@
 #include "Camera.h"
 #include "Recorder.h"
 
+// test1
+
 class Main : public Object
 {
 public:
