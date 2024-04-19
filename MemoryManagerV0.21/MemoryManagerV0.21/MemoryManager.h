@@ -130,7 +130,10 @@ public:
 		int pageIndex = (int)(offset/sizePage);
 		bool isEmpty = this->aPageIndex[pageIndex].dellocate(pObject);
 		if (isEmpty) {
-			this->aPageIndex[pageIndex].finalize();
+			// this->aPageIndex[pageIndex].finalize();
+			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
+				this->aPageIndex[pageIndex + i].finalize();
+			}
 		}
 		// ===============
 		this->collectGarbage();
