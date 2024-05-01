@@ -1,40 +1,42 @@
 #pragma once
 
 #include "Object.h"
+#include <cstring>
+#include <string>
 
-class Exception: public Object
-{
+class Exception : public Object {
 public:
-	enum class ECode {
-		eOutOfMemory,
-		eLengthECode
-	};
+    enum class ECode {
+        eOutOfMemory,
+        eLengthECode
+    };
 
 private:
-	ECode eCode;
-	char *pNameObject;
-	char *pNameClass;
-
-	char** pNameECode;
+    ECode eCode;
+    char* pNameObject;
+    char* pNameClass;
 
 public:
-	Exception(ECode eCode, const char* pNameObject, const char* pNameClass = "Exception") :
-		eCode(eCode)
-	{
-		this->pNameECode = new char* [(int)ECode::eLengthECode];
-		this->pNameECode[(int)ECode::eOutOfMemory] = strcpy("Out Of Memory");
+    Exception(ECode eCode, const char* pNameObject, const char* pNameClass = "Exception")
+        : eCode(eCode), pNameObject(_strdup(pNameObject)), pNameClass(_strdup(pNameClass)) {}
 
-		this->pNameObject = strcpy(pNameObject);
-		this->pNameClass = strcpy(pNameClass);
-	}
-	virtual ~Exception() {
-	}
+    virtual ~Exception() {
+        delete[] pNameObject;
+        delete[] pNameClass;
+    }
 
-	ECode getECode() { return this->eCode; }
-	char* getNameObject() { return this->pNameObject; }
-	char* getNameClass() { return this->pNameClass; }
+    ECode getECode() const { return eCode; }
+    const char* getNameObject() const { return pNameObject; }
+    const char* getNameClass() const { return pNameClass; }
 
-	void println() {
-		printf("Exception: %s(%s, %s)\n", pNameECode[(int)ECode::eOutOfMemory], pNameObject, pNameClass); }
+    const char* getECodeAsString() const {
+        switch (eCode) {
+        case ECode::eOutOfMemory: return "Out Of Memory";
+        default: return "Unknown Error";
+        }
+    }
+
+    void println() {
+        printf("Exception.h : %s(%s, %s)\n", getECodeAsString(), pNameObject, pNameClass);
+    }
 };
-

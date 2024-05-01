@@ -19,7 +19,7 @@ public:
 	}
 
 	void run() {
-		int numCameras = 5;
+		int numCameras = 50;
 		int numRecorders = 5;
 		Camera** paCamera = new Camera * [numCameras];
 		Recorder** paRecorder = new Recorder * [numRecorders];

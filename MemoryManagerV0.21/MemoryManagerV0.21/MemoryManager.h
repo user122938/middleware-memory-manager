@@ -3,6 +3,7 @@
 #include "IMemoryManager.h"
 #include "PageIndex.h"
 #include "Exception.h"
+#include "ExceptionManager.h"
 
 class MemoryManager : public IMemoryManager {
 private:
@@ -106,7 +107,9 @@ public:
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
 				// out of memory
-				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages1");
+				Exception ex(Exception::ECode::eOutOfMemory, "allocateNewPages1");
+				ExceptionManager::logException(ex);
+				throw ex;
 			}
 		}
 
@@ -117,7 +120,9 @@ public:
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
 				// out of memory
-				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages2");
+				Exception ex(Exception::ECode::eOutOfMemory, "allocateNewPages2");
+				ExceptionManager::logException(ex);
+				throw ex;
 			} else {
 				pSlotAllocated = pPageIndexFound->allocate(sizeSlot, pName);
 			}

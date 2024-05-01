@@ -1,5 +1,7 @@
 #include "Main.h"
 #include "MemoryManager.h"
+#include "ExceptionManager.h"
+#include "Exception.h"
 
 #define SIZE_MEMORY 1024
 #define SIZE_PAGE 64
@@ -20,5 +22,6 @@ int main() {
 	catch (Exception& exception) {
 		exception.println();
 		Object::s_pMemoryManager->showStatus();
+		ExceptionManager::printAllExceptions();
 	}
 }

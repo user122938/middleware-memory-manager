@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="ExceptionManager.h" />
     <ClInclude Include="IMemoryManager.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="ISlotIndex.h" />
@@ -144,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="ExceptionManager.cpp" />
     <ClCompile Include="IMemeoryManager.cpp" />
     <ClCompile Include="IObject.cpp" />
     <ClCompile Include="ISlotIndex.cpp" />
