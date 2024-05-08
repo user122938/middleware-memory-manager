@@ -1,4 +1,12 @@
-#pragma once
+﻿#pragma once
+
+/**
+   *
+   * @brief Object Interface
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class IObject
 {
 public:

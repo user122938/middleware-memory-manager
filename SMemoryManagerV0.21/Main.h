@@ -1,10 +1,16 @@
-#pragma once
+﻿#pragma once
 #include "Object.h"
 
 #include "Camera.h"
 #include "Recorder.h"
-#include "Test.h"
 
+/**
+   *
+   * @brief Main Header
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class Main : public Object
 {
 public:
@@ -41,26 +47,6 @@ public:
 		//	delete paRecorder[i];
 		//}
 		//Object::s_pMemoryManager->showStatus();
-
-		Test* test;
-		printf("Test 1: use little Memory\n");
-		test = new Test(512);
-		test->smallSlotTest();
-		test->equalSlotTest();
-		test->bigSlotTest();
-
-		printf("Test 2: use equal Memory\n");
-		test = new Test(960);
-		test->smallSlotTest();
-		test->equalSlotTest();
-		test->bigSlotTest();
-		
-		printf("Test 3: use over Memory\n");
-		test = new Test(2048);
-		test->smallSlotTest();
-		test->equalSlotTest();
-		test->bigSlotTest();
-		delete test;
 	}
 };
 

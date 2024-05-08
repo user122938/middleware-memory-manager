@@ -1,9 +1,16 @@
-#pragma once
+﻿#pragma once
 
 #include "IMemoryManager.h"
 #include "PageIndex.h"
 #include "Exception.h"
 
+/**
+   *
+   * @brief Memory Manager
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class MemoryManager : public IMemoryManager {
 private:
 

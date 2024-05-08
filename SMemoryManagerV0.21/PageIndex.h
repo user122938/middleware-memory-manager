@@ -1,8 +1,16 @@
-#pragma once
+﻿#pragma once
 
 #include "SlotIndex.h"
 #include "IObject.h"
 
+/**
+   *
+   * @brief Object's superclass
+   * @details Superclass of all object. It provides new, delete operators and getter for id, nameClass, nameObject, sizeSlot.
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class PageIndex {
 
 private:

@@ -1,8 +1,16 @@
-#pragma once
+﻿#pragma once
 
 #include "ISlotIndex.h"
 #include "Type.h"
 
+/**
+   *
+   * @brief SlotIndex class
+   * @details Store slot's address, name, alloc status
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class SlotIndex : public ISlotIndex {
 private:
 	void* pMemory;

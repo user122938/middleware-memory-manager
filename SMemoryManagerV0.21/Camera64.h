@@ -1,8 +1,16 @@
-#pragma once
+﻿#pragma once
 #include "Object.h"
 
 #define NUM_CAMERAS 5
 
+/**
+   *
+   * @brief Test Object: Camera64
+   * @details object size=64
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class Camera64 : public Object {
 private:
 	int data[NUM_CAMERAS] = {};
