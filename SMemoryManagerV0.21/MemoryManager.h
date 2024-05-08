@@ -158,6 +158,11 @@ public:
 		SlotIndex* pSlotIndexFound = this->aPageIndex[pageIndex].findASlotIndex(pObject);
 		return pSlotIndexFound;
 	}
+	PageIndex findAPageIndex(void* pObject) {
+		size_t offset = (size_t)pObject - (size_t)(this->pBuffer);
+		int pageIndex = (int)(offset / sizePage);
+		return this->aPageIndex[pageIndex];
+	}
 
 	void showStatus() {
 		printf("Start==========================================\n");

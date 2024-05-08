@@ -32,6 +32,10 @@ public:
 		ISlotIndex* pSlotIndex = s_pMemoryManager->findASlotIndex(this);
 		return pSlotIndex->getNameObject();
 	}
+	size_t getSizeSlot() {
+		PageIndex pSlotIndex = s_pMemoryManager->findAPageIndex(this);
+		return pSlotIndex.getSizeSlot();
+	}
 
 	Object(const char* pClassName = "Object") :
 		id(s_counterId++)
