@@ -1,18 +1,26 @@
-#pragma once
+﻿#pragma once
 
 #include "IMemoryManager.h"
 #include "PageIndex.h"
 #include "Exception.h"
 #include "ExceptionManager.h"
 
+/**
+   * 
+   * @brief Memory Manager
+   * @detail 버퍼를 할당 받아서 메모리를 나눠서 페이지를 할당한다.
+   * @date 2024-05-02
+   * @version 0.21
+   * 
+   */
 class MemoryManager : public IMemoryManager {
 private:
 
-	char* pBuffer;
 	size_t sizeBuffer;
-	size_t sizePage;
+	char* pBuffer;
 
 	int numPages;
+	size_t sizePage;
 	PageIndex* aPageIndex;
 
 	size_t normalizeSize(size_t size) {
@@ -107,9 +115,7 @@ public:
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
 				// out of memory
-				Exception ex(Exception::ECode::eOutOfMemory, "allocateNewPages1");
-				ExceptionManager::logException(ex);
-				throw ex;
+				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages1");
 			}
 		}
 
@@ -120,16 +126,9 @@ public:
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
 				// out of memory
-<<<<<<< HEAD:MemoryManagerV0.21/MemoryManagerV0.21/MemoryManager.h
-				Exception ex(Exception::ECode::eOutOfMemory, "allocateNewPages2");
-				ExceptionManager::logException(ex);
-				throw ex;
-			} else {
-=======
 				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages2");
 			}
 			else {
->>>>>>> 844389d308651d6f3bd85d2c9b91026c12f3d45e:SMemoryManagerV0.21/MemoryManager.h
 				pSlotAllocated = pPageIndexFound->allocate(sizeSlot, pName);
 			}
 		}
@@ -141,12 +140,10 @@ public:
 		int pageIndex = (int)(offset / sizePage);
 		bool isEmpty = this->aPageIndex[pageIndex].dellocate(pObject);
 		if (isEmpty) {
-<<<<<<< HEAD:MemoryManagerV0.21/MemoryManagerV0.21/MemoryManager.h
 			// this->aPageIndex[pageIndex].finalize();
 			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
 				this->aPageIndex[pageIndex + i].finalize();
 			}
-=======
 			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
 				this->aPageIndex[pageIndex + i].finalize();
 			}
@@ -162,7 +159,6 @@ public:
 		for (int i = startConsecutivePages; i >= 0 || this->aPageIndex[pageIndex].isAllocated(); i--) {
 			this->aPageIndex[i].setNumConsecutivePages(numConsecutivePages);
 			numConsecutivePages++;
->>>>>>> 844389d308651d6f3bd85d2c9b91026c12f3d45e:SMemoryManagerV0.21/MemoryManager.h
 		}
 		// ===============
 		this->collectGarbage();
@@ -174,6 +170,11 @@ public:
 		int pageIndex = (int)(offset / sizePage);
 		SlotIndex* pSlotIndexFound = this->aPageIndex[pageIndex].findASlotIndex(pObject);
 		return pSlotIndexFound;
+	}
+	PageIndex findAPageIndex(void* pObject) {
+		size_t offset = (size_t)pObject - (size_t)(this->pBuffer);
+		int pageIndex = (int)(offset / sizePage);
+		return this->aPageIndex[pageIndex];
 	}
 
 	void showStatus() {

@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -141,7 +141,6 @@
     <ClInclude Include="string.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="PageIndex.h" />
-    <ClInclude Include="Test.h" />
     <ClInclude Include="Type.h" />
   </ItemGroup>
   <ItemGroup>
@@ -159,7 +158,6 @@
     <ClCompile Include="PageIndex.cpp" />
     <ClCompile Include="Recorder.cpp" />
     <ClCompile Include="SlotIndex.cpp" />
-    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

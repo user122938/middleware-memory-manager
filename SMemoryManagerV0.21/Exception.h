@@ -1,9 +1,16 @@
-#pragma once
+﻿#pragma once
 
 #include "Object.h"
 #include <cstring>
 #include <string>
 
+/**
+   *
+   * @brief Exception header
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class Exception : public Object {
 public:
     enum class ECode {
