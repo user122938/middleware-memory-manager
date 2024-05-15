@@ -1,9 +1,17 @@
-#pragma once
+﻿#pragma once
 
 #include "Object.h"
 
 #define NUM_RECORDERS 20
 
+/**
+   *
+   * @brief Test Object: Recorder
+   * @details object size=104
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class Recorder : public Object {
 private:
 	int data[NUM_RECORDERS] = {};

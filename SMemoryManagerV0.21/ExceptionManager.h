@@ -1,9 +1,17 @@
-#pragma once
+﻿#pragma once
 
 #include "Exception.h"
 #include <vector>
 #include <iostream>
 
+/**
+   *
+   * @brief Exception Manager header
+   * @details Managing exceptions and logging at vector.
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class ExceptionManager {
 private:
     static std::vector<std::string> exceptionLogs;
@@ -23,3 +31,4 @@ public:
         }
     }
 };
+

@@ -1,17 +1,26 @@
-#pragma once
+﻿#pragma once
 
 #include "IMemoryManager.h"
 #include "PageIndex.h"
 #include "Exception.h"
+#include "ExceptionManager.h"
 
+/**
+   * 
+   * @brief Memory Manager
+   * @detail 버퍼를 할당 받아서 메모리를 나눠서 페이지를 할당한다.
+   * @date 2024-05-02
+   * @version 0.21
+   * 
+   */
 class MemoryManager : public IMemoryManager {
 private:
 
-	char* pBuffer;
 	size_t sizeBuffer;
-	size_t sizePage;
+	char* pBuffer;
 
 	int numPages;
+	size_t sizePage;
 	PageIndex* aPageIndex;
 
 	size_t normalizeSize(size_t size) {
@@ -131,6 +140,10 @@ public:
 		int pageIndex = (int)(offset / sizePage);
 		bool isEmpty = this->aPageIndex[pageIndex].dellocate(pObject);
 		if (isEmpty) {
+			// this->aPageIndex[pageIndex].finalize();
+			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
+				this->aPageIndex[pageIndex + i].finalize();
+			}
 			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
 				this->aPageIndex[pageIndex + i].finalize();
 			}

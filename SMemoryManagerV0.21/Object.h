@@ -1,10 +1,18 @@
-#pragma once
+﻿#pragma once
 
 #include "Type.h"
 #include "IObject.h"
 #include "IMemoryManager.h"
 #include "ISlotIndex.h"
 
+/**
+   *
+   * @brief Object's superclass
+   * @details Superclass of all object. It provides new, delete operators and getter for id, nameClass, nameObject, sizeSlot.
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class Object: public IObject
 {
 private:

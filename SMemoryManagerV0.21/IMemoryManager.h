@@ -1,8 +1,15 @@
-#pragma once
+﻿#pragma once
 
 #include "ISlotIndex.h"
 #include "PageIndex.h"
 
+/**
+   *
+   * @brief Memory Manager Interface
+   * @date 2024-05-02
+   * @version 0.21
+   *
+   */
 class IMemoryManager
 {
 public:
