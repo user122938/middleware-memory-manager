@@ -1,13 +1,14 @@
-﻿#pragma once
+#pragma once
 
 #include "IMemoryManager.h"
 #include "PageIndex.h"
 #include "Exception.h"
+#include "ExceptionManager.h"
 
-	/**
+    /**
    	*
    	* @brief 메모리 할당, 해제 관리 클래스
-	* @details 메모리 공간을 페이지 단위로 나누어 PageIndex배열을 생성하고 객체를 할당, 해제한다.
+    * @details 메모리 공간을 페이지 단위로 나누어 PageIndex배열을 생성하고 객체를 할당, 해제한다.
    	* @date 2024-05-19
    	* @version 0.21
    	*
@@ -16,9 +17,10 @@ class MemoryManager : public IMemoryManager {
 private:
 	char* pBuffer;
 	size_t sizeBuffer;
-	size_t sizePage;
+	char* pBuffer;
 
 	int numPages;
+	size_t sizePage;
 	PageIndex* aPageIndex;
 
 	size_t normalizeSize(size_t size) {
@@ -167,6 +169,10 @@ public:
 		int pageIndex = (int)(offset / sizePage);
 		bool isEmpty = this->aPageIndex[pageIndex].dellocate(pObject);
 		if (isEmpty) {
+			// this->aPageIndex[pageIndex].finalize();
+			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
+				this->aPageIndex[pageIndex + i].finalize();
+			}
 			for (int i = 0; i < this->aPageIndex[pageIndex].getNumConsecutivePages(); i++) {
 				this->aPageIndex[pageIndex + i].finalize();
 			}

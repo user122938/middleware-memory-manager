@@ -1,0 +1,18 @@
+// memory = page = slot = object
+1024 1024 1024
+// memory = page = slot > object
+1024 1024 1000
+// memory = page = slot < object
+1024 1024 1048
+// memory > page = slot = object
+1024 512 512
+// memory > page = slot > object
+1024 512 256
+// memory > page = slot < object
+1024 512 712
+// memory < page = slot = object
+1024 2048 2048
+// memory < page = slot < object
+1024 2048 2512
+// memory < page = slot > object
+1024 2048 1256
