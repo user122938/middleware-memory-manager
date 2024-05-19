@@ -3,18 +3,27 @@
 
 #define NUM_CAMERAS 5
 
-/**
-   *
-   * @brief Test Object: Camera
-   * @details object size=48
-   * @date 2024-05-02
-   * @version 0.21
-   *
-   */
+	/**
+   	*
+   	* @brief 크기가 48인 테스트용 클래스 
+	* @details 생성자로 이름 저장, 배열에 0~4까지의 값을 저장하고 출력
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+    */
 class Camera : public Object {
 private:
 	int data[NUM_CAMERAS] = {};
 public:
+	/**
+	* 
+	*
+    * @brief Camera 생성자
+    * @datails 부모 생성자에 이름("Camera") 전달
+    * @date 2024-05-19
+    * @version 0.21
+    *
+	*/
 	Camera(const char* pName = "Camera") :
 		Object(pName)
 	{
@@ -22,6 +31,14 @@ public:
 	virtual ~Camera() {
 	}
 
+	/**
+   	*
+   	* @brief Camera 실행 함수
+	* @datails data배열에 0~4까지(NUM_CAMERAS만큼)의 값을 저장하고 합계 출력
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+   	*/
 	void run() {
 		for (int i = 0; i < NUM_CAMERAS; i++) {
 			this->data[i] = i;

@@ -4,13 +4,13 @@
 #include "Camera.h"
 #include "Recorder.h"
 
-/**
-   *
-   * @brief Main Header
-   * @date 2024-05-02
-   * @version 0.21
-   *
-   */
+	/**
+   	*
+   	* @brief 메인 클래스
+   	* @date 2024-05-02
+   	* @version 0.21
+   	*
+   	*/
 class Main : public Object
 {
 public:
@@ -24,29 +24,5 @@ public:
 	}
 
 	void run() {
-		//int numCameras = 5;
-		//int numRecorders = 5;
-		//Camera** paCamera = new Camera * [numCameras];
-		//Recorder** paRecorder = new Recorder * [numRecorders];
-		//
-		//Object::s_pMemoryManager->showStatus();
-		//for (int i = 0; i < numCameras; i++) {
-		//	char* pName = to_pchar(i);
-		//	paCamera[i] = new(pName) Camera();
-		//	paCamera[i]->run();
-
-		//	paRecorder[i] = new(pName) Recorder();
-		//	paRecorder[i]->run();
-		//}
-		//Object::s_pMemoryManager->showStatus();
-		//for (int i = 0; i < numCameras; i++) {
-		//	delete paCamera[i];
-		//}
-		//Object::s_pMemoryManager->showStatus();
-		//for (int i = 0; i < numRecorders; i++) {
-		//	delete paRecorder[i];
-		//}
-		//Object::s_pMemoryManager->showStatus();
 	}
 };
-

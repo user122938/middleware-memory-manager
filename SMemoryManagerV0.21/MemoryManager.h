@@ -4,16 +4,16 @@
 #include "PageIndex.h"
 #include "Exception.h"
 
-/**
-   *
-   * @brief Memory Manager
-   * @date 2024-05-02
-   * @version 0.21
-   *
-   */
+	/**
+   	*
+   	* @brief 메모리 할당, 해제 관리 클래스
+	* @details 메모리 공간을 페이지 단위로 나누어 PageIndex배열을 생성하고 객체를 할당, 해제한다.
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+   	*/
 class MemoryManager : public IMemoryManager {
 private:
-
 	char* pBuffer;
 	size_t sizeBuffer;
 	size_t sizePage;
@@ -71,7 +71,17 @@ public:
 	void operator delete(void* pObject) {
 		free(pObject);
 	}
-
+	/**
+ 	*
+ 	* @brief 메모리 관리 객체 생성자
+ 	* @details 메모리 공간을 페이지 크기 만큼 나누어 PageIndex배열을 생성하고 초기화한다.
+	* @param pBuffer 메모리 시작주소
+	* @param sizeBuffer 메모리 크기
+	* @param sizePage 한 페이지 크기
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	MemoryManager(char* pBuffer, size_t sizeBuffer, size_t sizePage) :
 		pBuffer(pBuffer),
 		sizeBuffer(sizeBuffer),
@@ -88,42 +98,52 @@ public:
 			pBufferCurrent = pBufferCurrent + sizePage;
 		}
 	}
+
+	/**
+ 	*
+ 	* @brief 메모리 관리 객체 소멸자
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	virtual ~MemoryManager() {
 	}
 
-
+	/**
+ 	*
+ 	* @brief 메모리에 객체를 할당하는 함수
+ 	* @details 객체 크기를 16배수의 slot으로 일반화하고 할당할 PageIndex를 찾아 할당한다.
+	* @param sizeMemory 할당할 객체 크기
+	* @param pName 할당할 객체 이름
+	* @return 할당된 객체의 메모리 주소
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	void* allocate(size_t sizeMemory, const char* pName) {
-		// multiple x
 		size_t sizeSlot = normalizeSize(sizeMemory);
 
-		// search for allocated PageIndex s
 		PageIndex* pPageIndexFound = nullptr;
 		for (int i = 0; i < numPages; i++) {
 			if (this->aPageIndex[i].isAllocated()) {
 				if (this->aPageIndex[i].getSizeSlot() == sizeSlot) {
-					// found
 					pPageIndexFound = &(this->aPageIndex[i]);
 					break;
 				}
 			}
 		}
 
-		// not found
 		if (pPageIndexFound == nullptr) {
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
-				// out of memory
 				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages1");
 			}
 		}
 
-		// allocate a slot
 		void* pSlotAllocated = pPageIndexFound->allocate(sizeSlot, pName);
-		// no more slots
 		if (pSlotAllocated == nullptr) {
 			pPageIndexFound = allocateNewPages(sizeSlot);
 			if (pPageIndexFound == nullptr) {
-				// out of memory
 				throw Exception(Exception::ECode::eOutOfMemory, "allocateNewPages2");
 			}
 			else {
@@ -133,6 +153,15 @@ public:
 		return pSlotAllocated;
 	}
 
+	/**
+ 	*
+ 	* @brief 객체를 할당 해제하는 함수
+ 	* @details 객체 주소에 해당하는 PageIndex를 찾아 객체를 할당 해제 후 빈 페이지를 정리한다.
+	* @param pObject 할당 해제할 객체 주소
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	void dellocate(void* pObject) {
 		size_t offset = (size_t)pObject - (size_t)(this->pBuffer);
 		int pageIndex = (int)(offset / sizePage);
@@ -159,18 +188,47 @@ public:
 		// ===============
 	}
 
+	/**
+ 	*
+ 	* @brief 객체 주소에 해당하는 SlotIndex를 찾는 함수
+	* @details 객체 주소에 해당하는 PageIndex를 찾고 PageIndex의 검색함수를 호출해 SlotIndex를 찾고 반환한다.
+	* @param pObject 객체 주소
+	* @return 객체 주소에 해당하는 SlotIndex
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	SlotIndex* findASlotIndex(void* pObject) {
 		size_t offset = (size_t)pObject - (size_t)(this->pBuffer);
 		int pageIndex = (int)(offset / sizePage);
 		SlotIndex* pSlotIndexFound = this->aPageIndex[pageIndex].findASlotIndex(pObject);
 		return pSlotIndexFound;
 	}
+
+	/**
+ 	*
+ 	* @brief 객체 주소에 해당하는 PageIndex를 찾는 함수
+	* @details 객체 주소를 받아 페이지 번호를 찾고 해당하는 PageIndex를 반환한다.
+	* @param pObject 객체 주소
+	* @return 객체 주소에 해당하는 PageIndex
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	PageIndex findAPageIndex(void* pObject) {
 		size_t offset = (size_t)pObject - (size_t)(this->pBuffer);
 		int pageIndex = (int)(offset / sizePage);
 		return this->aPageIndex[pageIndex];
 	}
 
+	/**
+ 	*
+ 	* @brief 메모리 할당 상태 출력 함수
+	* @details 반복문으로 PageIndex배열의 할당 상태(슬롯 크기, 연결된 페이지)를 출력, 페이지 할당 상태 출력함수 호출.
+ 	* @date 2024-05-02
+ 	* @version 0.21
+ 	*
+ 	*/
 	void showStatus() {
 		printf("Start==========================================\n");
 		for (int i = 0; i < numPages; i++) {

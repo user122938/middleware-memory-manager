@@ -3,14 +3,14 @@
 
 #define NUM_CAMERAS 5
 
-/**
-   *
-   * @brief Test Object: Camera64
-   * @details object size=64
-   * @date 2024-05-02
-   * @version 0.21
-   *
-   */
+	/**
+   	*
+   	* @brief 크기가 64인 테스트용 클래스
+	* @details 생성자로 이름 저장, 배열 0~4까지의 값을 저장하고 출력
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+   	*/
 class Camera64 : public Object {
 private:
 	int data[NUM_CAMERAS] = {};
@@ -19,6 +19,14 @@ private:
 	int id3;
 	int id4;
 public:
+	/**
+   	*
+   	* @brief Camera64 생성자
+	* @details 부모 생성자에 이름("Camera64") 전달, id 값 입력
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+   	*/
 	Camera64(const char* pName = "Camera64") :
 		Object(pName),
 		id1(1),
@@ -30,6 +38,14 @@ public:
 	virtual ~Camera64() {
 	}
 
+	/**
+   	*
+   	* @brief Camera64 실행 함수
+	* @details data배열에 0~4까지(NUM_CAMERAS만큼)의 값을 저장하고 합계 출력
+   	* @date 2024-05-19
+   	* @version 0.21
+   	*
+   	*/
 	void run() {
 		for (int i = 0; i < NUM_CAMERAS; i++) {
 			this->data[i] = i;
