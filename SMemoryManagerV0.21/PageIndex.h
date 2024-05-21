@@ -7,7 +7,7 @@
    	*
    	* @brief 페이지 내 Slot 할당, 해제 클래스
 	* @details SlotIndex배열에 SlotIndex객체를 할당, 해제 및 할당 상태를 출력할 수 있다.
-   	* @date 2024-05-19
+   	* @date 2024-05-02
    	* @version 0.21
    	*
    	*/
@@ -28,26 +28,9 @@ private:
 	int numSlotsAvailable;
 
 public:
-	/**
-	* 
-	* @brief malloc함수를 통해 PageIndex 생성
-	* @param size PageIndex 크기
-	* @return PageIndex 객체 포인터
- 	* @date 2024-05-19
- 	* @version 0.21
- 	*
- 	*/
 	void* operator new(size_t size) {
 		return malloc(size);
 	}
-
-	/**
-	* 
-	* @brief free함수를 통해 PageIndex 할당 해제
- 	* @date 2024-05-19
- 	* @version 0.21
- 	*
- 	*/
 	void operator delete(void* pObject) {
 		free(pObject);
 	}
@@ -156,7 +139,7 @@ public:
 
 	/**
  	*
- 	* @brief PageIndex 소멸자
+ 	* @brief 페이지 소멸자
  	* @date 2024-05-19
  	* @version 0.21
  	*
@@ -263,7 +246,7 @@ public:
  	*
  	* @brief 페이지 내부 할당 상태 출력 함수
 	* @details 반복문으로 SlotIndex배열의 할당 상태(클래스 및 객체 이름, 객체 아이디)를 출력
- 	* @date 2024-05-19
+ 	* @date 2024-05-02
  	* @version 0.21
  	*
  	*/

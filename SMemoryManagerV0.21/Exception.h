@@ -79,7 +79,6 @@ public:
     *
     */
     const char* getNameObject() const { return pNameObject; }
-
     /**
     *
     * @brief 예외 클래스 이름 반환
