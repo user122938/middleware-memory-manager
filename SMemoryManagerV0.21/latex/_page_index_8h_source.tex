@@ -1,0 +1,135 @@
+\doxysection{Page\+Index.\+h}
+\label{_page_index_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}SlotIndex.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IObject.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }PageIndex\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ s\_countId;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}*\ pPage;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ sizePage;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ numConsecutivePages;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ bAllocated;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ sizeSlot;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ numMaxSlots;}
+\DoxyCodeLine{00027\ \ \ \ \ SlotIndex*\ aSlotIndex;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ numSlotsAvailable;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}*\ \textcolor{keyword}{operator}\ \textcolor{keyword}{new}(\textcolor{keywordtype}{size\_t}\ size)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ malloc(size);}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}*\ pObject)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ free(pObject);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \{\ \textcolor{keywordflow}{return}\ this-\/>id;\ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ setPPage(\textcolor{keywordtype}{char}*\ pPage)\ \{\ this-\/>pPage\ =\ pPage;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ setSizePage(\textcolor{keywordtype}{size\_t}\ sizePage)\ \{\ this-\/>sizePage\ =\ sizePage;\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ setNumConsecutivePages(\textcolor{keywordtype}{int}\ numConsecutivePages)\ \{\ this-\/>numConsecutivePages\ =\ numConsecutivePages;\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ getNumConsecutivePages()\ \{\ \textcolor{keywordflow}{return}\ this-\/>numConsecutivePages;\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAllocated()\ \{\ \textcolor{keywordflow}{return}\ this-\/>bAllocated;\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ setBAllocated(\textcolor{keywordtype}{bool}\ bAllocated)\ \{\ this-\/>bAllocated\ =\ bAllocated;\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ getSizeSlot()\ \{\ \textcolor{keywordflow}{return}\ this-\/>sizeSlot;\ \}}
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ PageIndex()\ :}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ id(s\_countId++),}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ pPage(nullptr),}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ sizePage(NOT\_DEFINED),}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ numConsecutivePages(NOT\_DEFINED),}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ bAllocated(false),}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ sizeSlot(NOT\_DEFINED),}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ numMaxSlots(NOT\_DEFINED),}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ aSlotIndex(nullptr),}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ numSlotsAvailable(NOT\_DEFINED)}
+\DoxyCodeLine{00152\ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00162\ \ \ \ \ \string~PageIndex()\ \{\}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize(\textcolor{keywordtype}{size\_t}\ sizeSlot)\ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ this-\/>sizeSlot\ =\ sizeSlot;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ this-\/>numMaxSlots\ =\ (int)(sizePage\ <\ sizeSlot\ ?\ 1\ :\ sizePage\ /\ sizeSlot);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ this-\/>numSlotsAvailable\ =\ numMaxSlots;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ this-\/>aSlotIndex\ =\ \textcolor{keyword}{new}\ SlotIndex[numMaxSlots];}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ pCurrent\ =\ this-\/>pPage;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numMaxSlots;\ i++)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ aSlotIndex[i].setPMemory(pCurrent);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ pCurrent\ =\ pCurrent\ +\ sizeSlot;}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ this-\/>setBAllocated(\textcolor{keyword}{true});}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ finalize()\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ this-\/>setBAllocated(\textcolor{keyword}{false});}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keywordtype}{void}*\ allocate(\textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pNameObject)\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ pMemoryAllocated\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>numMaxSlots;\ i++)\ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>aSlotIndex[i].isAllocated())\ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aSlotIndex[i].setNameObject(pNameObject);}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aSlotIndex[i].setBAllocated(\textcolor{keyword}{true});}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pMemoryAllocated\ =\ this-\/>aSlotIndex[i].getPMemory();}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>numSlotsAvailable-\/-\/;}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pMemoryAllocated;}
+\DoxyCodeLine{00220\ \ \ \ \ \}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{bool}\ dellocate(\textcolor{keywordtype}{void}*\ pMemory)\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset\ =\ (\textcolor{keywordtype}{char}*)pMemory\ -\/\ pPage;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexSlot\ =\ (int)(offset\ /\ sizeSlot);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ this-\/>aSlotIndex[indexSlot].setBAllocated(\textcolor{keyword}{false});}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ this-\/>numSlotsAvailable++;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isEmpty\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>numSlotsAvailable\ ==\ this-\/>numMaxSlots)\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ isEmpty\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isEmpty;}
+\DoxyCodeLine{00242\ \ \ \ \ \}}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00254\ \ \ \ \ SlotIndex*\ findASlotIndex(\textcolor{keywordtype}{void}*\ pMemory)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset\ =\ (\textcolor{keywordtype}{char}*)pMemory\ -\/\ pPage;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexSlot\ =\ (int)(offset\ /\ sizeSlot);}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&(this-\/>aSlotIndex[indexSlot]);}
+\DoxyCodeLine{00258\ \ \ \ \ \}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordtype}{void}\ showStatus()\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}});}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!bAllocated)\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ EMPTY\ SLOT\(\backslash\)n"{}});}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numMaxSlots;\ i++)\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aSlotIndex[i].isAllocated())\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IObject*\ pObject\ =\ (IObject*)(this-\/>aSlotIndex[i].getPMemory());}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ \%s::\%s(\%d)\(\backslash\)n"{}},\ pObject-\/>getNameClass(),\ aSlotIndex[i].getNameObject(),\ pObject-\/>getId());}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}|\ \ EMPTY\ SLOT\(\backslash\)n"{}});}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{00285\ \ \ \ \ \}}
+\DoxyCodeLine{00286\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\doxysection{testing\+::Test\+With\+Param$<$ T $>$ 클래스 템플릿 참조}
+\label{classtesting_1_1_test_with_param}\index{testing::TestWithParam$<$ T $>$@{testing::TestWithParam$<$ T $>$}}
+testing\+::Test\+With\+Param$<$ T $>$에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtesting_1_1_test_with_param}
+\end{center}
+\end{figure}
+\doxysubsubsection*{추가로 상속된 멤버들}
+\doxysubsection*{\textbf{ testing\+::\+Test}(으)로부터 상속된 Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+typedef internal\+::\+Set\+Up\+Test\+Case\+Func {\bfseries Set\+Up\+Test\+Case\+Func}
+\item 
+typedef internal\+::\+Tear\+Down\+Test\+Case\+Func {\bfseries Tear\+Down\+Test\+Case\+Func}
+\end{DoxyCompactItemize}
+\doxysubsection*{\textbf{ testing\+::\+With\+Param\+Interface$<$ T $>$}(으)로부터 상속된 Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+typedef T {\bfseries Param\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{\textbf{ testing\+::\+With\+Param\+Interface$<$ T $>$}(으)로부터 상속된 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+const Param\+Type \& {\bfseries Get\+Param} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{\textbf{ testing\+::\+Test}(으)로부터 상속된 정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bfseries Set\+Up\+Test\+Case} ()
+\item 
+static void {\bfseries Tear\+Down\+Test\+Case} ()
+\item 
+static bool {\bfseries Has\+Fatal\+Failure} ()
+\item 
+static bool {\bfseries Has\+Nonfatal\+Failure} ()
+\item 
+static bool {\bfseries Has\+Failure} ()
+\item 
+static void {\bfseries Record\+Property} (const std\+::string \&key, const std\+::string \&value)
+\item 
+static void {\bfseries Record\+Property} (const std\+::string \&key, int value)
+\end{DoxyCompactItemize}
+\doxysubsection*{\textbf{ testing\+::\+Test}(으)로부터 상속된 Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Set\+Up} ()
+\item 
+virtual void {\bfseries Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+packages/\+Microsoft.\+googletest.\+v140.\+windesktop.\+msvcstl.\+static.\+rt-\/dyn.\+1.\+8.\+1.\+7/build/native/include/gtest/gtest.\+h\end{DoxyCompactItemize}

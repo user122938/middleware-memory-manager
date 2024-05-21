@@ -65,16 +65,32 @@ private:
 	}
 
 public:
+	/**
+	* @brief malloc함수를 통해 메모리 매니저 생성
+	* @param size 메모리 매니저 크기
+	* @return 메모리 매니저 객체 포인터
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	void* operator new(size_t size) {
 		return malloc(size);
 	}
+
+	/**
+	* @brief free함수를 통해 매모리 매니저 할당 해제
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	void operator delete(void* pObject) {
 		free(pObject);
 	}
+
 	/**
  	*
  	* @brief 메모리 관리 객체 생성자
- 	* @details 메모리 공간을 페이지 크기 만큼 나누어 PageIndex배열을 생성하고 초기화한다.
+ 	* @details 메모리 공간을 페이지 크기만큼 나누어 PageIndex배열을 생성하고 초기화한다.
 	* @param pBuffer 메모리 시작주소
 	* @param sizeBuffer 메모리 크기
 	* @param sizePage 한 페이지 크기
@@ -112,7 +128,7 @@ public:
 	/**
  	*
  	* @brief 메모리에 객체를 할당하는 함수
- 	* @details 객체 크기를 16배수의 slot으로 일반화하고 할당할 PageIndex를 찾아 할당한다.
+ 	* @details 객체 크기를 16배수의 slot으로 일반화하고 할당할 PageIndex를 배열의 마지막부터 찾아 할당한다.
 	* @param sizeMemory 할당할 객체 크기
 	* @param pName 할당할 객체 이름
 	* @return 할당된 객체의 메모리 주소

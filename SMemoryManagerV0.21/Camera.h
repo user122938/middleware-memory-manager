@@ -4,12 +4,12 @@
 #define NUM_CAMERAS 5
 
 	/**
-   	*
+	* 
    	* @brief 크기가 48인 테스트용 클래스 
 	* @details 생성자로 이름 저장, 배열에 0~4까지의 값을 저장하고 출력
    	* @date 2024-05-19
    	* @version 0.21
-   	*
+	* 
     */
 class Camera : public Object {
 private:
@@ -17,17 +17,24 @@ private:
 public:
 	/**
 	* 
-	*
     * @brief Camera 생성자
     * @datails 부모 생성자에 이름("Camera") 전달
     * @date 2024-05-19
     * @version 0.21
-    *
+	* 
 	*/
 	Camera(const char* pName = "Camera") :
 		Object(pName)
 	{
 	}
+
+	/**
+ 	*
+ 	* @brief Camera 소멸자
+ 	* @date 2024-05-19
+ 	* @version 0.21
+ 	*
+ 	*/
 	virtual ~Camera() {
 	}
 

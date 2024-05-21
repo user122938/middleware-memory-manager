@@ -5,11 +5,11 @@
 #include "Recorder.h"
 
 	/**
-   	*
+	* 
    	* @brief 메인 클래스
    	* @date 2024-05-02
    	* @version 0.21
-   	*
+	* 
    	*/
 class Main : public Object
 {

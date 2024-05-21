@@ -1,0 +1,174 @@
+\doxysection{testing\+::internal\+::posix 네임스페이스 참조}
+\label{namespacetesting_1_1internal_1_1posix}\index{testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ typedef} \textbf{ struct} \textbf{ stat} \textbf{ Stat\+Struct}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ File\+No} (\textbf{ FILE} $\ast$file)
+\item 
+\textbf{ int} \textbf{ Is\+ATTY} (\textbf{ int} \textbf{ fd})
+\item 
+\textbf{ int} \textbf{ Stat} (\textbf{ const} \textbf{ char} $\ast$\textbf{ path}, \textbf{ Stat\+Struct} $\ast$\textbf{ buf})
+\item 
+\textbf{ int} \textbf{ Str\+Case\+Cmp} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2})
+\item 
+\textbf{ char} $\ast$ \textbf{ Str\+Dup} (\textbf{ const} \textbf{ char} $\ast$\textbf{ src})
+\item 
+\textbf{ int} \textbf{ Rm\+Dir} (\textbf{ const} \textbf{ char} $\ast$\textbf{ dir})
+\item 
+\textbf{ bool} \textbf{ Is\+Dir} (\textbf{ const} \textbf{ Stat\+Struct} \&\textbf{ st})
+\item 
+\textbf{ const} \textbf{ char} $\ast$ \textbf{ Str\+NCpy} (\textbf{ char} $\ast$\textbf{ dest}, \textbf{ const} \textbf{ char} $\ast$\textbf{ src}, \textbf{ size\+\_\+t} \textbf{ n})
+\item 
+\textbf{ int} \textbf{ Ch\+Dir} (\textbf{ const} \textbf{ char} $\ast$\textbf{ dir})
+\item 
+\textbf{ FILE} $\ast$ \textbf{ FOpen} (\textbf{ const} \textbf{ char} $\ast$\textbf{ path}, \textbf{ const} \textbf{ char} $\ast$\textbf{ mode})
+\item 
+\textbf{ FILE} $\ast$ \textbf{ FReopen} (\textbf{ const} \textbf{ char} $\ast$\textbf{ path}, \textbf{ const} \textbf{ char} $\ast$\textbf{ mode}, \textbf{ FILE} $\ast$\textbf{ stream})
+\item 
+\textbf{ FILE} $\ast$ \textbf{ FDOpen} (\textbf{ int} \textbf{ fd}, \textbf{ const} \textbf{ char} $\ast$\textbf{ mode})
+\item 
+\textbf{ int} \textbf{ FClose} (\textbf{ FILE} $\ast$\textbf{ fp})
+\item 
+\textbf{ int} \textbf{ Read} (\textbf{ int} \textbf{ fd}, \textbf{ void} $\ast$\textbf{ buf}, \textbf{ unsigned} \textbf{ int} \textbf{ count})
+\item 
+\textbf{ int} \textbf{ Write} (\textbf{ int} \textbf{ fd}, \textbf{ const} \textbf{ void} $\ast$\textbf{ buf}, \textbf{ unsigned} \textbf{ int} \textbf{ count})
+\item 
+\textbf{ int} \textbf{ Close} (\textbf{ int} \textbf{ fd})
+\item 
+\textbf{ const} \textbf{ char} $\ast$ \textbf{ Str\+Error} (\textbf{ int} \textbf{ errnum})
+\item 
+\textbf{ const} \textbf{ char} $\ast$ \textbf{ Get\+Env} (\textbf{ const} \textbf{ char} $\ast$name)
+\item 
+\textbf{ void} \textbf{ Abort} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{타입정의 문서화}
+\label{namespacetesting_1_1internal_1_1posix_a8eb9f08d3af29941c2d2a964cfff3ecb} 
+\index{testing::internal::posix@{testing::internal::posix}!StatStruct@{StatStruct}}
+\index{StatStruct@{StatStruct}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{StatStruct}
+{\footnotesize\ttfamily \textbf{ typedef} \textbf{ struct} \textbf{ stat} \textbf{ testing\+::internal\+::posix\+::\+Stat\+Struct}}
+
+
+
+\doxysubsection{함수 문서화}
+\label{namespacetesting_1_1internal_1_1posix_a69b8278c59359dd6a6f941b4643db9fb} 
+\index{testing::internal::posix@{testing::internal::posix}!Abort@{Abort}}
+\index{Abort@{Abort}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{Abort()}
+{\footnotesize\ttfamily \textbf{ void} testing\+::internal\+::posix\+::\+Abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a1ddc8a4fc6bb21da372307485591a212} 
+\index{testing::internal::posix@{testing::internal::posix}!ChDir@{ChDir}}
+\index{ChDir@{ChDir}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{ChDir()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Ch\+Dir (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a15e5b8f2a535ef1b2529b85b861e4846} 
+\index{testing::internal::posix@{testing::internal::posix}!Close@{Close}}
+\index{Close@{Close}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{Close()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Close (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_af4beeaaa8d62916d5e3b644a1ddfbd6b} 
+\index{testing::internal::posix@{testing::internal::posix}!FClose@{FClose}}
+\index{FClose@{FClose}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{FClose()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+FClose (\begin{DoxyParamCaption}\item[{\textbf{ FILE} $\ast$}]{fp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a78eb38374e5a5c87ab0cbb30583627f7} 
+\index{testing::internal::posix@{testing::internal::posix}!FDOpen@{FDOpen}}
+\index{FDOpen@{FDOpen}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{FDOpen()}
+{\footnotesize\ttfamily \textbf{ FILE} $\ast$ testing\+::internal\+::posix\+::\+FDOpen (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{fd,  }\item[{\textbf{ const} \textbf{ char} $\ast$}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a3117b067e1f942a2031e666953120ccc} 
+\index{testing::internal::posix@{testing::internal::posix}!FileNo@{FileNo}}
+\index{FileNo@{FileNo}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{FileNo()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+File\+No (\begin{DoxyParamCaption}\item[{\textbf{ FILE} $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_affa05d06d3e3b1ce975935cb0eac4fa7} 
+\index{testing::internal::posix@{testing::internal::posix}!FOpen@{FOpen}}
+\index{FOpen@{FOpen}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{FOpen()}
+{\footnotesize\ttfamily \textbf{ FILE} $\ast$ testing\+::internal\+::posix\+::\+FOpen (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{path,  }\item[{\textbf{ const} \textbf{ char} $\ast$}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a7428e40e37fc1798e36804eafc11680b} 
+\index{testing::internal::posix@{testing::internal::posix}!FReopen@{FReopen}}
+\index{FReopen@{FReopen}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{FReopen()}
+{\footnotesize\ttfamily \textbf{ FILE} $\ast$ testing\+::internal\+::posix\+::\+FReopen (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{path,  }\item[{\textbf{ const} \textbf{ char} $\ast$}]{mode,  }\item[{\textbf{ FILE} $\ast$}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_aa78973d3f7aa4efd24742b0537c8cd50} 
+\index{testing::internal::posix@{testing::internal::posix}!GetEnv@{GetEnv}}
+\index{GetEnv@{GetEnv}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{GetEnv()}
+{\footnotesize\ttfamily \textbf{ const} \textbf{ char} $\ast$ testing\+::internal\+::posix\+::\+Get\+Env (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a16ebe936b3a8ea462a94191635aedc27} 
+\index{testing::internal::posix@{testing::internal::posix}!IsATTY@{IsATTY}}
+\index{IsATTY@{IsATTY}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{IsATTY()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Is\+ATTY (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_af0d04ed5baeed28353fa38742748a421} 
+\index{testing::internal::posix@{testing::internal::posix}!IsDir@{IsDir}}
+\index{IsDir@{IsDir}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{IsDir()}
+{\footnotesize\ttfamily \textbf{ bool} testing\+::internal\+::posix\+::\+Is\+Dir (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ Stat\+Struct} \&}]{st }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a3c6ab13e581a56f1b02f3eb7536c97fd} 
+\index{testing::internal::posix@{testing::internal::posix}!Read@{Read}}
+\index{Read@{Read}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{Read()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Read (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{fd,  }\item[{\textbf{ void} $\ast$}]{buf,  }\item[{\textbf{ unsigned} \textbf{ int}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_acbad5d4ea5b73fd1765f5f760642932a} 
+\index{testing::internal::posix@{testing::internal::posix}!RmDir@{RmDir}}
+\index{RmDir@{RmDir}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{RmDir()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Rm\+Dir (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a2b87b7ff647a128614daf50667eb9304} 
+\index{testing::internal::posix@{testing::internal::posix}!Stat@{Stat}}
+\index{Stat@{Stat}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{Stat()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Stat (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{path,  }\item[{\textbf{ Stat\+Struct} $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a1ef2385a7f8e4c706054da35967e76bd} 
+\index{testing::internal::posix@{testing::internal::posix}!StrCaseCmp@{StrCaseCmp}}
+\index{StrCaseCmp@{StrCaseCmp}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{StrCaseCmp()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Str\+Case\+Cmp (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{s1,  }\item[{\textbf{ const} \textbf{ char} $\ast$}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a5c0864ea9d81d27332b9133e35cbc43c} 
+\index{testing::internal::posix@{testing::internal::posix}!StrDup@{StrDup}}
+\index{StrDup@{StrDup}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{StrDup()}
+{\footnotesize\ttfamily \textbf{ char} $\ast$ testing\+::internal\+::posix\+::\+Str\+Dup (\begin{DoxyParamCaption}\item[{\textbf{ const} \textbf{ char} $\ast$}]{src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a6e7e77c37cacb64c32234b988b10933c} 
+\index{testing::internal::posix@{testing::internal::posix}!StrError@{StrError}}
+\index{StrError@{StrError}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{StrError()}
+{\footnotesize\ttfamily \textbf{ const} \textbf{ char} $\ast$ testing\+::internal\+::posix\+::\+Str\+Error (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{errnum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_a3defc980438fce16cf5320a458ccea17} 
+\index{testing::internal::posix@{testing::internal::posix}!StrNCpy@{StrNCpy}}
+\index{StrNCpy@{StrNCpy}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{StrNCpy()}
+{\footnotesize\ttfamily \textbf{ const} \textbf{ char} $\ast$ testing\+::internal\+::posix\+::\+Str\+NCpy (\begin{DoxyParamCaption}\item[{\textbf{ char} $\ast$}]{dest,  }\item[{\textbf{ const} \textbf{ char} $\ast$}]{src,  }\item[{\textbf{ size\+\_\+t}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\label{namespacetesting_1_1internal_1_1posix_af4acf9f78d55f815a18b43786511abef} 
+\index{testing::internal::posix@{testing::internal::posix}!Write@{Write}}
+\index{Write@{Write}!testing::internal::posix@{testing::internal::posix}}
+\doxysubsubsection{Write()}
+{\footnotesize\ttfamily \textbf{ int} testing\+::internal\+::posix\+::\+Write (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{fd,  }\item[{\textbf{ const} \textbf{ void} $\ast$}]{buf,  }\item[{\textbf{ unsigned} \textbf{ int}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

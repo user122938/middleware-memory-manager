@@ -1,0 +1,458 @@
+\doxysection{packages/\+Microsoft.googletest.\+v140.\+windesktop.\+msvcstl.\+static.\+rt-\/dyn.1.8.1.7/build/native/include/gtest/internal/gtest-\/internal.h 파일 참조}
+\label{gtest-internal_8h}\index{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.7/build/native/include/gtest/internal/gtest-\/internal.h@{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.7/build/native/include/gtest/internal/gtest-\/internal.h}}
+{\ttfamily \#include "{}gtest/internal/gtest-\/port.\+h"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}gtest/gtest-\/message.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/internal/gtest-\/filepath.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/internal/gtest-\/string.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/internal/gtest-\/type-\/util.\+h"{}}\newline
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ testing\+::internal\+::\+Floating\+Point$<$ Raw\+Type $>$}
+\item 
+class \textbf{ testing\+::internal\+::\+Type\+Id\+Helper$<$ T $>$}
+\item 
+class \textbf{ testing\+::internal\+::\+Test\+Factory\+Base}
+\item 
+class \textbf{ testing\+::internal\+::\+Test\+Factory\+Impl$<$ Test\+Class $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Code\+Location}
+\item 
+struct \textbf{ testing\+::internal\+::\+Const\+Char\+Ptr}
+\item 
+class \textbf{ testing\+::internal\+::\+Random}
+\item 
+struct \textbf{ testing\+::internal\+::\+Compile\+Assert\+Types\+Equal$<$ T, T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Remove\+Reference$<$ T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Remove\+Reference$<$ T \& $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Remove\+Const$<$ T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Remove\+Const$<$ const T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Remove\+Const$<$ const T[\+N]$>$}
+\item 
+class \textbf{ testing\+::internal\+::\+Implicitly\+Convertible$<$ From, To $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+AProtocol\+Message$<$ T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+Hash\+Table$<$ T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Void\+T$<$ T $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Has\+Value\+Type$<$ T, typename $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Has\+Value\+Type$<$ T, Void\+T$<$ typename T\+::value\+\_\+type $>$ $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+Recursive\+Container\+Impl$<$ C, false, HV $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+Recursive\+Container\+Impl$<$ C, true, false $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+Recursive\+Container\+Impl$<$ C, true, true $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Is\+Recursive\+Container$<$ C $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Enable\+If$<$ true $>$}
+\item 
+struct \textbf{ testing\+::internal\+::\+Relation\+To\+Source\+Reference}
+\item 
+struct \textbf{ testing\+::internal\+::\+Relation\+To\+Source\+Copy}
+\item 
+class \textbf{ testing\+::internal\+::\+Native\+Array$<$ Element $>$}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+namespace \textbf{ proto2}
+\item 
+namespace \textbf{ testing}
+\item 
+namespace \textbf{ testing\+::internal}
+\item 
+namespace \textbf{ testing\+::internal\+::edit\+\_\+distance}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+}(foo,  bar)~\textbf{ GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+\+IMPL\+\_\+}(foo, bar)
+\item 
+\#define \textbf{ GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+\+IMPL\+\_\+}(foo,  bar)~foo \#\# bar
+\item 
+\#define \textbf{ GTEST\+\_\+\+STRINGIFY\+\_\+}(name)~\#name
+\item 
+\#define \textbf{ GTEST\+\_\+\+IS\+\_\+\+NULL\+\_\+\+LITERAL\+\_\+}(x)~    (sizeof(\textbf{ \+::testing\+::internal\+::\+Is\+Null\+Literal\+Helper}(x)) == 1)
+\item 
+\#define \textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+}(T)~    typename \textbf{ \+::testing\+::internal\+::\+Remove\+Reference}$<$T$>$\+::type
+\item 
+\#define \textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+CONST\+\_\+}(T)~    typename \textbf{ \+::testing\+::internal\+::\+Remove\+Const}$<$T$>$\+::type
+\item 
+\#define \textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+\+AND\+\_\+\+CONST\+\_\+}(T)~    \textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+CONST\+\_\+}(\textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+}(T))
+\item 
+\#define \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+\+AT\+\_\+}(file,  line,  message,  result\+\_\+type)
+\item 
+\#define \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message,  result\+\_\+type)~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+\+AT\+\_\+}(\+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+, message, result\+\_\+type)
+\item 
+\#define \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(message)~  return \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Fatal\+Failure)
+\item 
+\#define \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+}(message)~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Non\+Fatal\+Failure)
+\item 
+\#define \textbf{ GTEST\+\_\+\+SUCCESS\+\_\+}(message)~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Success)
+\item 
+\#define \textbf{ GTEST\+\_\+\+SUPPRESS\+\_\+\+UNREACHABLE\+\_\+\+CODE\+\_\+\+WARNING\+\_\+\+BELOW\+\_\+}(statement)~  if (\textbf{ \+::testing\+::internal\+::\+Always\+True}()) \{ statement; \}
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+}(statement,  expected\+\_\+exception,  fail)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+}(statement,  fail)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+}(statement,  fail)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+BOOLEAN\+\_\+}(expression,  text,  actual,  expected,  fail)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(statement,  fail)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+\+CLASS\+\_\+\+NAME\+\_\+}(test\+\_\+case\+\_\+name,  test\+\_\+name)~  test\+\_\+case\+\_\+name\#\#\+\_\+\#\#test\+\_\+name\#\#\+\_\+\+Test
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST\+\_\+}(test\+\_\+case\+\_\+name,  test\+\_\+name,  parent\+\_\+class,  parent\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ typedef} \textbf{ Floating\+Point}$<$ \textbf{ float} $>$ \textbf{ testing\+::internal\+::\+Float}
+\item 
+\textbf{ typedef} \textbf{ Floating\+Point}$<$ \textbf{ double} $>$ \textbf{ testing\+::internal\+::\+Double}
+\item 
+\textbf{ typedef} \textbf{ const} \textbf{ void} $\ast$ \textbf{ testing\+::internal\+::\+Type\+Id}
+\item 
+\textbf{ typedef} \textbf{ void}($\ast$ \textbf{ testing\+::internal\+::\+Set\+Up\+Test\+Case\+Func}) ()
+\item 
+\textbf{ typedef} \textbf{ void}($\ast$ \textbf{ testing\+::internal\+::\+Tear\+Down\+Test\+Case\+Func}) ()
+\item 
+\textbf{ typedef} \textbf{ int} \textbf{ testing\+::internal\+::\+Is\+Container}
+\item 
+\textbf{ typedef} \textbf{ char} \textbf{ testing\+::internal\+::\+Is\+Not\+Container}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ testing\+::internal\+::edit\+\_\+distance\+::\+Edit\+Type} \{ \textbf{ testing\+::internal\+::edit\+\_\+distance\+::k\+Match}
+, \textbf{ testing\+::internal\+::edit\+\_\+distance\+::k\+Add}
+, \textbf{ testing\+::internal\+::edit\+\_\+distance\+::k\+Remove}
+, \textbf{ testing\+::internal\+::edit\+\_\+distance\+::k\+Replace}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\+::std\+::string \textbf{ testing\+::\+Print\+To\+String} (const T \&value)
+\item 
+\textbf{ char} \textbf{ testing\+::internal\+::\+Is\+Null\+Literal\+Helper} (\textbf{ Secret} $\ast$\textbf{ p})
+\item 
+\textbf{ char}(\& \textbf{ testing\+::internal\+::\+Is\+Null\+Literal\+Helper} (...))[2]
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::internal\+::\+Append\+User\+Message} (\textbf{ const} std\+::string \&\textbf{ gtest\+\_\+msg}, \textbf{ const} \textbf{ Message} \&\textbf{ user\+\_\+msg})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::vector$<$ \textbf{ Edit\+Type} $>$ \textbf{ testing\+::internal\+::edit\+\_\+distance\+::\+Calculate\+Optimal\+Edits} (\textbf{ const} std\+::vector$<$ \textbf{ size\+\_\+t} $>$ \&\textbf{ left}, \textbf{ const} std\+::vector$<$ \textbf{ size\+\_\+t} $>$ \&\textbf{ right})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::vector$<$ \textbf{ Edit\+Type} $>$ \textbf{ testing\+::internal\+::edit\+\_\+distance\+::\+Calculate\+Optimal\+Edits} (\textbf{ const} std\+::vector$<$ std\+::string $>$ \&\textbf{ left}, \textbf{ const} std\+::vector$<$ std\+::string $>$ \&\textbf{ right})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::internal\+::edit\+\_\+distance\+::\+Create\+Unified\+Diff} (\textbf{ const} std\+::vector$<$ std\+::string $>$ \&\textbf{ left}, \textbf{ const} std\+::vector$<$ std\+::string $>$ \&\textbf{ right}, \textbf{ size\+\_\+t} \textbf{ context}=2)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::internal\+::\+Diff\+Strings} (\textbf{ const} std\+::string \&\textbf{ left}, \textbf{ const} std\+::string \&\textbf{ right}, \textbf{ size\+\_\+t} $\ast$\textbf{ total\+\_\+line\+\_\+count})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Eq\+Failure} (\textbf{ const} \textbf{ char} $\ast$\textbf{ expected\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ actual\+\_\+expression}, \textbf{ const} std\+::string \&\textbf{ expected\+\_\+value}, \textbf{ const} std\+::string \&\textbf{ actual\+\_\+value}, \textbf{ bool} \textbf{ ignoring\+\_\+case})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::internal\+::\+Get\+Bool\+Assertion\+Failure\+Message} (\textbf{ const} \textbf{ Assertion\+Result} \&\textbf{ assertion\+\_\+result}, \textbf{ const} \textbf{ char} $\ast$\textbf{ expression\+\_\+text}, \textbf{ const} \textbf{ char} $\ast$\textbf{ actual\+\_\+predicate\+\_\+value}, \textbf{ const} \textbf{ char} $\ast$\textbf{ expected\+\_\+predicate\+\_\+value})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} $>$ }\\\textbf{ Type\+Id} \textbf{ testing\+::internal\+::\+Get\+Type\+Id} ()
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Type\+Id} \textbf{ testing\+::internal\+::\+Get\+Test\+Type\+Id} ()
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Test\+Info} $\ast$ \textbf{ testing\+::internal\+::\+Make\+And\+Register\+Test\+Info} (\textbf{ const} \textbf{ char} $\ast$test\+\_\+case\+\_\+name, \textbf{ const} \textbf{ char} $\ast$name, \textbf{ const} \textbf{ char} $\ast$type\+\_\+param, \textbf{ const} \textbf{ char} $\ast$value\+\_\+param, \textbf{ Code\+Location} \textbf{ code\+\_\+location}, \textbf{ Type\+Id} \textbf{ fixture\+\_\+class\+\_\+id}, \textbf{ Set\+Up\+Test\+Case\+Func} \textbf{ set\+\_\+up\+\_\+tc}, \textbf{ Tear\+Down\+Test\+Case\+Func} \textbf{ tear\+\_\+down\+\_\+tc}, \textbf{ Test\+Factory\+Base} $\ast$\textbf{ factory})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ bool} \textbf{ testing\+::internal\+::\+Skip\+Prefix} (\textbf{ const} \textbf{ char} $\ast$\textbf{ prefix}, \textbf{ const} \textbf{ char} $\ast$$\ast$\textbf{ pstr})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::internal\+::\+Get\+Current\+Os\+Stack\+Trace\+Except\+Top} (\textbf{ Unit\+Test} $\ast$\textbf{ unit\+\_\+test}, \textbf{ int} \textbf{ skip\+\_\+count})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ bool} \textbf{ testing\+::internal\+::\+Always\+True} ()
+\item 
+\textbf{ bool} \textbf{ testing\+::internal\+::\+Always\+False} ()
+\item 
+{\footnotesize template$<$\textbf{ class} \textbf{ C} $>$ }\\\textbf{ Is\+Container} \textbf{ testing\+::internal\+::\+Is\+Container\+Test} (\textbf{ int}, \textbf{ typename} C\+::iterator $\ast$=\textbf{ NULL}, \textbf{ typename} C\+::const\+\_\+iterator $\ast$=\textbf{ NULL})
+\item 
+{\footnotesize template$<$\textbf{ class} \textbf{ C} $>$ }\\\textbf{ Is\+Not\+Container} \textbf{ testing\+::internal\+::\+Is\+Container\+Test} (\textbf{ long})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} $>$ }\\\textbf{ bool} \textbf{ testing\+::internal\+::\+Array\+Eq} (\textbf{ const} \textbf{ T} $\ast$\textbf{ lhs}, \textbf{ size\+\_\+t} size, \textbf{ const} \textbf{ U} $\ast$\textbf{ rhs})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} $>$ }\\\textbf{ bool} \textbf{ testing\+::internal\+::\+Array\+Eq} (\textbf{ const} \textbf{ T} \&\textbf{ lhs}, \textbf{ const} \textbf{ U} \&\textbf{ rhs})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} , \textbf{ size\+\_\+t} N$>$ }\\\textbf{ bool} \textbf{ testing\+::internal\+::\+Array\+Eq} (\textbf{ const} \textbf{ T}(\&\textbf{ lhs})[\textbf{ N}], \textbf{ const} \textbf{ U}(\&\textbf{ rhs})[\textbf{ N}])
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ Iter} , \textbf{ typename} \textbf{ Element} $>$ }\\\textbf{ Iter} \textbf{ testing\+::internal\+::\+Array\+Aware\+Find} (\textbf{ Iter} begin, \textbf{ Iter} end, \textbf{ const} \textbf{ Element} \&\textbf{ elem})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} $>$ }\\\textbf{ void} \textbf{ testing\+::internal\+::\+Copy\+Array} (\textbf{ const} \textbf{ T} $\ast$\textbf{ from}, \textbf{ size\+\_\+t} size, \textbf{ U} $\ast$\textbf{ to})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} $>$ }\\\textbf{ void} \textbf{ testing\+::internal\+::\+Copy\+Array} (\textbf{ const} \textbf{ T} \&\textbf{ from}, \textbf{ U} $\ast$\textbf{ to})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T} , \textbf{ typename} \textbf{ U} , \textbf{ size\+\_\+t} N$>$ }\\\textbf{ void} \textbf{ testing\+::internal\+::\+Copy\+Array} (\textbf{ const} \textbf{ T}(\&\textbf{ from})[\textbf{ N}], \textbf{ U}($\ast$\textbf{ to})[\textbf{ N}])
+\end{DoxyCompactItemize}
+\doxysubsubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ const} \textbf{ char} \textbf{ testing\+::internal\+::k\+Stack\+Trace\+Marker} [$\,$]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\label{gtest-internal_8h_ae3c336cbe1ae2bd1b1d019333e4428a0} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_CONCAT\_TOKEN\_@{GTEST\_CONCAT\_TOKEN\_}}
+\index{GTEST\_CONCAT\_TOKEN\_@{GTEST\_CONCAT\_TOKEN\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_CONCAT\_TOKEN\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+(\begin{DoxyParamCaption}\item[{}]{foo,  }\item[{}]{bar }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+\+IMPL\+\_\+}(foo, bar)}
+
+\label{gtest-internal_8h_aa39fb5346d3573feebe4257cb3a01fde} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_CONCAT\_TOKEN\_IMPL\_@{GTEST\_CONCAT\_TOKEN\_IMPL\_}}
+\index{GTEST\_CONCAT\_TOKEN\_IMPL\_@{GTEST\_CONCAT\_TOKEN\_IMPL\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_CONCAT\_TOKEN\_IMPL\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+CONCAT\+\_\+\+TOKEN\+\_\+\+IMPL\+\_\+(\begin{DoxyParamCaption}\item[{}]{foo,  }\item[{}]{bar }\end{DoxyParamCaption})~foo \#\# bar}
+
+\label{gtest-internal_8h_a0f9a4c3ea82cc7bf4478eaffdc168358} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_FATAL\_FAILURE\_@{GTEST\_FATAL\_FAILURE\_}}
+\index{GTEST\_FATAL\_FAILURE\_@{GTEST\_FATAL\_FAILURE\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_FATAL\_FAILURE\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})~  return \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Fatal\+Failure)}
+
+\label{gtest-internal_8h_ae5dd8e23090e08856613878fa1ff6fca} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_IS\_NULL\_LITERAL\_@{GTEST\_IS\_NULL\_LITERAL\_}}
+\index{GTEST\_IS\_NULL\_LITERAL\_@{GTEST\_IS\_NULL\_LITERAL\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_IS\_NULL\_LITERAL\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+IS\+\_\+\+NULL\+\_\+\+LITERAL\+\_\+(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~    (sizeof(\textbf{ \+::testing\+::internal\+::\+Is\+Null\+Literal\+Helper}(x)) == 1)}
+
+\label{gtest-internal_8h_a94c73d5368ec946bc354d0992ad00810} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_MESSAGE\_@{GTEST\_MESSAGE\_}}
+\index{GTEST\_MESSAGE\_@{GTEST\_MESSAGE\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_MESSAGE\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+MESSAGE\+\_\+(\begin{DoxyParamCaption}\item[{}]{message,  }\item[{}]{result\+\_\+type }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+\+AT\+\_\+}(\+\_\+\+\_\+\+FILE\+\_\+\+\_\+, \+\_\+\+\_\+\+LINE\+\_\+\+\_\+, message, result\+\_\+type)}
+
+\label{gtest-internal_8h_a8d70025c45a47a493780746dfd66d565} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_MESSAGE\_AT\_@{GTEST\_MESSAGE\_AT\_}}
+\index{GTEST\_MESSAGE\_AT\_@{GTEST\_MESSAGE\_AT\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_MESSAGE\_AT\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+MESSAGE\+\_\+\+AT\+\_\+(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{line,  }\item[{}]{message,  }\item[{}]{result\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ::testing::internal::AssertHelper(result\_type,\ file,\ line,\ message)\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ =\ ::testing::Message()}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_a6cb7482cfa03661a91c698eb5895f642} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_NONFATAL\_FAILURE\_@{GTEST\_NONFATAL\_FAILURE\_}}
+\index{GTEST\_NONFATAL\_FAILURE\_@{GTEST\_NONFATAL\_FAILURE\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_NONFATAL\_FAILURE\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Non\+Fatal\+Failure)}
+
+\label{gtest-internal_8h_a2ffec8c60510eb130af387f5ce9a756a} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_REMOVE\_CONST\_@{GTEST\_REMOVE\_CONST\_}}
+\index{GTEST\_REMOVE\_CONST\_@{GTEST\_REMOVE\_CONST\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_REMOVE\_CONST\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+REMOVE\+\_\+\+CONST\+\_\+(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~    typename \textbf{ \+::testing\+::internal\+::\+Remove\+Const}$<$T$>$\+::type}
+
+\label{gtest-internal_8h_a84c72f25a6a6600e3ff8381ca6982ae9} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_REMOVE\_REFERENCE\_@{GTEST\_REMOVE\_REFERENCE\_}}
+\index{GTEST\_REMOVE\_REFERENCE\_@{GTEST\_REMOVE\_REFERENCE\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_REMOVE\_REFERENCE\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~    typename \textbf{ \+::testing\+::internal\+::\+Remove\+Reference}$<$T$>$\+::type}
+
+\label{gtest-internal_8h_a874567b176266188fabfffb8393267ce} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_@{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}}
+\index{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_@{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_REMOVE\_REFERENCE\_AND\_CONST\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+\+AND\+\_\+\+CONST\+\_\+(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~    \textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+CONST\+\_\+}(\textbf{ GTEST\+\_\+\+REMOVE\+\_\+\+REFERENCE\+\_\+}(T))}
+
+\label{gtest-internal_8h_affa935d4361fa573644e9c739dde2b14} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_STRINGIFY\_@{GTEST\_STRINGIFY\_}}
+\index{GTEST\_STRINGIFY\_@{GTEST\_STRINGIFY\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_STRINGIFY\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+STRINGIFY\+\_\+(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})~\#name}
+
+\label{gtest-internal_8h_abe012b550eb3807e8c49f7e161bd1567} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_SUCCESS\_@{GTEST\_SUCCESS\_}}
+\index{GTEST\_SUCCESS\_@{GTEST\_SUCCESS\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_SUCCESS\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+SUCCESS\+\_\+(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+MESSAGE\+\_\+}(message, \+::testing\+::\+Test\+Part\+Result\+::k\+Success)}
+
+\label{gtest-internal_8h_a2e66f7dfc5cb87e0fa0289f653173c69} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_@{GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_}}
+\index{GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_@{GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+SUPPRESS\+\_\+\+UNREACHABLE\+\_\+\+CODE\+\_\+\+WARNING\+\_\+\+BELOW\+\_\+(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~  if (\textbf{ \+::testing\+::internal\+::\+Always\+True}()) \{ statement; \}}
+
+\label{gtest-internal_8h_ae2d26f0f92fbaf62bf4c1eca45bb2f1f} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_@{GTEST\_TEST\_}}
+\index{GTEST\_TEST\_@{GTEST\_TEST\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+(\begin{DoxyParamCaption}\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{test\+\_\+name,  }\item[{}]{parent\+\_\+class,  }\item[{}]{parent\+\_\+id }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name)\ :\ \textcolor{keyword}{public}\ parent\_class\ \{\(\backslash\)}
+\DoxyCodeLine{\ \textcolor{keyword}{public}:\(\backslash\)}
+\DoxyCodeLine{\ \ GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name)()\ \{\}\(\backslash\)}
+\DoxyCodeLine{\ \textcolor{keyword}{private}:\(\backslash\)}
+\DoxyCodeLine{\ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ TestBody();\(\backslash\)}
+\DoxyCodeLine{\ \ static\ ::testing::TestInfo*\ \textcolor{keyword}{const}\ test\_info\_\ GTEST\_ATTRIBUTE\_UNUSED\_;\(\backslash\)}
+\DoxyCodeLine{\ \ GTEST\_DISALLOW\_COPY\_AND\_ASSIGN\_(\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name));\(\backslash\)}
+\DoxyCodeLine{\};\(\backslash\)}
+\DoxyCodeLine{\(\backslash\)}
+\DoxyCodeLine{::testing::TestInfo*\ \textcolor{keyword}{const}\ GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name)\(\backslash\)}
+\DoxyCodeLine{\ \ ::test\_info\_\ =\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ::testing::internal::MakeAndRegisterTestInfo(\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \#test\_case\_name,\ \#test\_name,\ NULL,\ NULL,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ::testing::internal::CodeLocation(\_\_FILE\_\_,\ \_\_LINE\_\_),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (parent\_id),\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ parent\_class::SetUpTestCase,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ parent\_class::TearDownTestCase,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ new\ ::testing::internal::TestFactoryImpl<\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name)>);\(\backslash\)}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ GTEST\_TEST\_CLASS\_NAME\_(test\_case\_name,\ test\_name)::TestBody()}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_af48bbd26d54d4afc5e4cef39b1c76ba3} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_ANY\_THROW\_@{GTEST\_TEST\_ANY\_THROW\_}}
+\index{GTEST\_TEST\_ANY\_THROW\_@{GTEST\_TEST\_ANY\_THROW\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_ANY\_THROW\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{fail }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ if\ (::testing::internal::AlwaysTrue())\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ gtest\_caught\_any\ =\ \textcolor{keyword}{false};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{try}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_(statement);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ catch\ (...)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ gtest\_caught\_any\ =\ \textcolor{keyword}{true};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (!gtest\_caught\_any)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{goto}\ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testanythrow\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testanythrow\_,\ \_\_LINE\_\_):\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ fail(\textcolor{stringliteral}{"{}Expected:\ "{}}\ \#statement\ \textcolor{stringliteral}{"{}\ throws\ an\ exception.\(\backslash\)n"{}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Actual:\ it\ doesn't."{}})}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_ae8912365e1d00a7a2bd248268c64aa1a} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_BOOLEAN\_@{GTEST\_TEST\_BOOLEAN\_}}
+\index{GTEST\_TEST\_BOOLEAN\_@{GTEST\_TEST\_BOOLEAN\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_BOOLEAN\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+BOOLEAN\+\_\+(\begin{DoxyParamCaption}\item[{}]{expression,  }\item[{}]{text,  }\item[{}]{actual,  }\item[{}]{expected,  }\item[{}]{fail }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ if\ (const\ ::testing::AssertionResult\ gtest\_ar\_\ =\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ ::testing::AssertionResult(expression))\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ;\ \(\backslash\)}
+\DoxyCodeLine{\ \ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ fail(::testing::internal::GetBoolAssertionFailureMessage(\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ gtest\_ar\_,\ text,\ \#actual,\ \#expected).c\_str())}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_a87a1ee3a3b9b798195236d053f2e5dcc} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_CLASS\_NAME\_@{GTEST\_TEST\_CLASS\_NAME\_}}
+\index{GTEST\_TEST\_CLASS\_NAME\_@{GTEST\_TEST\_CLASS\_NAME\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_CLASS\_NAME\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+CLASS\+\_\+\+NAME\+\_\+(\begin{DoxyParamCaption}\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{test\+\_\+name }\end{DoxyParamCaption})~  test\+\_\+case\+\_\+name\#\#\+\_\+\#\#test\+\_\+name\#\#\+\_\+\+Test}
+
+\label{gtest-internal_8h_a1b37a3c446836d33040f3266a6236081} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_NO\_FATAL\_FAILURE\_@{GTEST\_TEST\_NO\_FATAL\_FAILURE\_}}
+\index{GTEST\_TEST\_NO\_FATAL\_FAILURE\_@{GTEST\_TEST\_NO\_FATAL\_FAILURE\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_NO\_FATAL\_FAILURE\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{fail }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ if\ (::testing::internal::AlwaysTrue())\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ ::testing::internal::HasNewFatalFailureHelper\ gtest\_fatal\_failure\_checker;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_(statement);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ if\ (gtest\_fatal\_failure\_checker.has\_new\_fatal\_failure())\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{goto}\ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testnofatal\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testnofatal\_,\ \_\_LINE\_\_):\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ fail(\textcolor{stringliteral}{"{}Expected:\ "{}}\ \#statement\ \textcolor{stringliteral}{"{}\ doesn't\ generate\ new\ fatal\ "{}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}failures\ in\ the\ current\ thread.\(\backslash\)n"{}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Actual:\ it\ does."{}})}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_a9a109d026b5a904646437d7570e13581} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_NO\_THROW\_@{GTEST\_TEST\_NO\_THROW\_}}
+\index{GTEST\_TEST\_NO\_THROW\_@{GTEST\_TEST\_NO\_THROW\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_NO\_THROW\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{fail }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ if\ (::testing::internal::AlwaysTrue())\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{try}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_(statement);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ catch\ (...)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keywordflow}{goto}\ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testnothrow\_,\ \_\_LINE\_\_);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \}\ else\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testnothrow\_,\ \_\_LINE\_\_):\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ fail(\textcolor{stringliteral}{"{}Expected:\ "{}}\ \#statement\ \textcolor{stringliteral}{"{}\ doesn't\ throw\ an\ exception.\(\backslash\)n"{}}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ \ Actual:\ it\ throws."{}})}
+
+\end{DoxyCode}
+\label{gtest-internal_8h_a3f71db93eaf30b0cfca9612b9ac32106} 
+\index{gtest-\/internal.h@{gtest-\/internal.h}!GTEST\_TEST\_THROW\_@{GTEST\_TEST\_THROW\_}}
+\index{GTEST\_TEST\_THROW\_@{GTEST\_TEST\_THROW\_}!gtest-\/internal.h@{gtest-\/internal.h}}
+\doxysubsubsection{GTEST\_TEST\_THROW\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{expected\+\_\+exception,  }\item[{}]{fail }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_AMBIGUOUS\_ELSE\_BLOCKER\_\ \(\backslash\)}
+\DoxyCodeLine{\ \ if\ (::testing::internal::ConstCharPtr\ gtest\_msg\ =\ \textcolor{stringliteral}{"{}"{}})\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{bool}\ gtest\_caught\_expected\ =\ \textcolor{keyword}{false};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{try}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ GTEST\_SUPPRESS\_UNREACHABLE\_CODE\_WARNING\_BELOW\_(statement);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ catch\ (expected\_exception\ \textcolor{keyword}{const}\&)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ gtest\_caught\_expected\ =\ \textcolor{keyword}{true};\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ catch\ (...)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ gtest\_msg.value\ =\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Expected:\ "{}}\ \#statement\ \textcolor{stringliteral}{"{}\ throws\ an\ exception\ of\ type\ "{}}\ \(\backslash\)}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \#expected\_exception\ "{}.\(\backslash\)n\ \ Actual:\ it\ throws\ a\ different\ type."{};\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ goto\ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testthrow\_,\ \_\_LINE\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ if\ (!gtest\_caught\_expected)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ gtest\_msg.value\ =\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ "{}Expected:\ "{}\ \#statement\ "{}\ throws\ an\ exception\ of\ type\ "{}\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \#expected\_exception\ "{}.\(\backslash\)n\ \ Actual:\ it\ throws\ nothing."{};\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ goto\ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testthrow\_,\ \_\_LINE\_\_);\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \}\ else\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ GTEST\_CONCAT\_TOKEN\_(gtest\_label\_testthrow\_,\ \_\_LINE\_\_):\ \(\backslash\)}}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ fail(gtest\_msg.value)}}
+
+\end{DoxyCode}

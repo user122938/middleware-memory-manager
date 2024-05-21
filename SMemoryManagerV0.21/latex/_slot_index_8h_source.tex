@@ -1,0 +1,39 @@
+\doxysection{Slot\+Index.\+h}
+\label{_slot_index_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ISlotIndex.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Type.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }SlotIndex\ :\ \textcolor{keyword}{public}\ ISlotIndex\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}*\ pMemory;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}*\ pNameObject;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ bAllocated;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ SlotIndex()\ :}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ pMemory(nullptr),}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ pNameObject(nullptr),}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ bAllocated(false)}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \string~SlotIndex()\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ setPMemory(\textcolor{keywordtype}{void}*\ pMemory)\ \{\ this-\/>pMemory\ =\ pMemory;\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}*\ getPMemory()\ \{\ \textcolor{keywordflow}{return}\ this-\/>pMemory;\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ setNameObject(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pNameObject)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ this-\/>pNameObject\ =\ strcpy(pNameObject);}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{char}*\ getNameObject()\ \{\ \textcolor{keywordflow}{return}\ this-\/>pNameObject;\ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ setBAllocated(\textcolor{keywordtype}{bool}\ bAllocated)\ \{\ this-\/>bAllocated\ =\ bAllocated;\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ isAllocated()\ \{\ \textcolor{keywordflow}{return}\ this-\/>bAllocated;\ \}}
+\DoxyCodeLine{00105\ \};}
+
+\end{DoxyCode}

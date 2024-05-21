@@ -1,0 +1,708 @@
+\doxysection{packages/\+Microsoft.googletest.\+v140.\+windesktop.\+msvcstl.\+static.\+rt-\/dyn.1.8.1.7/build/native/include/gtest/gtest.h 파일 참조}
+\label{gtest_8h}\index{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.7/build/native/include/gtest/gtest.h@{packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-\/dyn.1.8.1.7/build/native/include/gtest/gtest.h}}
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}gtest/internal/gtest-\/internal.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/internal/gtest-\/string.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/death-\/test.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/message.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/param-\/test.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/printers.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest\+\_\+prod.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/test-\/part.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest-\/typed-\/test.\+h"{}}\newline
+{\ttfamily \#include "{}gtest/gtest\+\_\+pred\+\_\+impl.\+h"{}}\newline
+\doxysubsubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ testing\+::\+Test}
+\item 
+class \textbf{ testing\+::\+Test\+Property}
+\item 
+class \textbf{ testing\+::\+Test\+Result}
+\item 
+class \textbf{ testing\+::\+Test\+Info}
+\item 
+class \textbf{ testing\+::\+Test\+Case}
+\item 
+class \textbf{ testing\+::\+Environment}
+\item 
+class \textbf{ testing\+::\+Test\+Event\+Listener}
+\item 
+class \textbf{ testing\+::\+Empty\+Test\+Event\+Listener}
+\item 
+class \textbf{ testing\+::\+Test\+Event\+Listeners}
+\item 
+class \textbf{ testing\+::\+Unit\+Test}
+\item 
+class \textbf{ testing\+::internal\+::\+Eq\+Helper$<$ lhs\+\_\+is\+\_\+null\+\_\+literal $>$}
+\item 
+class \textbf{ testing\+::internal\+::\+Eq\+Helper$<$ true $>$}
+\item 
+class \textbf{ testing\+::internal\+::\+Assert\+Helper}
+\item 
+class \textbf{ testing\+::\+With\+Param\+Interface$<$ T $>$}
+\item 
+class \textbf{ testing\+::\+Test\+With\+Param$<$ T $>$}
+\item 
+class \textbf{ testing\+::\+Scoped\+Trace}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+namespace \textbf{ testing}
+\item 
+namespace \textbf{ testing\+::internal}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+}(op\+\_\+name,  op)
+\item 
+\#define \textbf{ ADD\+\_\+\+FAILURE}()~\textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+}("{}Failed"{})
+\item 
+\#define \textbf{ ADD\+\_\+\+FAILURE\+\_\+\+AT}(file,  line)
+\item 
+\#define \textbf{ GTEST\+\_\+\+FAIL}()~\textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}("{}Failed"{})
+\item 
+\#define \textbf{ FAIL}()~\textbf{ GTEST\+\_\+\+FAIL}()
+\item 
+\#define \textbf{ GTEST\+\_\+\+SUCCEED}()~\textbf{ GTEST\+\_\+\+SUCCESS\+\_\+}("{}Succeeded"{})
+\item 
+\#define \textbf{ SUCCEED}()~\textbf{ GTEST\+\_\+\+SUCCEED}()
+\item 
+\#define \textbf{ EXPECT\+\_\+\+THROW}(statement,  expected\+\_\+exception)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+}(statement, expected\+\_\+exception, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ EXPECT\+\_\+\+NO\+\_\+\+THROW}(statement)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ EXPECT\+\_\+\+ANY\+\_\+\+THROW}(statement)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ ASSERT\+\_\+\+THROW}(statement,  expected\+\_\+exception)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+}(statement, expected\+\_\+exception, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ ASSERT\+\_\+\+NO\+\_\+\+THROW}(statement)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ ASSERT\+\_\+\+ANY\+\_\+\+THROW}(statement)~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ EXPECT\+\_\+\+TRUE}(condition)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+FALSE}(condition)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+TRUE}(condition)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+FALSE}(condition)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+NE}(val1,  val2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+NE}, val1, val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+LE}(val1,  val2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LE}, val1, val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+LT}(val1,  val2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LT}, val1, val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+GE}(val1,  val2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GE}, val1, val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+GT}(val1,  val2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GT}, val1, val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+NE}(val1,  val2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+NE}, val1, val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LE}(val1,  val2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LE}, val1, val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LT}(val1,  val2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LT}, val1, val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GE}(val1,  val2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GE}, val1, val2)
+\item 
+\#define \textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GT}(val1,  val2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GT}, val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+EQ}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+EQ}(val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+NE}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+NE}(val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+LE}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LE}(val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+LT}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LT}(val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+GE}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GE}(val1, val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+GT}(val1,  val2)~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GT}(val1, val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+STREQ}(s1,  s2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STREQ}, s1, s2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+STRNE}(s1,  s2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRNE}, s1, s2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+STRCASEEQ}(s1,  s2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASEEQ}, s1, s2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+STRCASENE}(s1,  s2)~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASENE}, s1, s2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+STREQ}(s1,  s2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STREQ}, s1, s2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+STRNE}(s1,  s2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRNE}, s1, s2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+STRCASEEQ}(s1,  s2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASEEQ}, s1, s2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+STRCASENE}(s1,  s2)~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASENE}, s1, s2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+FLOAT\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+FLOAT\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+DOUBLE\+\_\+\+EQ}(val1,  val2)
+\item 
+\#define \textbf{ EXPECT\+\_\+\+NEAR}(val1,  val2,  abs\+\_\+error)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+NEAR}(val1,  val2,  abs\+\_\+error)
+\item 
+\#define \textbf{ ASSERT\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE}(statement)~    \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ EXPECT\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE}(statement)~    \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})
+\item 
+\#define \textbf{ SCOPED\+\_\+\+TRACE}(message)
+\item 
+\#define \textbf{ GTEST\+\_\+\+TEST}(test\+\_\+case\+\_\+name,  test\+\_\+name)
+\item 
+\#define \textbf{ TEST}(test\+\_\+case\+\_\+name,  test\+\_\+name)~\textbf{ GTEST\+\_\+\+TEST}(test\+\_\+case\+\_\+name, test\+\_\+name)
+\item 
+\#define \textbf{ TEST\+\_\+F}(test\+\_\+fixture,  test\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef \textbf{ internal\+::\+Time\+In\+Millis} \textbf{ testing\+::\+Time\+In\+Millis}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ GTEST\+\_\+\+DISABLE\+\_\+\+MSC\+\_\+\+WARNINGS\+\_\+\+PUSH\+\_\+} (4251) namespace testing
+\item 
+\textbf{ Environment} $\ast$ \textbf{ testing\+::\+Add\+Global\+Test\+Environment} (\textbf{ Environment} $\ast$env)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} void \textbf{ testing\+::\+Init\+Google\+Test} (int $\ast$argc, char $\ast$$\ast$argv)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} void \textbf{ testing\+::\+Init\+Google\+Test} (int $\ast$argc, wchar\+\_\+t $\ast$$\ast$argv)
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T1} , \textbf{ typename} \textbf{ T2} $>$ }\\\textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+EQFailure} (\textbf{ const} \textbf{ char} $\ast$\textbf{ lhs\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ rhs\+\_\+expression}, \textbf{ const} \textbf{ T1} \&\textbf{ lhs}, \textbf{ const} \textbf{ T2} \&\textbf{ rhs})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T1} , \textbf{ typename} \textbf{ T2} $>$ }\\\textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+EQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ lhs\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ rhs\+\_\+expression}, \textbf{ const} \textbf{ T1} \&\textbf{ lhs}, \textbf{ const} \textbf{ T2} \&\textbf{ rhs})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+EQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ lhs\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ rhs\+\_\+expression}, \textbf{ Biggest\+Int} \textbf{ lhs}, \textbf{ Biggest\+Int} \textbf{ rhs})
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ T1} , \textbf{ typename} \textbf{ T2} $>$ }\\\textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+Op\+Failure} (\textbf{ const} \textbf{ char} $\ast$\textbf{ expr1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ expr2}, \textbf{ const} \textbf{ T1} \&\textbf{ val1}, \textbf{ const} \textbf{ T2} \&\textbf{ val2}, \textbf{ const} \textbf{ char} $\ast$\textbf{ op})
+\item 
+\textbf{ testing\+::internal\+::\+GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+} (\textbf{ NE}, !=)
+\item 
+\textbf{ testing\+::internal\+::\+GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+} (\textbf{ LE},$<$=)
+\item 
+\textbf{ testing\+::internal\+::\+GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+} (\textbf{ LT},$<$)
+\item 
+\textbf{ testing\+::internal\+::\+GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+} (\textbf{ GE}, $>$=)
+\item 
+\textbf{ testing\+::internal\+::\+GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+} (\textbf{ GT}, $>$)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STREQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STRCASEEQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STRNE} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STRCASENE} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STREQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ wchar\+\_\+t} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ wchar\+\_\+t} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+STRNE} (\textbf{ const} \textbf{ char} $\ast$\textbf{ s1\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ s2\+\_\+expression}, \textbf{ const} \textbf{ wchar\+\_\+t} $\ast$\textbf{ s1}, \textbf{ const} \textbf{ wchar\+\_\+t} $\ast$\textbf{ s2})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const char $\ast$needle, const char $\ast$haystack)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const wchar\+\_\+t $\ast$needle, const wchar\+\_\+t $\ast$haystack)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Not\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const char $\ast$needle, const char $\ast$haystack)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Not\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const wchar\+\_\+t $\ast$needle, const wchar\+\_\+t $\ast$haystack)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const \+::std\+::string \&needle, const \+::std\+::string \&haystack)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Is\+Not\+Substring} (const char $\ast$needle\+\_\+expr, const char $\ast$haystack\+\_\+expr, const \+::std\+::string \&needle, const \+::std\+::string \&haystack)
+\item 
+{\footnotesize template$<$\textbf{ typename} \textbf{ Raw\+Type} $>$ }\\\textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Cmp\+Helper\+Floating\+Point\+EQ} (\textbf{ const} \textbf{ char} $\ast$\textbf{ lhs\+\_\+expression}, \textbf{ const} \textbf{ char} $\ast$\textbf{ rhs\+\_\+expression}, \textbf{ Raw\+Type} \textbf{ lhs\+\_\+value}, \textbf{ Raw\+Type} \textbf{ rhs\+\_\+value})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ Assertion\+Result} \textbf{ testing\+::internal\+::\+Double\+Near\+Pred\+Format} (\textbf{ const} \textbf{ char} $\ast$\textbf{ expr1}, \textbf{ const} \textbf{ char} $\ast$\textbf{ expr2}, \textbf{ const} \textbf{ char} $\ast$\textbf{ abs\+\_\+error\+\_\+expr}, \textbf{ double} \textbf{ val1}, \textbf{ double} \textbf{ val2}, \textbf{ double} \textbf{ abs\+\_\+error})
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Float\+LE} (const char $\ast$expr1, const char $\ast$expr2, float val1, float val2)
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} Assertion\+Result \textbf{ testing\+::\+Double\+LE} (const char $\ast$expr1, const char $\ast$expr2, double val1, double val2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \textbf{ testing\+::\+Static\+Assert\+Type\+Eq} ()
+\item 
+\textbf{ GTEST\+\_\+\+API\+\_\+} std\+::string \textbf{ testing\+::\+Temp\+Dir} ()
+\item 
+int \textbf{ RUN\+\_\+\+ALL\+\_\+\+TESTS} () \textbf{ GTEST\+\_\+\+MUST\+\_\+\+USE\+\_\+\+RESULT\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+class \textbf{ GTEST\+\_\+\+API\+\_\+} \textbf{ testing\+::\+Scoped\+Trace} \textbf{ testing\+::\+GTEST\+\_\+\+ATTRIBUTE\+\_\+\+UNUSED\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{매크로 문서화}
+\label{gtest_8h_adc16b5b0a740c39084ea5c9e960e3063} 
+\index{gtest.h@{gtest.h}!ADD\_FAILURE@{ADD\_FAILURE}}
+\index{ADD\_FAILURE@{ADD\_FAILURE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ADD\_FAILURE}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+FAILURE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+}("{}Failed"{})}
+
+\label{gtest_8h_a448d7e5105b640e892fd8153fbee0b7f} 
+\index{gtest.h@{gtest.h}!ADD\_FAILURE\_AT@{ADD\_FAILURE\_AT}}
+\index{ADD\_FAILURE\_AT@{ADD\_FAILURE\_AT}!gtest.h@{gtest.h}}
+\doxysubsubsection{ADD\_FAILURE\_AT}
+{\footnotesize\ttfamily \#define ADD\+\_\+\+FAILURE\+\_\+\+AT(\begin{DoxyParamCaption}\item[{}]{file,  }\item[{}]{line }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_MESSAGE\_AT\_(file,\ line,\ \textcolor{stringliteral}{"{}Failed"{}},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ::testing::TestPartResult::kNonFatalFailure)}
+
+\end{DoxyCode}
+\label{gtest_8h_affadeef9379fe5aabf6f28d9eab9d3c0} 
+\index{gtest.h@{gtest.h}!ASSERT\_ANY\_THROW@{ASSERT\_ANY\_THROW}}
+\index{ASSERT\_ANY\_THROW@{ASSERT\_ANY\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_ANY\_THROW}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+ANY\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_a6617da62e5ae5490995a3bfca1f331a9} 
+\index{gtest.h@{gtest.h}!ASSERT\_DOUBLE\_EQ@{ASSERT\_DOUBLE\_EQ}}
+\index{ASSERT\_DOUBLE\_EQ@{ASSERT\_DOUBLE\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_DOUBLE\_EQ}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+DOUBLE\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ASSERT\_PRED\_FORMAT2(::testing::internal::CmpHelperFloatingPointEQ<double>,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_a1a6db8b1338ee7040329322b77779086} 
+\index{gtest.h@{gtest.h}!ASSERT\_EQ@{ASSERT\_EQ}}
+\index{ASSERT\_EQ@{ASSERT\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_EQ}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+EQ}(val1, val2)}
+
+\label{gtest_8h_a8197fa52f3538588d20d8af4834c9003} 
+\index{gtest.h@{gtest.h}!ASSERT\_FALSE@{ASSERT\_FALSE}}
+\index{ASSERT\_FALSE@{ASSERT\_FALSE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_FALSE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_BOOLEAN\_(!(condition),\ \#condition,\ \textcolor{keyword}{true},\ \textcolor{keyword}{false},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTEST\_FATAL\_FAILURE\_)}
+
+\end{DoxyCode}
+\label{gtest_8h_a4663ffbf844baa54bdb29f9148fd0f96} 
+\index{gtest.h@{gtest.h}!ASSERT\_FLOAT\_EQ@{ASSERT\_FLOAT\_EQ}}
+\index{ASSERT\_FLOAT\_EQ@{ASSERT\_FLOAT\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_FLOAT\_EQ}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+FLOAT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ASSERT\_PRED\_FORMAT2(::testing::internal::CmpHelperFloatingPointEQ<float>,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_af4ff5dc71479fcb374b6bc2ed195bcc4} 
+\index{gtest.h@{gtest.h}!ASSERT\_GE@{ASSERT\_GE}}
+\index{ASSERT\_GE@{ASSERT\_GE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_GE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GE}(val1, val2)}
+
+\label{gtest_8h_a16a882d4eafc9f8643867aea40879140} 
+\index{gtest.h@{gtest.h}!ASSERT\_GT@{ASSERT\_GT}}
+\index{ASSERT\_GT@{ASSERT\_GT}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_GT}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+GT}(val1, val2)}
+
+\label{gtest_8h_a775643748feff0b490aae651d041e971} 
+\index{gtest.h@{gtest.h}!ASSERT\_LE@{ASSERT\_LE}}
+\index{ASSERT\_LE@{ASSERT\_LE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_LE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LE}(val1, val2)}
+
+\label{gtest_8h_affc4f9cae4c3aabfe60fced83737b42c} 
+\index{gtest.h@{gtest.h}!ASSERT\_LT@{ASSERT\_LT}}
+\index{ASSERT\_LT@{ASSERT\_LT}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_LT}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+LT}(val1, val2)}
+
+\label{gtest_8h_aa866c8dece57912e6f51495ed3e8d8d5} 
+\index{gtest.h@{gtest.h}!ASSERT\_NE@{ASSERT\_NE}}
+\index{ASSERT\_NE@{ASSERT\_NE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_NE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+ASSERT\+\_\+\+NE}(val1, val2)}
+
+\label{gtest_8h_a73cce6b752d204f91a36bef2f8e663b3} 
+\index{gtest.h@{gtest.h}!ASSERT\_NEAR@{ASSERT\_NEAR}}
+\index{ASSERT\_NEAR@{ASSERT\_NEAR}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_NEAR}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NEAR(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2,  }\item[{}]{abs\+\_\+error }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ASSERT\_PRED\_FORMAT3(::testing::internal::DoubleNearPredFormat,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2,\ abs\_error)}
+
+\end{DoxyCode}
+\label{gtest_8h_a5034fda3490aad5a93942ac83f4cea49} 
+\index{gtest.h@{gtest.h}!ASSERT\_NO\_FATAL\_FAILURE@{ASSERT\_NO\_FATAL\_FAILURE}}
+\index{ASSERT\_NO\_FATAL\_FAILURE@{ASSERT\_NO\_FATAL\_FAILURE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_NO\_FATAL\_FAILURE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~    \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_a895c34d9b192cdc2ba46d2680623485d} 
+\index{gtest.h@{gtest.h}!ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}}
+\index{ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_NO\_THROW}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_a58847dd696200a3268361401dfcd0fa0} 
+\index{gtest.h@{gtest.h}!ASSERT\_STRCASEEQ@{ASSERT\_STRCASEEQ}}
+\index{ASSERT\_STRCASEEQ@{ASSERT\_STRCASEEQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_STRCASEEQ}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STRCASEEQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASEEQ}, s1, s2)}
+
+\label{gtest_8h_ac3d2c3836b103068a050f32585b2aaad} 
+\index{gtest.h@{gtest.h}!ASSERT\_STRCASENE@{ASSERT\_STRCASENE}}
+\index{ASSERT\_STRCASENE@{ASSERT\_STRCASENE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_STRCASENE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STRCASENE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASENE}, s1, s2)}
+
+\label{gtest_8h_a74f4189ea570bab9a65d47104659ef9c} 
+\index{gtest.h@{gtest.h}!ASSERT\_STREQ@{ASSERT\_STREQ}}
+\index{ASSERT\_STREQ@{ASSERT\_STREQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_STREQ}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STREQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STREQ}, s1, s2)}
+
+\label{gtest_8h_a3d679660ac1b2f9f6e6c7608452af923} 
+\index{gtest.h@{gtest.h}!ASSERT\_STRNE@{ASSERT\_STRNE}}
+\index{ASSERT\_STRNE@{ASSERT\_STRNE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_STRNE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+STRNE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRNE}, s1, s2)}
+
+\label{gtest_8h_aedb1eddae6c2a2430b0e7b7e03b4f052} 
+\index{gtest.h@{gtest.h}!ASSERT\_THROW@{ASSERT\_THROW}}
+\index{ASSERT\_THROW@{ASSERT\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_THROW}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{expected\+\_\+exception }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+}(statement, expected\+\_\+exception, \textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_ae9244bfbda562e8b798789b001993fa5} 
+\index{gtest.h@{gtest.h}!ASSERT\_TRUE@{ASSERT\_TRUE}}
+\index{ASSERT\_TRUE@{ASSERT\_TRUE}!gtest.h@{gtest.h}}
+\doxysubsubsection{ASSERT\_TRUE}
+{\footnotesize\ttfamily \#define ASSERT\+\_\+\+TRUE(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_BOOLEAN\_(condition,\ \#condition,\ \textcolor{keyword}{false},\ \textcolor{keyword}{true},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTEST\_FATAL\_FAILURE\_)}
+
+\end{DoxyCode}
+\label{gtest_8h_a9be43f44d148e8a8d6a89c864bf4e461} 
+\index{gtest.h@{gtest.h}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_ANY\_THROW}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+ANY\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+ANY\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_ab4852f9430cf656690256ea7fe6323b8} 
+\index{gtest.h@{gtest.h}!EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}}
+\index{EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_DOUBLE\_EQ}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ EXPECT\_PRED\_FORMAT2(::testing::internal::CmpHelperFloatingPointEQ<double>,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_a4159019abda84f5366acdb7604ff220a} 
+\index{gtest.h@{gtest.h}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_EQ}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ EXPECT\_PRED\_FORMAT2(::testing::internal::\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EqHelper<GTEST\_IS\_NULL\_LITERAL\_(val1)>::Compare,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_aeb6c7ae89f440c90c1a1815951c836da} 
+\index{gtest.h@{gtest.h}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_FALSE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_BOOLEAN\_(!(condition),\ \#condition,\ \textcolor{keyword}{true},\ \textcolor{keyword}{false},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTEST\_NONFATAL\_FAILURE\_)}
+
+\end{DoxyCode}
+\label{gtest_8h_a981e552322fb084042d02d6dfa9860ca} 
+\index{gtest.h@{gtest.h}!EXPECT\_FLOAT\_EQ@{EXPECT\_FLOAT\_EQ}}
+\index{EXPECT\_FLOAT\_EQ@{EXPECT\_FLOAT\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_FLOAT\_EQ}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+FLOAT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ EXPECT\_PRED\_FORMAT2(::testing::internal::CmpHelperFloatingPointEQ<float>,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_ab7a0ff4bfa4d9b27baa118d8b0756ca0} 
+\index{gtest.h@{gtest.h}!EXPECT\_GE@{EXPECT\_GE}}
+\index{EXPECT\_GE@{EXPECT\_GE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_GE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GE}, val1, val2)}
+
+\label{gtest_8h_aa8bc8320813e1abb0016129b636e3b27} 
+\index{gtest.h@{gtest.h}!EXPECT\_GT@{EXPECT\_GT}}
+\index{EXPECT\_GT@{EXPECT\_GT}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_GT}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GT}, val1, val2)}
+
+\label{gtest_8h_ae0f265632323b4a07b585dcfde10f60a} 
+\index{gtest.h@{gtest.h}!EXPECT\_LE@{EXPECT\_LE}}
+\index{EXPECT\_LE@{EXPECT\_LE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_LE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LE}, val1, val2)}
+
+\label{gtest_8h_af28c06b2b5e8dee151896f299f6610cf} 
+\index{gtest.h@{gtest.h}!EXPECT\_LT@{EXPECT\_LT}}
+\index{EXPECT\_LT@{EXPECT\_LT}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_LT}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LT}, val1, val2)}
+
+\label{gtest_8h_a6ae7443947f25abc58bfcfcfc56b0d75} 
+\index{gtest.h@{gtest.h}!EXPECT\_NE@{EXPECT\_NE}}
+\index{EXPECT\_NE@{EXPECT\_NE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_NE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+NE}, val1, val2)}
+
+\label{gtest_8h_a88cd7978af0e7dbd42cd606dfabdcc6f} 
+\index{gtest.h@{gtest.h}!EXPECT\_NEAR@{EXPECT\_NEAR}}
+\index{EXPECT\_NEAR@{EXPECT\_NEAR}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_NEAR}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+NEAR(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2,  }\item[{}]{abs\+\_\+error }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ EXPECT\_PRED\_FORMAT3(::testing::internal::DoubleNearPredFormat,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2,\ abs\_error)}
+
+\end{DoxyCode}
+\label{gtest_8h_a067c02ccaf3171d6e1781cd0f8cdcf74} 
+\index{gtest.h@{gtest.h}!EXPECT\_NO\_FATAL\_FAILURE@{EXPECT\_NO\_FATAL\_FAILURE}}
+\index{EXPECT\_NO\_FATAL\_FAILURE@{EXPECT\_NO\_FATAL\_FAILURE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_NO\_FATAL\_FAILURE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~    \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_a2743a1438137ad857aa3f9fec3ff67ec} 
+\index{gtest.h@{gtest.h}!EXPECT\_NO\_THROW@{EXPECT\_NO\_THROW}}
+\index{EXPECT\_NO\_THROW@{EXPECT\_NO\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_NO\_THROW}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+NO\+\_\+\+THROW\+\_\+}(statement, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_a740cab7e3eec5c178a64b4f558bde66e} 
+\index{gtest.h@{gtest.h}!EXPECT\_STRCASEEQ@{EXPECT\_STRCASEEQ}}
+\index{EXPECT\_STRCASEEQ@{EXPECT\_STRCASEEQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_STRCASEEQ}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+STRCASEEQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASEEQ}, s1, s2)}
+
+\label{gtest_8h_a07d0b5cbd3b5f7c8b6f44c609046ff07} 
+\index{gtest.h@{gtest.h}!EXPECT\_STRCASENE@{EXPECT\_STRCASENE}}
+\index{EXPECT\_STRCASENE@{EXPECT\_STRCASENE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_STRCASENE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+STRCASENE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRCASENE}, s1, s2)}
+
+\label{gtest_8h_ad20f7b94ac5081e16f0005b94e95f0c6} 
+\index{gtest.h@{gtest.h}!EXPECT\_STREQ@{EXPECT\_STREQ}}
+\index{EXPECT\_STREQ@{EXPECT\_STREQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_STREQ}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+STREQ(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STREQ}, s1, s2)}
+
+\label{gtest_8h_aee7e9c42f55549dbc0dfc42391eb9775} 
+\index{gtest.h@{gtest.h}!EXPECT\_STRNE@{EXPECT\_STRNE}}
+\index{EXPECT\_STRNE@{EXPECT\_STRNE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_STRNE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+STRNE(\begin{DoxyParamCaption}\item[{}]{s1,  }\item[{}]{s2 }\end{DoxyParamCaption})~  \textbf{ EXPECT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+STRNE}, s1, s2)}
+
+\label{gtest_8h_a789842b4475eed948e6fd18390d5a859} 
+\index{gtest.h@{gtest.h}!EXPECT\_THROW@{EXPECT\_THROW}}
+\index{EXPECT\_THROW@{EXPECT\_THROW}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_THROW}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement,  }\item[{}]{expected\+\_\+exception }\end{DoxyParamCaption})~  \textbf{ GTEST\+\_\+\+TEST\+\_\+\+THROW\+\_\+}(statement, expected\+\_\+exception, \textbf{ GTEST\+\_\+\+NONFATAL\+\_\+\+FAILURE\+\_\+})}
+
+\label{gtest_8h_ac33e7cdfb5d44a7a0f0ab552eb5c3c6a} 
+\index{gtest.h@{gtest.h}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!gtest.h@{gtest.h}}
+\doxysubsubsection{EXPECT\_TRUE}
+{\footnotesize\ttfamily \#define EXPECT\+\_\+\+TRUE(\begin{DoxyParamCaption}\item[{}]{condition }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_BOOLEAN\_(condition,\ \#condition,\ \textcolor{keyword}{false},\ \textcolor{keyword}{true},\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GTEST\_NONFATAL\_FAILURE\_)}
+
+\end{DoxyCode}
+\label{gtest_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed} 
+\index{gtest.h@{gtest.h}!FAIL@{FAIL}}
+\index{FAIL@{FAIL}!gtest.h@{gtest.h}}
+\doxysubsubsection{FAIL}
+{\footnotesize\ttfamily \#define FAIL(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+FAIL}()}
+
+\label{gtest_8h_a8a7a47387090810cdfe78933d348182d} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_EQ@{GTEST\_ASSERT\_EQ}}
+\index{GTEST\_ASSERT\_EQ@{GTEST\_ASSERT\_EQ}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_EQ}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ASSERT\_PRED\_FORMAT2(::testing::internal::\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EqHelper<GTEST\_IS\_NULL\_LITERAL\_(val1)>::Compare,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ val1,\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_a55373d99c079ff1b894e2eb5bcd15c5a} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_GE@{GTEST\_ASSERT\_GE}}
+\index{GTEST\_ASSERT\_GE@{GTEST\_ASSERT\_GE}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_GE}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GE}, val1, val2)}
+
+\label{gtest_8h_a088b9056fd1c1f316b41c22f64deb33a} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_GT@{GTEST\_ASSERT\_GT}}
+\index{GTEST\_ASSERT\_GT@{GTEST\_ASSERT\_GT}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_GT}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+GT}, val1, val2)}
+
+\label{gtest_8h_abef04dcd4a0259d378de7b3b3ffb6730} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_LE@{GTEST\_ASSERT\_LE}}
+\index{GTEST\_ASSERT\_LE@{GTEST\_ASSERT\_LE}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_LE}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LE}, val1, val2)}
+
+\label{gtest_8h_a5a75667e637febd18e5f7d4f3abf55e8} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_LT@{GTEST\_ASSERT\_LT}}
+\index{GTEST\_ASSERT\_LT@{GTEST\_ASSERT\_LT}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_LT}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+LT}, val1, val2)}
+
+\label{gtest_8h_a6fa9bb2b6731eba8f481e40e9e4931b3} 
+\index{gtest.h@{gtest.h}!GTEST\_ASSERT\_NE@{GTEST\_ASSERT\_NE}}
+\index{GTEST\_ASSERT\_NE@{GTEST\_ASSERT\_NE}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_ASSERT\_NE}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+ASSERT\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{val1,  }\item[{}]{val2 }\end{DoxyParamCaption})~  \textbf{ ASSERT\+\_\+\+PRED\+\_\+\+FORMAT2}(\textbf{ \+::testing\+::internal\+::\+Cmp\+Helper\+NE}, val1, val2)}
+
+\label{gtest_8h_a636231436707c30d6778f79ae96f5dc6} 
+\index{gtest.h@{gtest.h}!GTEST\_FAIL@{GTEST\_FAIL}}
+\index{GTEST\_FAIL@{GTEST\_FAIL}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_FAIL}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+FAIL(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+FATAL\+\_\+\+FAILURE\+\_\+}("{}Failed"{})}
+
+\label{gtest_8h_a4a5b6fbde5dd05e05dd6846ac5e5c18e} 
+\index{gtest.h@{gtest.h}!GTEST\_IMPL\_CMP\_HELPER\_@{GTEST\_IMPL\_CMP\_HELPER\_}}
+\index{GTEST\_IMPL\_CMP\_HELPER\_@{GTEST\_IMPL\_CMP\_HELPER\_}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_IMPL\_CMP\_HELPER\_}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+IMPL\+\_\+\+CMP\+\_\+\+HELPER\+\_\+(\begin{DoxyParamCaption}\item[{}]{op\+\_\+name,  }\item[{}]{op }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ T2>\(\backslash\)}
+\DoxyCodeLine{AssertionResult\ CmpHelper\#\#op\_name(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ expr1,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ expr2,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T1\&\ val1,\ \textcolor{keyword}{const}\ T2\&\ val2)\ \{\(\backslash\)}
+\DoxyCodeLine{\ \ if\ (val1\ op\ val2)\ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ AssertionSuccess();\(\backslash\)}
+\DoxyCodeLine{\ \ \}\ \textcolor{keywordflow}{else}\ \{\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ CmpHelperOpFailure(expr1,\ expr2,\ val1,\ val2,\ \#op);\(\backslash\)}
+\DoxyCodeLine{\ \ \}\(\backslash\)}
+\DoxyCodeLine{\}\(\backslash\)}
+\DoxyCodeLine{GTEST\_API\_\ AssertionResult\ CmpHelper\#\#op\_name(\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ expr1,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ expr2,\ BiggestInt\ val1,\ BiggestInt\ val2)}
+
+\end{DoxyCode}
+\label{gtest_8h_a2690441c38202728f4159ac2462d9720} 
+\index{gtest.h@{gtest.h}!GTEST\_SUCCEED@{GTEST\_SUCCEED}}
+\index{GTEST\_SUCCEED@{GTEST\_SUCCEED}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_SUCCEED}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+SUCCEED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+SUCCESS\+\_\+}("{}Succeeded"{})}
+
+\label{gtest_8h_a725b565bedc3a34dc109901854214cc4} 
+\index{gtest.h@{gtest.h}!GTEST\_TEST@{GTEST\_TEST}}
+\index{GTEST\_TEST@{GTEST\_TEST}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_TEST}
+{\footnotesize\ttfamily \#define GTEST\+\_\+\+TEST(\begin{DoxyParamCaption}\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{test\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_(test\_case\_name,\ test\_name,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ ::testing::Test,\ ::testing::internal::GetTestTypeId())}
+
+\end{DoxyCode}
+\label{gtest_8h_a4dac08f15adc8cb1ee0e5c1bfb0f440d} 
+\index{gtest.h@{gtest.h}!SCOPED\_TRACE@{SCOPED\_TRACE}}
+\index{SCOPED\_TRACE@{SCOPED\_TRACE}!gtest.h@{gtest.h}}
+\doxysubsubsection{SCOPED\_TRACE}
+{\footnotesize\ttfamily \#define SCOPED\+\_\+\+TRACE(\begin{DoxyParamCaption}\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ ::testing::ScopedTrace\ GTEST\_CONCAT\_TOKEN\_(gtest\_trace\_,\ \_\_LINE\_\_)(\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \_\_FILE\_\_,\ \_\_LINE\_\_,\ (message))}
+
+\end{DoxyCode}
+\label{gtest_8h_a75adcdf89f69b0b615e395daafc315af} 
+\index{gtest.h@{gtest.h}!SUCCEED@{SUCCEED}}
+\index{SUCCEED@{SUCCEED}!gtest.h@{gtest.h}}
+\doxysubsubsection{SUCCEED}
+{\footnotesize\ttfamily \#define SUCCEED(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+SUCCEED}()}
+
+\label{gtest_8h_ad8b332753515c0ab8baada563c2547eb} 
+\index{gtest.h@{gtest.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gtest.h@{gtest.h}}
+\doxysubsubsection{TEST}
+{\footnotesize\ttfamily \#define TEST(\begin{DoxyParamCaption}\item[{}]{test\+\_\+case\+\_\+name,  }\item[{}]{test\+\_\+name }\end{DoxyParamCaption})~\textbf{ GTEST\+\_\+\+TEST}(test\+\_\+case\+\_\+name, test\+\_\+name)}
+
+\label{gtest_8h_a0ee66d464d1a06c20c1929cae09d8758} 
+\index{gtest.h@{gtest.h}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!gtest.h@{gtest.h}}
+\doxysubsubsection{TEST\_F}
+{\footnotesize\ttfamily \#define TEST\+\_\+F(\begin{DoxyParamCaption}\item[{}]{test\+\_\+fixture,  }\item[{}]{test\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ GTEST\_TEST\_(test\_fixture,\ test\_name,\ test\_fixture,\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ ::testing::internal::GetTypeId<test\_fixture>())}
+
+\end{DoxyCode}
+
+
+\doxysubsection{함수 문서화}
+\label{gtest_8h_a88f79832f9d045112a76e9da8611cc13} 
+\index{gtest.h@{gtest.h}!GTEST\_DISABLE\_MSC\_WARNINGS\_PUSH\_@{GTEST\_DISABLE\_MSC\_WARNINGS\_PUSH\_}}
+\index{GTEST\_DISABLE\_MSC\_WARNINGS\_PUSH\_@{GTEST\_DISABLE\_MSC\_WARNINGS\_PUSH\_}!gtest.h@{gtest.h}}
+\doxysubsubsection{GTEST\_DISABLE\_MSC\_WARNINGS\_PUSH\_()}
+{\footnotesize\ttfamily GTEST\+\_\+\+DISABLE\+\_\+\+MSC\+\_\+\+WARNINGS\+\_\+\+PUSH\+\_\+ (\begin{DoxyParamCaption}\item[{4251}]{ }\end{DoxyParamCaption})}
+
+\label{gtest_8h_a853a3792807489591d3d4a2f2ff9359f} 
+\index{gtest.h@{gtest.h}!RUN\_ALL\_TESTS@{RUN\_ALL\_TESTS}}
+\index{RUN\_ALL\_TESTS@{RUN\_ALL\_TESTS}!gtest.h@{gtest.h}}
+\doxysubsubsection{RUN\_ALL\_TESTS()}
+{\footnotesize\ttfamily int RUN\+\_\+\+ALL\+\_\+\+TESTS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

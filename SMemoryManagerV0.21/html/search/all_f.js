@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['samesizetupleprefixcomparator_0',['SameSizeTuplePrefixComparator',['../structstd_1_1tr1_1_1gtest__internal_1_1_same_size_tuple_prefix_comparator.html',1,'std::tr1::gtest_internal']]],
+  ['samesizetupleprefixcomparator_3c_200_2c_200_20_3e_1',['SameSizeTuplePrefixComparator&lt; 0, 0 &gt;',['../structstd_1_1tr1_1_1gtest__internal_1_1_same_size_tuple_prefix_comparator_3_010_00_010_01_4.html',1,'std::tr1::gtest_internal']]],
+  ['samesizetupleprefixcomparator_3c_20k_2c_20k_20_3e_2',['SameSizeTuplePrefixComparator&lt; k, k &gt;',['../structstd_1_1tr1_1_1gtest__internal_1_1_same_size_tuple_prefix_comparator_3_01k_00_01k_01_4.html',1,'std::tr1::gtest_internal']]],
+  ['scoped_5fptr_3',['scoped_ptr',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20_3a_3astd_3a_3astringstream_20_3e_4',['scoped_ptr&lt; ::std::stringstream &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20const_20_3a_3astd_3a_3astring_20_3e_5',['scoped_ptr&lt; const ::std::string &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20const_20t_20_3e_6',['scoped_ptr&lt; const T &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20gtest_5fflag_5fsaver_5f_20_3e_7',['scoped_ptr&lt; GTEST_FLAG_SAVER_ &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20testing_3a_3ainternal_3a_3aparamiteratorinterface_3c_20t_20_3e_20_3e_8',['scoped_ptr&lt; testing::internal::ParamIteratorInterface&lt; T &gt; &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scoped_5fptr_3c_20testing_3a_3ainternal_3a_3atestmetafactorybase_3c_20paramtype_20_3e_20_3e_9',['scoped_ptr&lt; testing::internal::TestMetaFactoryBase&lt; ParamType &gt; &gt;',['../classtesting_1_1internal_1_1scoped__ptr.html',1,'testing::internal']]],
+  ['scopedtrace_10',['ScopedTrace',['../classtesting_1_1_scoped_trace.html',1,'testing']]],
+  ['setballocated_11',['setBAllocated',['../class_page_index.html#a9658f22352b7fa7e0a20a509a9a7fbd8',1,'PageIndex::setBAllocated()'],['../class_slot_index.html#abbf9e5e89ec6e4dbcb2065ef5c3c0d1e',1,'SlotIndex::setBAllocated(bool bAllocated)']]],
+  ['setnameobject_12',['setNameObject',['../class_slot_index.html#af2f4786491383ca2d029f56891e904fc',1,'SlotIndex']]],
+  ['setnumconsecutivepages_13',['setNumConsecutivePages',['../class_page_index.html#a90003eeba260523814dd4c7f45620ab3',1,'PageIndex']]],
+  ['setpmemory_14',['setPMemory',['../class_slot_index.html#a5fdab3560affb869cda0dc085275db48',1,'SlotIndex']]],
+  ['setppage_15',['setPPage',['../class_page_index.html#aebf74da9421f27e39f0ebcb4b760b3f7',1,'PageIndex']]],
+  ['setsizepage_16',['setSizePage',['../class_page_index.html#aaf0709b38b94c830b7a3ae6b8407ee78',1,'PageIndex']]],
+  ['showstatus_17',['showStatus',['../class_i_memory_manager.html#a9d01c4204362a7ed4bc64280aa2f9548',1,'IMemoryManager::showStatus()'],['../class_memory_manager.html#a6e3325ab55cda124e3e7f4d62e7ae286',1,'MemoryManager::showStatus()'],['../class_page_index.html#a8f787e302ca6c8e8be7ebf7a922d190c',1,'PageIndex::showStatus()']]],
+  ['slotindex_18',['SlotIndex',['../class_slot_index.html',1,'SlotIndex'],['../class_slot_index.html#a87984d11f1c4dc4736d064495798acb0',1,'SlotIndex::SlotIndex()']]],
+  ['staticasserttypeeqhelper_19',['StaticAssertTypeEqHelper',['../structtesting_1_1internal_1_1_static_assert_type_eq_helper.html',1,'testing::internal']]],
+  ['staticasserttypeeqhelper_3c_20t_2c_20t_20_3e_20',['StaticAssertTypeEqHelper&lt; T, T &gt;',['../structtesting_1_1internal_1_1_static_assert_type_eq_helper_3_01_t_00_01_t_01_4.html',1,'testing::internal']]],
+  ['string_21',['String',['../classtesting_1_1internal_1_1_string.html',1,'testing::internal']]],
+  ['support_20features_22',['Underlying library support features',['../md_packages_2_microsoft_8googletest_8v140_8windesktop_8msvcstl_8static_8rt-dyn_81_88_81_87_2build32ff9ed2ab46485244cc9248e60fdb8.html#autotoc_md7',1,'']]],
+  ['symbols_3a_23',['Exporting API symbols:',['../md_packages_2_microsoft_8googletest_8v140_8windesktop_8msvcstl_8static_8rt-dyn_81_88_81_87_2build32ff9ed2ab46485244cc9248e60fdb8.html#autotoc_md8',1,'']]]
+];

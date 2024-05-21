@@ -1,0 +1,176 @@
+\doxysection{Memory\+Manager.\+h}
+\label{_memory_manager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}IMemoryManager.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}PageIndex.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Exception.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }MemoryManager\ :\ \textcolor{keyword}{public}\ IMemoryManager\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}*\ pBuffer;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ sizeBuffer;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ sizePage;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ numPages;}
+\DoxyCodeLine{00022\ \ \ \ \ PageIndex*\ aPageIndex;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ normalizeSize(\textcolor{keywordtype}{size\_t}\ size)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size1\ =\ size\ >>\ 4;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size2\ =\ size1\ <<\ 4;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ size\ =\ ((size\ ==\ size2)\ ?\ size1\ :\ ++size1)\ <<\ 4;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ PageIndex*\ allocateNewPages(\textcolor{keywordtype}{size\_t}\ sizeSlot)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numPagesRequired\ =\ (sizeSlot\ \%\ sizePage)\ ==\ 0\ ?\ (\textcolor{keywordtype}{int})(sizeSlot\ /\ sizePage)\ :\ (int)(sizeSlot\ /\ sizePage)\ +\ 1;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ PageIndex*\ pPageIndexAllocated\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ bFound\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numConsequtivePages\ =\ 0;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ numPages\ -\/\ 1;\ i\ >=\ 0;\ i-\/-\/)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (bFound)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aPageIndex[i].isAllocated())\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ numConsequtivePages++;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[i].setNumConsecutivePages(numConsequtivePages);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!this-\/>aPageIndex[i].isAllocated())\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aPageIndex[i].getNumConsecutivePages()\ ==\ numPagesRequired)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pPageIndexAllocated\ =\ \&(this-\/>aPageIndex[i]);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ i;\ k\ <\ i\ +\ numPagesRequired;\ k++)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[k].initialize(sizeSlot);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[k].setBAllocated(\textcolor{keyword}{true});}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bFound\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pPageIndexAllocated;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ collectGarbage()\ \{}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}*\ \textcolor{keyword}{operator}\ \textcolor{keyword}{new}(\textcolor{keywordtype}{size\_t}\ size)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ malloc(size);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}*\ pObject)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ free(pObject);}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00101\ \ \ \ \ MemoryManager(\textcolor{keywordtype}{char}*\ pBuffer,\ \textcolor{keywordtype}{size\_t}\ sizeBuffer,\ \textcolor{keywordtype}{size\_t}\ sizePage)\ :}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ pBuffer(pBuffer),}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ sizeBuffer(sizeBuffer),}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ sizePage(sizePage)}
+\DoxyCodeLine{00105\ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ numPages\ =\ (int)(sizeBuffer\ /\ sizePage);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ aPageIndex\ =\ \textcolor{keyword}{new}\ PageIndex[numPages];}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}*\ pBufferCurrent\ =\ pBuffer;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numPages;\ i++)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ aPageIndex[i].setPPage(pBufferCurrent);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ aPageIndex[i].setSizePage(sizePage);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ aPageIndex[i].setNumConsecutivePages(numPages\ -\/\ i);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ pBufferCurrent\ =\ pBufferCurrent\ +\ sizePage;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~MemoryManager()\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}*\ allocate(\textcolor{keywordtype}{size\_t}\ sizeMemory,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pName)\ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ sizeSlot\ =\ normalizeSize(sizeMemory);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ PageIndex*\ pPageIndexFound\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numPages;\ i++)\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aPageIndex[i].isAllocated())\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aPageIndex[i].getSizeSlot()\ ==\ sizeSlot)\ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pPageIndexFound\ =\ \&(this-\/>aPageIndex[i]);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pPageIndexFound\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ pPageIndexFound\ =\ allocateNewPages(sizeSlot);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pPageIndexFound\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(Exception::ECode::eOutOfMemory,\ \textcolor{stringliteral}{"{}allocateNewPages1"{}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ pSlotAllocated\ =\ pPageIndexFound-\/>allocate(sizeSlot,\ pName);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pSlotAllocated\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ pPageIndexFound\ =\ allocateNewPages(sizeSlot);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pPageIndexFound\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ Exception(Exception::ECode::eOutOfMemory,\ \textcolor{stringliteral}{"{}allocateNewPages2"{}});}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pSlotAllocated\ =\ pPageIndexFound-\/>allocate(sizeSlot,\ pName);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pSlotAllocated;}
+\DoxyCodeLine{00170\ \ \ \ \ \}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ dellocate(\textcolor{keywordtype}{void}*\ pObject)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset\ =\ (size\_t)pObject\ -\/\ (\textcolor{keywordtype}{size\_t})(this-\/>pBuffer);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pageIndex\ =\ (int)(offset\ /\ sizePage);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isEmpty\ =\ this-\/>aPageIndex[pageIndex].dellocate(pObject);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isEmpty)\ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this-\/>aPageIndex[pageIndex].getNumConsecutivePages();\ i++)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[pageIndex\ +\ i].finalize();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ startConsecutivePages\ =\ this-\/>numPages\ -\/\ 1;}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ pageIndex;\ i\ <\ numPages;\ i++)\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>aPageIndex[i].isAllocated())\ \{\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ startConsecutivePages\ =\ i\ -\/\ 1;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numConsecutivePages\ =\ 1;}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ startConsecutivePages;\ i\ >=\ 0\ ||\ this-\/>aPageIndex[pageIndex].isAllocated();\ i-\/-\/)\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[i].setNumConsecutivePages(numConsecutivePages);}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ numConsecutivePages++;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===============}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ this-\/>collectGarbage();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ===============}}
+\DoxyCodeLine{00205\ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00217\ \ \ \ \ SlotIndex*\ findASlotIndex(\textcolor{keywordtype}{void}*\ pObject)\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset\ =\ (size\_t)pObject\ -\/\ (\textcolor{keywordtype}{size\_t})(this-\/>pBuffer);}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pageIndex\ =\ (int)(offset\ /\ sizePage);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ SlotIndex*\ pSlotIndexFound\ =\ this-\/>aPageIndex[pageIndex].findASlotIndex(pObject);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pSlotIndexFound;}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00234\ \ \ \ \ PageIndex\ findAPageIndex(\textcolor{keywordtype}{void}*\ pObject)\ \{}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ offset\ =\ (size\_t)pObject\ -\/\ (\textcolor{keywordtype}{size\_t})(this-\/>pBuffer);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pageIndex\ =\ (int)(offset\ /\ sizePage);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>aPageIndex[pageIndex];}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ showStatus()\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Start==========================================\(\backslash\)n"{}});}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numPages;\ i++)\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ aPageIndex[i].getNumConsecutivePages();\ j++)\ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}PageIndex\%d(SizeSlot=\%d,\ ConsecutivePages=\%d)\(\backslash\)n"{}},\ i\ +\ j,\ (\textcolor{keywordtype}{int})aPageIndex[i\ +\ j].getSizeSlot(),\ aPageIndex[i\ +\ j].getNumConsecutivePages());}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>aPageIndex[i].showStatus();}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ i\ +\ aPageIndex[i].getNumConsecutivePages()\ -\/\ 1;}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}End============================================\(\backslash\)n"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \};}
+
+\end{DoxyCode}
