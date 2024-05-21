@@ -36,11 +36,11 @@ public:
     /**
     *
     * @brief 예외 생성자
-    * @details 
+    * @details 예외를 발생 시 예외 코드, 객체 이름, 클래스 이름을 저장
     * @param eCode 예외 코드
     * @param pNameObject 예외가 발생한 객체 이름
-    * @param pNameClass ??? (기본값: "Exception")
-    * @date 2024-05-19
+    * @param pNameClass 예외 클래스명 (기본값: "Exception")
+    * @date 2024-05-21
     * @version 0.21
     *
     */

@@ -1,0 +1,227 @@
+\begin{theindex}
+
+  \item {$\sim$Camera}
+    \subitem {Camera}, 8
+  \item {$\sim$Camera64}
+    \subitem {Camera64}, 10
+  \item {$\sim$Exception}
+    \subitem {Exception}, 13
+  \item {$\sim$MemoryManager}
+    \subitem {MemoryManager}, 26
+  \item {$\sim$Object}
+    \subitem {Object}, 32
+  \item {$\sim$PageIndex}
+    \subitem {PageIndex}, 36
+  \item {$\sim$Recorder}
+    \subitem {Recorder}, 45
+  \item {$\sim$SlotIndex}
+    \subitem {SlotIndex}, 47
+
+  \indexspace
+
+  \item {allocate}
+    \subitem {IMemoryManager}, 18
+    \subitem {MemoryManager}, 27
+    \subitem {PageIndex}, 37
+
+  \indexspace
+
+  \item {Camera}, 7
+    \subitem {$\sim$Camera}, 8
+    \subitem {Camera}, 8
+    \subitem {run}, 9
+  \item {Camera64}, 9
+    \subitem {$\sim$Camera64}, 10
+    \subitem {Camera64}, 10
+    \subitem {run}, 11
+
+  \indexspace
+
+  \item {dellocate}
+    \subitem {IMemoryManager}, 19
+    \subitem {MemoryManager}, 27
+    \subitem {PageIndex}, 37
+
+  \indexspace
+
+  \item {ECode}
+    \subitem {Exception}, 13
+  \item {Exception}, 11
+    \subitem {$\sim$Exception}, 13
+    \subitem {ECode}, 13
+    \subitem {Exception}, 13
+    \subitem {getECode}, 14
+    \subitem {getECodeAsString}, 14
+    \subitem {getNameClass}, 14
+    \subitem {getNameObject}, 15
+    \subitem {println}, 15
+  \item {ExceptionManager}, 16
+    \subitem {logException}, 16
+    \subitem {printAllExceptions}, 17
+
+  \indexspace
+
+  \item {finalize}
+    \subitem {PageIndex}, 38
+  \item {findAPageIndex}
+    \subitem {IMemoryManager}, 19
+    \subitem {MemoryManager}, 28
+  \item {findASlotIndex}
+    \subitem {IMemoryManager}, 20
+    \subitem {MemoryManager}, 28
+    \subitem {PageIndex}, 38
+
+  \indexspace
+
+  \item {getECode}
+    \subitem {Exception}, 14
+  \item {getECodeAsString}
+    \subitem {Exception}, 14
+  \item {getId}
+    \subitem {IObject}, 22
+    \subitem {Object}, 32
+    \subitem {PageIndex}, 39
+  \item {getNameClass}
+    \subitem {Exception}, 14
+    \subitem {IObject}, 22
+    \subitem {Object}, 32
+  \item {getNameObject}
+    \subitem {Exception}, 15
+    \subitem {IObject}, 22
+    \subitem {ISlotIndex}, 23
+    \subitem {Object}, 33
+    \subitem {SlotIndex}, 48
+  \item {getNumConsecutivePages}
+    \subitem {PageIndex}, 39
+  \item {getPMemory}
+    \subitem {SlotIndex}, 48
+  \item {getSizeSlot}
+    \subitem {Object}, 33
+    \subitem {PageIndex}, 39
+
+  \indexspace
+
+  \item {IMemoryManager}, 17
+    \subitem {allocate}, 18
+    \subitem {dellocate}, 19
+    \subitem {findAPageIndex}, 19
+    \subitem {findASlotIndex}, 20
+    \subitem {showStatus}, 20
+  \item {initialize}
+    \subitem {PageIndex}, 40
+  \item {IObject}, 21
+    \subitem {getId}, 22
+    \subitem {getNameClass}, 22
+    \subitem {getNameObject}, 22
+  \item {isAllocated}
+    \subitem {PageIndex}, 40
+    \subitem {SlotIndex}, 48
+  \item {ISlotIndex}, 23
+    \subitem {getNameObject}, 23
+
+  \indexspace
+
+  \item {logException}
+    \subitem {ExceptionManager}, 16
+
+  \indexspace
+
+  \item {Main}, 24
+  \item {MemoryManager}, 25
+    \subitem {$\sim$MemoryManager}, 26
+    \subitem {allocate}, 27
+    \subitem {dellocate}, 27
+    \subitem {findAPageIndex}, 28
+    \subitem {findASlotIndex}, 28
+    \subitem {MemoryManager}, 26
+    \subitem {operator delete}, 29
+    \subitem {operator new}, 29
+    \subitem {showStatus}, 30
+
+  \indexspace
+
+  \item {Object}, 31
+    \subitem {$\sim$Object}, 32
+    \subitem {getId}, 32
+    \subitem {getNameClass}, 32
+    \subitem {getNameObject}, 33
+    \subitem {getSizeSlot}, 33
+    \subitem {Object}, 32
+    \subitem {operator delete}, 33, 34
+    \subitem {operator new}, 34
+  \item {operator delete}
+    \subitem {MemoryManager}, 29
+    \subitem {Object}, 33, 34
+    \subitem {PageIndex}, 41
+  \item {operator new}
+    \subitem {MemoryManager}, 29
+    \subitem {Object}, 34
+    \subitem {PageIndex}, 41
+
+  \indexspace
+
+  \item {PageIndex}, 35
+    \subitem {$\sim$PageIndex}, 36
+    \subitem {allocate}, 37
+    \subitem {dellocate}, 37
+    \subitem {finalize}, 38
+    \subitem {findASlotIndex}, 38
+    \subitem {getId}, 39
+    \subitem {getNumConsecutivePages}, 39
+    \subitem {getSizeSlot}, 39
+    \subitem {initialize}, 40
+    \subitem {isAllocated}, 40
+    \subitem {operator delete}, 41
+    \subitem {operator new}, 41
+    \subitem {PageIndex}, 36
+    \subitem {setBAllocated}, 42
+    \subitem {setNumConsecutivePages}, 42
+    \subitem {setPPage}, 43
+    \subitem {setSizePage}, 43
+    \subitem {showStatus}, 44
+  \item {printAllExceptions}
+    \subitem {ExceptionManager}, 17
+  \item {println}
+    \subitem {Exception}, 15
+
+  \indexspace
+
+  \item {Recorder}, 44
+    \subitem {$\sim$Recorder}, 45
+    \subitem {Recorder}, 45
+    \subitem {run}, 46
+  \item {run}
+    \subitem {Camera}, 9
+    \subitem {Camera64}, 11
+    \subitem {Recorder}, 46
+
+  \indexspace
+
+  \item {setBAllocated}
+    \subitem {PageIndex}, 42
+    \subitem {SlotIndex}, 49
+  \item {setNameObject}
+    \subitem {SlotIndex}, 49
+  \item {setNumConsecutivePages}
+    \subitem {PageIndex}, 42
+  \item {setPMemory}
+    \subitem {SlotIndex}, 50
+  \item {setPPage}
+    \subitem {PageIndex}, 43
+  \item {setSizePage}
+    \subitem {PageIndex}, 43
+  \item {showStatus}
+    \subitem {IMemoryManager}, 20
+    \subitem {MemoryManager}, 30
+    \subitem {PageIndex}, 44
+  \item {SlotIndex}, 46
+    \subitem {$\sim$SlotIndex}, 47
+    \subitem {getNameObject}, 48
+    \subitem {getPMemory}, 48
+    \subitem {isAllocated}, 48
+    \subitem {setBAllocated}, 49
+    \subitem {setNameObject}, 49
+    \subitem {setPMemory}, 50
+    \subitem {SlotIndex}, 47
+
+\end{theindex}

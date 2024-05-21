@@ -17,10 +17,9 @@ private:
 public:
 	/**
 	* 
-	*
     * @brief Camera 생성자
-    * @datails 부모 생성자에 이름("Camera") 전달
-    * @date 2024-05-19
+    * @datails 부모 클래스 생성자에 이름("Camera") 전달
+    * @date 2024-05-21
     * @version 0.21
     *
 	*/
@@ -28,6 +27,14 @@ public:
 		Object(pName)
 	{
 	}
+
+	/**
+	* 
+ 	* @brief Camera 소멸자
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+	*/
 	virtual ~Camera() {
 	}
 

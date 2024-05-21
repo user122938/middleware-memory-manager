@@ -1,0 +1,235 @@
+\doxysection{Object Class Reference}
+\label{class_object}\index{Object@{Object}}
+
+
+메모리에 할당되는 객체를 만드는 클래스의 부모 클래스  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Inheritance diagram for Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \textbf{ operator new} (size\+\_\+t size, const char $\ast$p\+Name)
+\item 
+void \textbf{ operator delete} (void $\ast$p\+Allocated)
+\item 
+void \textbf{ operator delete} (void $\ast$p\+Object, const char $\ast$p\+Name)
+\item 
+\textbf{ Object} (const char $\ast$p\+Class\+Name="{}Object"{})
+\item 
+virtual \textbf{ $\sim$\+Object} ()
+\item 
+int \textbf{ get\+Id} ()
+\item 
+char $\ast$ \textbf{ get\+Name\+Class} ()
+\item 
+char $\ast$ \textbf{ get\+Name\+Object} ()
+\item 
+size\+\_\+t \textbf{ get\+Size\+Slot} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\label{class_object_a67fc3c25dee6195f81add26347fab242} 
+static int {\bfseries s\+\_\+counter\+Id} = 0
+\item 
+\label{class_object_a2acc9cf06e6de10e917d114c37490bbb} 
+static \textbf{ IMemory\+Manager} $\ast$ {\bfseries s\+\_\+p\+Memory\+Manager} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+메모리에 할당되는 객체를 만드는 클래스의 부모 클래스 
+
+  $\ast$   $\ast$
+
+객체의 생성과 소멸, 객체의 정보를 반환하는 함수를 가지고 있다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_object_a9f8af75e3be4d7e1878831d7d55d3b07} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{Object()}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Class\+Name = {\ttfamily "{}Object"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}  @brief 객체 생성자
+  @details 객체 이름을 받아서 저장하고, 아이디를 부여한다.
+  @param pClassName 객체 이름(기본값: "Object")
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_object_aa3e791419d84c4c346ef9499513b8e00} 
+\index{Object@{Object}!````~Object@{$\sim$Object}}
+\index{````~Object@{$\sim$Object}!Object@{Object}}
+\doxysubsubsection{$\sim$Object()}
+{\footnotesize\ttfamily virtual Object\+::$\sim$\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyVerb}  @brief 객체 소멸자
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_object_a7ef64754f8708602b386ee09b43be992} 
+\index{Object@{Object}!getId@{getId}}
+\index{getId@{getId}!Object@{Object}}
+\doxysubsubsection{getId()}
+{\footnotesize\ttfamily int Object\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyVerb}  @brief 객체 아이디를 반환하는 함수
+  @return 객체 아이디
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IObject} \doxyref{}{p.}{class_i_object_aaeb822da41293c57e36ad40756716fca}.
+
+\label{class_object_a2bd7b6c88fe97f40732dd0e43fc7e6c0} 
+\index{Object@{Object}!getNameClass@{getNameClass}}
+\index{getNameClass@{getNameClass}!Object@{Object}}
+\doxysubsubsection{getNameClass()}
+{\footnotesize\ttfamily char $\ast$ Object\+::get\+Name\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyVerb}  @brief 객체를 생성할 때 사용한 클래스 이름을 반환하는 함수
+  @return 객체를 생성할 때 사용한 클래스 이름
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IObject} \doxyref{}{p.}{class_i_object_a0bdd15252e8e2a7994ea1665bde78710}.
+
+\label{class_object_a5214e1c1e3680cd51d4cef1f6f45f0d0} 
+\index{Object@{Object}!getNameObject@{getNameObject}}
+\index{getNameObject@{getNameObject}!Object@{Object}}
+\doxysubsubsection{getNameObject()}
+{\footnotesize\ttfamily char $\ast$ Object\+::get\+Name\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyVerb}  @brief 객체 이름을 반환하는 함수
+  @return 객체 이름
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IObject} \doxyref{}{p.}{class_i_object_a2d69d6428559d817aa4b12675449ab9b}.
+
+\label{class_object_a10c296f6403028572f269661f91a6812} 
+\index{Object@{Object}!getSizeSlot@{getSizeSlot}}
+\index{getSizeSlot@{getSizeSlot}!Object@{Object}}
+\doxysubsubsection{getSizeSlot()}
+{\footnotesize\ttfamily size\+\_\+t Object\+::get\+Size\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}  @brief 객체가 할당된 Slot의 크기를 반환하는 함수
+  @return 객체가   할당된 Slot의 크기
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_object_a9da1bbe08cc672ebfaa36862c2139c4b} 
+\index{Object@{Object}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Object@{Object}}
+\doxysubsubsection{operator delete()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Object\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Allocated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}  @brief 객체 삭제시 할당 해제하는 함수
+  @details 객체 주소를 메모리매니저에게 주면서 할당 해제한다.
+  @param pAllocated 할당 해제할 객체의 주소
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_object_a7a9f018b8a5283a47cbed2cf0c396c65} 
+\index{Object@{Object}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!Object@{Object}}
+\doxysubsubsection{operator delete()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Object\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}  @brief 객체 삭제시 할당 해제하는 함수
+  @details 객체 주소를 메모리매니저에게 주면서 할당 해제한다.
+  @param pAllocated 할당 해제할 객체의 주소
+  @param pName 할당 해제할 객체의 이름
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_object_a7156766206269694ebba6b9d6a14b346} 
+\index{Object@{Object}!operator new@{operator new}}
+\index{operator new@{operator new}!Object@{Object}}
+\doxysubsubsection{operator new()}
+{\footnotesize\ttfamily void $\ast$ Object\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyVerb}@brief 객체 생성시 메모리에 할당하는 함수
+@details 객체를 생성할 때 메모리매니저에게 이름과 크기를 주면서 할당한다.
+@param size 할당할 객체의 크기
+@param pName 할당할 객체의 이름
+@return 할당된 메모리의 포인터
+\end{DoxyVerb}
+   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Object.\+h\item 
+Object.\+cpp\end{DoxyCompactItemize}

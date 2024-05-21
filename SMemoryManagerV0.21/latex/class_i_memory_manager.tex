@@ -1,0 +1,189 @@
+\doxysection{IMemory\+Manager Class Reference}
+\label{class_i_memory_manager}\index{IMemoryManager@{IMemoryManager}}
+
+
+메모리 매니저 인터페이스  
+
+
+
+
+{\ttfamily \#include $<$IMemory\+Manager.\+h$>$}
+
+Inheritance diagram for IMemory\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_memory_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void $\ast$ \textbf{ allocate} (size\+\_\+t size\+Slot, const char $\ast$p\+Name)=0
+\begin{DoxyCompactList}\small\item\em 메모리 할당 \end{DoxyCompactList}\item 
+virtual void \textbf{ dellocate} (void $\ast$p\+Object)=0
+\begin{DoxyCompactList}\small\item\em 메모리 해제 \end{DoxyCompactList}\item 
+virtual \textbf{ ISlot\+Index} $\ast$ \textbf{ find\+ASlot\+Index} (void $\ast$p\+Object)=0
+\begin{DoxyCompactList}\small\item\em \doxyref{Slot\+Index}{p.}{class_slot_index} 검색 \end{DoxyCompactList}\item 
+virtual \textbf{ Page\+Index} \textbf{ find\+APage\+Index} (void $\ast$p\+Object)=0
+\begin{DoxyCompactList}\small\item\em \doxyref{Page\+Index}{p.}{class_page_index} 검색 \end{DoxyCompactList}\item 
+virtual void \textbf{ show\+Status} ()=0
+\begin{DoxyCompactList}\small\item\em 메모리 할당 상태 출력 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+메모리 매니저 인터페이스 
+
+  $\ast$   $\ast$
+
+메모리 할당/해제, slot 및 page\+Index 검색, 상태 출력을 위한 인터페이스   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/02   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_i_memory_manager_a6d76bcd35045bc0d449d53215d47c531} 
+\index{IMemoryManager@{IMemoryManager}!allocate@{allocate}}
+\index{allocate@{allocate}!IMemoryManager@{IMemoryManager}}
+\doxysubsubsection{allocate()}
+{\footnotesize\ttfamily virtual void $\ast$ IMemory\+Manager\+::allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+Slot,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+메모리 할당 
+
+  $\ast$   $\ast$
+
+슬롯크기, 이름을 받아 메모리 할당 
+\begin{DoxyParams}{Parameters}
+{\em size\+Slot} & 슬롯 크기 \\
+\hline
+{\em p\+Name} & 할당할 객체 이름   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implemented in \textbf{ Memory\+Manager} \doxyref{}{p.}{class_memory_manager_a99f700f2015fc5299e2a3806820e6345}.
+
+\label{class_i_memory_manager_ade19fd55d5a5ca8ae25317cdfb2728e8} 
+\index{IMemoryManager@{IMemoryManager}!dellocate@{dellocate}}
+\index{dellocate@{dellocate}!IMemoryManager@{IMemoryManager}}
+\doxysubsubsection{dellocate()}
+{\footnotesize\ttfamily virtual void IMemory\+Manager\+::dellocate (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+메모리 해제 
+
+  $\ast$   $\ast$
+
+할당 해제할 객체의 포인터를 받아 메모리 해제 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 할당 해제할 객체의 포인터   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implemented in \textbf{ Memory\+Manager} \doxyref{}{p.}{class_memory_manager_a59388a9ad9badcaace174104572ef675}.
+
+\label{class_i_memory_manager_af1d89b30eb9ac9e0eff0b7e619e071cb} 
+\index{IMemoryManager@{IMemoryManager}!findAPageIndex@{findAPageIndex}}
+\index{findAPageIndex@{findAPageIndex}!IMemoryManager@{IMemoryManager}}
+\doxysubsubsection{findAPageIndex()}
+{\footnotesize\ttfamily virtual \textbf{ Page\+Index} IMemory\+Manager\+::find\+APage\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxyref{Page\+Index}{p.}{class_page_index} 검색 
+
+  $\ast$   $\ast$
+
+검색할 객체의 포인터를 받아 \doxyref{Page\+Index}{p.}{class_page_index} 검색 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 검색할 객체의 포인터   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implemented in \textbf{ Memory\+Manager} \doxyref{}{p.}{class_memory_manager_aa3b66743ea2444656f904bbafdae9734}.
+
+\label{class_i_memory_manager_aae5dcf56c836253642eb54f83802c5b1} 
+\index{IMemoryManager@{IMemoryManager}!findASlotIndex@{findASlotIndex}}
+\index{findASlotIndex@{findASlotIndex}!IMemoryManager@{IMemoryManager}}
+\doxysubsubsection{findASlotIndex()}
+{\footnotesize\ttfamily virtual \textbf{ ISlot\+Index} $\ast$ IMemory\+Manager\+::find\+ASlot\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxyref{Slot\+Index}{p.}{class_slot_index} 검색 
+
+  $\ast$   $\ast$
+
+검색할 객체의 주소를 받아 \doxyref{Slot\+Index}{p.}{class_slot_index} 검색 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 검색할 객체의 주소   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implemented in \textbf{ Memory\+Manager} \doxyref{}{p.}{class_memory_manager_abfc9d2252bbc9ee85b2e4a6a82b7e46c}.
+
+\label{class_i_memory_manager_a9d01c4204362a7ed4bc64280aa2f9548} 
+\index{IMemoryManager@{IMemoryManager}!showStatus@{showStatus}}
+\index{showStatus@{showStatus}!IMemoryManager@{IMemoryManager}}
+\doxysubsubsection{showStatus()}
+{\footnotesize\ttfamily virtual void IMemory\+Manager\+::show\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+메모리 할당 상태 출력 
+
+  $\ast$   $\ast$
+
+현재 메모리 할당 상태를 콘솔에 출력   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implemented in \textbf{ Memory\+Manager} \doxyref{}{p.}{class_memory_manager_a6e3325ab55cda124e3e7f4d62e7ae286}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+IMemory\+Manager.\+h\end{DoxyCompactItemize}

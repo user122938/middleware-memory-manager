@@ -17,7 +17,6 @@ class MemoryManager : public IMemoryManager {
 private:
 	char* pBuffer;
 	size_t sizeBuffer;
-	char* pBuffer;
 
 	int numPages;
 	size_t sizePage;
@@ -67,12 +66,31 @@ private:
 	}
 
 public:
+	/**
+ 	*
+ 	* @brief malloc함수를 통해 MemoryManager 생성
+	* @param size MemoryManager 크기
+	* @return MemoryManager 메모리 주소
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+ 	*/
 	void* operator new(size_t size) {
 		return malloc(size);
 	}
+
+	/**
+ 	*
+ 	* @brief free함수를 통해 MemoryManager 할당 해제
+	* @param pObject MemoryManager 메모리 주소
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+ 	*/
 	void operator delete(void* pObject) {
 		free(pObject);
 	}
+
 	/**
  	*
  	* @brief 메모리 관리 객체 생성자
@@ -114,7 +132,7 @@ public:
 	/**
  	*
  	* @brief 메모리에 객체를 할당하는 함수
- 	* @details 객체 크기를 16배수의 slot으로 일반화하고 할당할 PageIndex를 찾아 할당한다.
+ 	* @details 객체 크기를 16배수의 slot으로 일반화하고 할당할 PageIndex를 뒤에서부터 찾아 할당한다.
 	* @param sizeMemory 할당할 객체 크기
 	* @param pName 할당할 객체 이름
 	* @return 할당된 객체의 메모리 주소

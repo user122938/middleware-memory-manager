@@ -1,0 +1,144 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{}%
+\contentsline {section}{\numberline {3.1}File List}{5}{}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{}%
+\contentsline {section}{\numberline {4.1}Camera Class Reference}{7}{}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{}%
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Camera()}{8}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}$\sim $Camera()}{8}{}%
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{9}{}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}run()}{9}{}%
+\contentsline {section}{\numberline {4.2}Camera64 Class Reference}{9}{}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{10}{}%
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{10}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Camera64()}{10}{}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}$\sim $Camera64()}{11}{}%
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{11}{}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}run()}{11}{}%
+\contentsline {section}{\numberline {4.3}Exception Class Reference}{11}{}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{12}{}%
+\contentsline {subsection}{\numberline {4.3.2}Member Enumeration Documentation}{13}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}ECode}{13}{}%
+\contentsline {subsection}{\numberline {4.3.3}Constructor \& Destructor Documentation}{13}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}Exception()}{13}{}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}$\sim $Exception()}{14}{}%
+\contentsline {subsection}{\numberline {4.3.4}Member Function Documentation}{14}{}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}getECode()}{14}{}%
+\contentsline {subsubsection}{\numberline {4.3.4.2}getECodeAsString()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.3.4.3}getNameClass()}{15}{}%
+\contentsline {subsubsection}{\numberline {4.3.4.4}getNameObject()}{16}{}%
+\contentsline {subsubsection}{\numberline {4.3.4.5}println()}{16}{}%
+\contentsline {section}{\numberline {4.4}Exception\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{16}{}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{17}{}%
+\contentsline {subsection}{\numberline {4.4.2}Member Function Documentation}{17}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}logException()}{17}{}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}printAllExceptions()}{18}{}%
+\contentsline {section}{\numberline {4.5}IMemory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{18}{}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{19}{}%
+\contentsline {subsection}{\numberline {4.5.2}Member Function Documentation}{19}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}allocate()}{19}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}dellocate()}{20}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}findAPageIndex()}{20}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}findASlotIndex()}{21}{}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}showStatus()}{21}{}%
+\contentsline {section}{\numberline {4.6}IObject Class Reference}{22}{}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{22}{}%
+\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{23}{}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}getId()}{23}{}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}getNameClass()}{23}{}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}getNameObject()}{23}{}%
+\contentsline {section}{\numberline {4.7}ISlot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index Class Reference}{24}{}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{24}{}%
+\contentsline {subsection}{\numberline {4.7.2}Member Function Documentation}{24}{}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}getNameObject()}{24}{}%
+\contentsline {section}{\numberline {4.8}Main Class Reference}{25}{}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{26}{}%
+\contentsline {section}{\numberline {4.9}Memory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{26}{}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{27}{}%
+\contentsline {subsection}{\numberline {4.9.2}Constructor \& Destructor Documentation}{27}{}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}MemoryManager()}{27}{}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}$\sim $MemoryManager()}{28}{}%
+\contentsline {subsection}{\numberline {4.9.3}Member Function Documentation}{28}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.1}allocate()}{28}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.2}dellocate()}{29}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.3}findAPageIndex()}{29}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.4}findASlotIndex()}{30}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.5}operator delete()}{30}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.6}operator new()}{31}{}%
+\contentsline {subsubsection}{\numberline {4.9.3.7}showStatus()}{31}{}%
+\contentsline {section}{\numberline {4.10}Object Class Reference}{32}{}%
+\contentsline {subsection}{\numberline {4.10.1}Detailed Description}{32}{}%
+\contentsline {subsection}{\numberline {4.10.2}Constructor \& Destructor Documentation}{33}{}%
+\contentsline {subsubsection}{\numberline {4.10.2.1}Object()}{33}{}%
+\contentsline {subsubsection}{\numberline {4.10.2.2}$\sim $Object()}{33}{}%
+\contentsline {subsection}{\numberline {4.10.3}Member Function Documentation}{33}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.1}getId()}{33}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.2}getNameClass()}{34}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.3}getNameObject()}{34}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.4}getSizeSlot()}{34}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.5}operator delete()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{35}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.6}operator delete()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{35}{}%
+\contentsline {subsubsection}{\numberline {4.10.3.7}operator new()}{36}{}%
+\contentsline {section}{\numberline {4.11}Page\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index Class Reference}{36}{}%
+\contentsline {subsection}{\numberline {4.11.1}Detailed Description}{37}{}%
+\contentsline {subsection}{\numberline {4.11.2}Constructor \& Destructor Documentation}{37}{}%
+\contentsline {subsubsection}{\numberline {4.11.2.1}PageIndex()}{37}{}%
+\contentsline {subsubsection}{\numberline {4.11.2.2}$\sim $PageIndex()}{38}{}%
+\contentsline {subsection}{\numberline {4.11.3}Member Function Documentation}{38}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.1}allocate()}{38}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.2}dellocate()}{39}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.3}finalize()}{39}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.4}findASlotIndex()}{39}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.5}getId()}{40}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.6}getNumConsecutivePages()}{40}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.7}getSizeSlot()}{41}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.8}initialize()}{41}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.9}isAllocated()}{41}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.10}operator delete()}{42}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.11}operator new()}{42}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.12}setBAllocated()}{43}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.13}setNumConsecutivePages()}{43}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.14}setPPage()}{44}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.15}setSizePage()}{44}{}%
+\contentsline {subsubsection}{\numberline {4.11.3.16}showStatus()}{45}{}%
+\contentsline {section}{\numberline {4.12}Recorder Class Reference}{45}{}%
+\contentsline {subsection}{\numberline {4.12.1}Detailed Description}{46}{}%
+\contentsline {subsection}{\numberline {4.12.2}Constructor \& Destructor Documentation}{47}{}%
+\contentsline {subsubsection}{\numberline {4.12.2.1}Recorder()}{47}{}%
+\contentsline {subsubsection}{\numberline {4.12.2.2}$\sim $Recorder()}{47}{}%
+\contentsline {subsection}{\numberline {4.12.3}Member Function Documentation}{47}{}%
+\contentsline {subsubsection}{\numberline {4.12.3.1}run()}{47}{}%
+\contentsline {section}{\numberline {4.13}Slot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index Class Reference}{48}{}%
+\contentsline {subsection}{\numberline {4.13.1}Detailed Description}{48}{}%
+\contentsline {subsection}{\numberline {4.13.2}Constructor \& Destructor Documentation}{49}{}%
+\contentsline {subsubsection}{\numberline {4.13.2.1}SlotIndex()}{49}{}%
+\contentsline {subsubsection}{\numberline {4.13.2.2}$\sim $SlotIndex()}{49}{}%
+\contentsline {subsection}{\numberline {4.13.3}Member Function Documentation}{49}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.1}getNameObject()}{49}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.2}getPMemory()}{50}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.3}isAllocated()}{50}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.4}setBAllocated()}{50}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.5}setNameObject()}{51}{}%
+\contentsline {subsubsection}{\numberline {4.13.3.6}setPMemory()}{51}{}%
+\contentsline {chapter}{\numberline {5}File Documentation}{53}{}%
+\contentsline {section}{\numberline {5.1}Camera.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{}%
+\contentsline {section}{\numberline {5.2}Camera64.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{}%
+\contentsline {section}{\numberline {5.3}Exception.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{}%
+\contentsline {section}{\numberline {5.4}Exception\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{}%
+\contentsline {section}{\numberline {5.5}IMemory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{}%
+\contentsline {section}{\numberline {5.6}IObject.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{}%
+\contentsline {section}{\numberline {5.7}ISlot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{}%
+\contentsline {section}{\numberline {5.8}Main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{}%
+\contentsline {section}{\numberline {5.9}Memory\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{}%
+\contentsline {section}{\numberline {5.10}Object.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{}%
+\contentsline {section}{\numberline {5.11}Page\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{59}{}%
+\contentsline {section}{\numberline {5.12}Recorder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{60}{}%
+\contentsline {section}{\numberline {5.13}Slot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Index.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{61}{}%
+\contentsline {section}{\numberline {5.14}string.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{61}{}%
+\contentsline {section}{\numberline {5.15}Type.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{61}{}%
+\contentsline {chapter}{Index}{63}{}%

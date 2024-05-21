@@ -1,0 +1,48 @@
+\doxysection{Exception.\+h}
+\label{_exception_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }Exception\ :\ \textcolor{keyword}{public}\ Object\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{enum\ class}\ ECode\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ eOutOfMemory,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ eLengthECode}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ ECode\ eCode;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{char}*\ pNameObject;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}*\ pNameClass;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ Exception(ECode\ eCode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pNameObject,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pNameClass\ =\ \textcolor{stringliteral}{"{}Exception"{}})}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ :\ eCode(eCode),\ pNameObject(\_strdup(pNameObject)),\ pNameClass(\_strdup(pNameClass))\ \{\}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Exception()\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ pNameObject;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ pNameClass;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00071\ \ \ \ \ ECode\ getECode()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ eCode;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ getNameObject()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pNameObject;\ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ getNameClass()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ pNameClass;\ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ getECodeAsString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (eCode)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ECode::eOutOfMemory:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Out\ Of\ Memory"{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Unknown\ Error"{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ println()\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Exception.h\ :\ \%s(\%s,\ \%s)\(\backslash\)n"{}},\ getECodeAsString(),\ pNameObject,\ pNameClass);}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \};}
+
+\end{DoxyCode}

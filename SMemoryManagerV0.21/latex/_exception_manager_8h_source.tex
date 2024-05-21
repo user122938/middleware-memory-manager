@@ -1,0 +1,30 @@
+\doxysection{Exception\+Manager.\+h}
+\label{_exception_manager_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Exception.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }ExceptionManager\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ exceptionLogs;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ logException(\textcolor{keyword}{const}\ Exception\&\ ex)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::string\ log\ =\ \textcolor{stringliteral}{"{}ExceptionManager-\/Exception:\ "{}}\ +\ std::string(ex.getECodeAsString())\ +}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}("{}}\ +\ std::string(ex.getNameObject())\ +\ \textcolor{stringliteral}{"{},\ "{}}\ +\ std::string(ex.getNameClass())\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ exceptionLogs.push\_back(log);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::cout\ <<\ log\ <<\ std::endl;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ printAllExceptions()\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}ExceptionManager-\/Logged\ Exceptions:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ log\ :\ exceptionLogs)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ log\ <<\ std::endl;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+
+\end{DoxyCode}

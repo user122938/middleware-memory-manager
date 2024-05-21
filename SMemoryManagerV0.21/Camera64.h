@@ -22,8 +22,8 @@ public:
 	/**
    	*
    	* @brief Camera64 생성자
-	* @details 부모 생성자에 이름("Camera64") 전달, id 값 입력
-   	* @date 2024-05-19
+	* @details 부모 클래스 생성자에 이름("Camera64") 전달, id 값 입력
+   	* @date 2024-05-21
    	* @version 0.21
    	*
    	*/
@@ -35,6 +35,14 @@ public:
 		id4(4)
 	{
 	}
+
+	/**
+	* 
+ 	* @brief Camera64 소멸자
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+	*/
 	virtual ~Camera64() {
 	}
 

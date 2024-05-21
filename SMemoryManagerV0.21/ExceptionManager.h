@@ -21,7 +21,7 @@ public:
     *
     * @brief 예외를 배열에 저장 및 출력
     * @details 예외 객체의 정보를 문자열로 만들어 배열에 저장 및 콘솔에 출력
-    * @param ex 예외 객체
+    * @param ex 예외 객체 주소
     * @date 2024-05-19
     * @version 0.21
     *

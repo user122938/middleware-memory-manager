@@ -1,0 +1,58 @@
+\doxysection{Object.\+h}
+\label{_object_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Type.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IObject.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}IMemoryManager.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ISlotIndex.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }Object:\ \textcolor{keyword}{public}\ IObject}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{char}*\ pNameClass;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ s\_counterId;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ IMemoryManager*\ s\_pMemoryManager;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}*\ \textcolor{keyword}{operator}\ \textcolor{keyword}{new}\ (\textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pName)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}*\ pAllocated\ =\ s\_pMemoryManager-\/>allocate(size,\ pName);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pAllocated;}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}*\ pAllocated)\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ s\_pMemoryManager-\/>dellocate(pAllocated);}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \textcolor{keyword}{operator}\ \textcolor{keyword}{delete}(\textcolor{keywordtype}{void}*\ pObject,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pName)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ s\_pMemoryManager-\/>dellocate(pObject);}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \ \ \ \ Object(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pClassName\ =\ \textcolor{stringliteral}{"{}Object"{}})\ :}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ id(s\_counterId++)}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ this-\/>pNameClass\ =\ strcpy(pClassName);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Object()\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ getId()\ \{\ \textcolor{keywordflow}{return}\ this-\/>id;\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{char}*\ getNameClass()\ \{\ \textcolor{keywordflow}{return}\ this-\/>pNameClass;\ \}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{char}*\ getNameObject()\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ ISlotIndex*\ pSlotIndex\ =\ s\_pMemoryManager-\/>findASlotIndex(\textcolor{keyword}{this});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pSlotIndex-\/>getNameObject();}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ getSizeSlot()\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ PageIndex\ pSlotIndex\ =\ s\_pMemoryManager-\/>findAPageIndex(\textcolor{keyword}{this});}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pSlotIndex.getSizeSlot();}
+\DoxyCodeLine{00129\ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \};}
+
+\end{DoxyCode}

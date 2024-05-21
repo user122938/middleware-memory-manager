@@ -1,0 +1,157 @@
+\indexentry{Camera@{Camera}}{7}
+\indexentry{Camera@{Camera}!Camera@{Camera}}{8}
+\indexentry{Camera@{Camera}!Camera@{Camera}}{8}
+\indexentry{Camera@{Camera}!````~Camera@{$\sim$Camera}}{8}
+\indexentry{````~Camera@{$\sim$Camera}!Camera@{Camera}}{8}
+\indexentry{Camera@{Camera}!run@{run}}{9}
+\indexentry{run@{run}!Camera@{Camera}}{9}
+\indexentry{Camera64@{Camera64}}{9}
+\indexentry{Camera64@{Camera64}!Camera64@{Camera64}}{10}
+\indexentry{Camera64@{Camera64}!Camera64@{Camera64}}{10}
+\indexentry{Camera64@{Camera64}!````~Camera64@{$\sim$Camera64}}{10}
+\indexentry{````~Camera64@{$\sim$Camera64}!Camera64@{Camera64}}{10}
+\indexentry{Camera64@{Camera64}!run@{run}}{11}
+\indexentry{run@{run}!Camera64@{Camera64}}{11}
+\indexentry{Exception@{Exception}}{11}
+\indexentry{Exception@{Exception}!ECode@{ECode}}{13}
+\indexentry{ECode@{ECode}!Exception@{Exception}}{13}
+\indexentry{Exception@{Exception}!Exception@{Exception}}{13}
+\indexentry{Exception@{Exception}!Exception@{Exception}}{13}
+\indexentry{Exception@{Exception}!````~Exception@{$\sim$Exception}}{13}
+\indexentry{````~Exception@{$\sim$Exception}!Exception@{Exception}}{13}
+\indexentry{Exception@{Exception}!getECode@{getECode}}{14}
+\indexentry{getECode@{getECode}!Exception@{Exception}}{14}
+\indexentry{Exception@{Exception}!getECodeAsString@{getECodeAsString}}{14}
+\indexentry{getECodeAsString@{getECodeAsString}!Exception@{Exception}}{14}
+\indexentry{Exception@{Exception}!getNameClass@{getNameClass}}{15}
+\indexentry{getNameClass@{getNameClass}!Exception@{Exception}}{15}
+\indexentry{Exception@{Exception}!getNameObject@{getNameObject}}{15}
+\indexentry{getNameObject@{getNameObject}!Exception@{Exception}}{15}
+\indexentry{Exception@{Exception}!println@{println}}{16}
+\indexentry{println@{println}!Exception@{Exception}}{16}
+\indexentry{ExceptionManager@{ExceptionManager}}{16}
+\indexentry{ExceptionManager@{ExceptionManager}!logException@{logException}}{17}
+\indexentry{logException@{logException}!ExceptionManager@{ExceptionManager}}{17}
+\indexentry{ExceptionManager@{ExceptionManager}!printAllExceptions@{printAllExceptions}}{17}
+\indexentry{printAllExceptions@{printAllExceptions}!ExceptionManager@{ExceptionManager}}{17}
+\indexentry{IMemoryManager@{IMemoryManager}}{18}
+\indexentry{IMemoryManager@{IMemoryManager}!allocate@{allocate}}{19}
+\indexentry{allocate@{allocate}!IMemoryManager@{IMemoryManager}}{19}
+\indexentry{IMemoryManager@{IMemoryManager}!dellocate@{dellocate}}{19}
+\indexentry{dellocate@{dellocate}!IMemoryManager@{IMemoryManager}}{19}
+\indexentry{IMemoryManager@{IMemoryManager}!findAPageIndex@{findAPageIndex}}{20}
+\indexentry{findAPageIndex@{findAPageIndex}!IMemoryManager@{IMemoryManager}}{20}
+\indexentry{IMemoryManager@{IMemoryManager}!findASlotIndex@{findASlotIndex}}{20}
+\indexentry{findASlotIndex@{findASlotIndex}!IMemoryManager@{IMemoryManager}}{20}
+\indexentry{IMemoryManager@{IMemoryManager}!showStatus@{showStatus}}{21}
+\indexentry{showStatus@{showStatus}!IMemoryManager@{IMemoryManager}}{21}
+\indexentry{IObject@{IObject}}{22}
+\indexentry{IObject@{IObject}!getId@{getId}}{23}
+\indexentry{getId@{getId}!IObject@{IObject}}{23}
+\indexentry{IObject@{IObject}!getNameClass@{getNameClass}}{23}
+\indexentry{getNameClass@{getNameClass}!IObject@{IObject}}{23}
+\indexentry{IObject@{IObject}!getNameObject@{getNameObject}}{23}
+\indexentry{getNameObject@{getNameObject}!IObject@{IObject}}{23}
+\indexentry{ISlotIndex@{ISlotIndex}}{24}
+\indexentry{ISlotIndex@{ISlotIndex}!getNameObject@{getNameObject}}{24}
+\indexentry{getNameObject@{getNameObject}!ISlotIndex@{ISlotIndex}}{24}
+\indexentry{Main@{Main}}{25}
+\indexentry{MemoryManager@{MemoryManager}}{26}
+\indexentry{MemoryManager@{MemoryManager}!MemoryManager@{MemoryManager}}{27}
+\indexentry{MemoryManager@{MemoryManager}!MemoryManager@{MemoryManager}}{27}
+\indexentry{MemoryManager@{MemoryManager}!````~MemoryManager@{$\sim$MemoryManager}}{27}
+\indexentry{````~MemoryManager@{$\sim$MemoryManager}!MemoryManager@{MemoryManager}}{27}
+\indexentry{MemoryManager@{MemoryManager}!allocate@{allocate}}{28}
+\indexentry{allocate@{allocate}!MemoryManager@{MemoryManager}}{28}
+\indexentry{MemoryManager@{MemoryManager}!dellocate@{dellocate}}{28}
+\indexentry{dellocate@{dellocate}!MemoryManager@{MemoryManager}}{28}
+\indexentry{MemoryManager@{MemoryManager}!findAPageIndex@{findAPageIndex}}{29}
+\indexentry{findAPageIndex@{findAPageIndex}!MemoryManager@{MemoryManager}}{29}
+\indexentry{MemoryManager@{MemoryManager}!findASlotIndex@{findASlotIndex}}{30}
+\indexentry{findASlotIndex@{findASlotIndex}!MemoryManager@{MemoryManager}}{30}
+\indexentry{MemoryManager@{MemoryManager}!operator delete@{operator delete}}{30}
+\indexentry{operator delete@{operator delete}!MemoryManager@{MemoryManager}}{30}
+\indexentry{MemoryManager@{MemoryManager}!operator new@{operator new}}{31}
+\indexentry{operator new@{operator new}!MemoryManager@{MemoryManager}}{31}
+\indexentry{MemoryManager@{MemoryManager}!showStatus@{showStatus}}{31}
+\indexentry{showStatus@{showStatus}!MemoryManager@{MemoryManager}}{31}
+\indexentry{Object@{Object}}{32}
+\indexentry{Object@{Object}!Object@{Object}}{33}
+\indexentry{Object@{Object}!Object@{Object}}{33}
+\indexentry{Object@{Object}!````~Object@{$\sim$Object}}{33}
+\indexentry{````~Object@{$\sim$Object}!Object@{Object}}{33}
+\indexentry{Object@{Object}!getId@{getId}}{33}
+\indexentry{getId@{getId}!Object@{Object}}{33}
+\indexentry{Object@{Object}!getNameClass@{getNameClass}}{33}
+\indexentry{getNameClass@{getNameClass}!Object@{Object}}{33}
+\indexentry{Object@{Object}!getNameObject@{getNameObject}}{34}
+\indexentry{getNameObject@{getNameObject}!Object@{Object}}{34}
+\indexentry{Object@{Object}!getSizeSlot@{getSizeSlot}}{34}
+\indexentry{getSizeSlot@{getSizeSlot}!Object@{Object}}{34}
+\indexentry{Object@{Object}!operator delete@{operator delete}}{34}
+\indexentry{operator delete@{operator delete}!Object@{Object}}{34}
+\indexentry{Object@{Object}!operator delete@{operator delete}}{35}
+\indexentry{operator delete@{operator delete}!Object@{Object}}{35}
+\indexentry{Object@{Object}!operator new@{operator new}}{35}
+\indexentry{operator new@{operator new}!Object@{Object}}{35}
+\indexentry{PageIndex@{PageIndex}}{36}
+\indexentry{PageIndex@{PageIndex}!PageIndex@{PageIndex}}{37}
+\indexentry{PageIndex@{PageIndex}!PageIndex@{PageIndex}}{37}
+\indexentry{PageIndex@{PageIndex}!````~PageIndex@{$\sim$PageIndex}}{37}
+\indexentry{````~PageIndex@{$\sim$PageIndex}!PageIndex@{PageIndex}}{37}
+\indexentry{PageIndex@{PageIndex}!allocate@{allocate}}{38}
+\indexentry{allocate@{allocate}!PageIndex@{PageIndex}}{38}
+\indexentry{PageIndex@{PageIndex}!dellocate@{dellocate}}{38}
+\indexentry{dellocate@{dellocate}!PageIndex@{PageIndex}}{38}
+\indexentry{PageIndex@{PageIndex}!finalize@{finalize}}{39}
+\indexentry{finalize@{finalize}!PageIndex@{PageIndex}}{39}
+\indexentry{PageIndex@{PageIndex}!findASlotIndex@{findASlotIndex}}{39}
+\indexentry{findASlotIndex@{findASlotIndex}!PageIndex@{PageIndex}}{39}
+\indexentry{PageIndex@{PageIndex}!getId@{getId}}{40}
+\indexentry{getId@{getId}!PageIndex@{PageIndex}}{40}
+\indexentry{PageIndex@{PageIndex}!getNumConsecutivePages@{getNumConsecutivePages}}{40}
+\indexentry{getNumConsecutivePages@{getNumConsecutivePages}!PageIndex@{PageIndex}}{40}
+\indexentry{PageIndex@{PageIndex}!getSizeSlot@{getSizeSlot}}{40}
+\indexentry{getSizeSlot@{getSizeSlot}!PageIndex@{PageIndex}}{40}
+\indexentry{PageIndex@{PageIndex}!initialize@{initialize}}{41}
+\indexentry{initialize@{initialize}!PageIndex@{PageIndex}}{41}
+\indexentry{PageIndex@{PageIndex}!isAllocated@{isAllocated}}{41}
+\indexentry{isAllocated@{isAllocated}!PageIndex@{PageIndex}}{41}
+\indexentry{PageIndex@{PageIndex}!operator delete@{operator delete}}{42}
+\indexentry{operator delete@{operator delete}!PageIndex@{PageIndex}}{42}
+\indexentry{PageIndex@{PageIndex}!operator new@{operator new}}{42}
+\indexentry{operator new@{operator new}!PageIndex@{PageIndex}}{42}
+\indexentry{PageIndex@{PageIndex}!setBAllocated@{setBAllocated}}{43}
+\indexentry{setBAllocated@{setBAllocated}!PageIndex@{PageIndex}}{43}
+\indexentry{PageIndex@{PageIndex}!setNumConsecutivePages@{setNumConsecutivePages}}{43}
+\indexentry{setNumConsecutivePages@{setNumConsecutivePages}!PageIndex@{PageIndex}}{43}
+\indexentry{PageIndex@{PageIndex}!setPPage@{setPPage}}{44}
+\indexentry{setPPage@{setPPage}!PageIndex@{PageIndex}}{44}
+\indexentry{PageIndex@{PageIndex}!setSizePage@{setSizePage}}{44}
+\indexentry{setSizePage@{setSizePage}!PageIndex@{PageIndex}}{44}
+\indexentry{PageIndex@{PageIndex}!showStatus@{showStatus}}{45}
+\indexentry{showStatus@{showStatus}!PageIndex@{PageIndex}}{45}
+\indexentry{Recorder@{Recorder}}{45}
+\indexentry{Recorder@{Recorder}!Recorder@{Recorder}}{47}
+\indexentry{Recorder@{Recorder}!Recorder@{Recorder}}{47}
+\indexentry{Recorder@{Recorder}!````~Recorder@{$\sim$Recorder}}{47}
+\indexentry{````~Recorder@{$\sim$Recorder}!Recorder@{Recorder}}{47}
+\indexentry{Recorder@{Recorder}!run@{run}}{47}
+\indexentry{run@{run}!Recorder@{Recorder}}{47}
+\indexentry{SlotIndex@{SlotIndex}}{48}
+\indexentry{SlotIndex@{SlotIndex}!SlotIndex@{SlotIndex}}{49}
+\indexentry{SlotIndex@{SlotIndex}!SlotIndex@{SlotIndex}}{49}
+\indexentry{SlotIndex@{SlotIndex}!````~SlotIndex@{$\sim$SlotIndex}}{49}
+\indexentry{````~SlotIndex@{$\sim$SlotIndex}!SlotIndex@{SlotIndex}}{49}
+\indexentry{SlotIndex@{SlotIndex}!getNameObject@{getNameObject}}{49}
+\indexentry{getNameObject@{getNameObject}!SlotIndex@{SlotIndex}}{49}
+\indexentry{SlotIndex@{SlotIndex}!getPMemory@{getPMemory}}{49}
+\indexentry{getPMemory@{getPMemory}!SlotIndex@{SlotIndex}}{49}
+\indexentry{SlotIndex@{SlotIndex}!isAllocated@{isAllocated}}{50}
+\indexentry{isAllocated@{isAllocated}!SlotIndex@{SlotIndex}}{50}
+\indexentry{SlotIndex@{SlotIndex}!setBAllocated@{setBAllocated}}{50}
+\indexentry{setBAllocated@{setBAllocated}!SlotIndex@{SlotIndex}}{50}
+\indexentry{SlotIndex@{SlotIndex}!setNameObject@{setNameObject}}{51}
+\indexentry{setNameObject@{setNameObject}!SlotIndex@{SlotIndex}}{51}
+\indexentry{SlotIndex@{SlotIndex}!setPMemory@{setPMemory}}{51}
+\indexentry{setPMemory@{setPMemory}!SlotIndex@{SlotIndex}}{51}

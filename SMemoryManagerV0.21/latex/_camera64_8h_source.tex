@@ -1,0 +1,42 @@
+\doxysection{Camera64.\+h}
+\label{_camera64_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Object.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NUM\_CAMERAS\ 5}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }Camera64\ :\ \textcolor{keyword}{public}\ Object\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ data[NUM\_CAMERAS]\ =\ \{\};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ id1;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ id2;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ id3;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ id4;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ Camera64(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ pName\ =\ \textcolor{stringliteral}{"{}Camera64"{}})\ :}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ Object(pName),}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ id1(1),}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ id2(2),}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ id3(3),}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ id4(4)}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Camera64()\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ run()\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NUM\_CAMERAS;\ i++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>data[i]\ =\ i;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ NUM\_CAMERAS;\ i++)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ =\ sum\ +\ this-\/>data[i];}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%s::\%s(\%d)::run()=\%d\(\backslash\)n"{}},\ this-\/>getNameClass(),\ this-\/>getNameObject(),\ this-\/>getId(),\ sum);}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+
+\end{DoxyCode}

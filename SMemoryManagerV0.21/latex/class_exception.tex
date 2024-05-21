@@ -1,0 +1,262 @@
+\doxysection{Exception Class Reference}
+\label{class_exception}\index{Exception@{Exception}}
+
+
+예외 클래스  
+
+
+
+
+{\ttfamily \#include $<$Exception.\+h$>$}
+
+Inheritance diagram for Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_exception}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \textbf{ ECode} \{ {\bfseries e\+Out\+Of\+Memory}
+, {\bfseries e\+Length\+ECode}
+ \}
+\begin{DoxyCompactList}\small\item\em 예외 코드 집합 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Exception} (\textbf{ ECode} e\+Code, const char $\ast$p\+Name\+Object, const char $\ast$p\+Name\+Class="{}Exception"{})
+\begin{DoxyCompactList}\small\item\em 예외 생성자 \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Exception} ()
+\begin{DoxyCompactList}\small\item\em 소멸자 \end{DoxyCompactList}\item 
+\textbf{ ECode} \textbf{ get\+ECode} () const
+\begin{DoxyCompactList}\small\item\em 예외 코드 반환 \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ get\+Name\+Object} () const
+\begin{DoxyCompactList}\small\item\em 오류가 발생한 객체 이름 반환 \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ get\+Name\+Class} () const
+\begin{DoxyCompactList}\small\item\em 예외 클래스 이름 반환 \end{DoxyCompactList}\item 
+const char $\ast$ \textbf{ get\+ECode\+As\+String} () const
+\begin{DoxyCompactList}\small\item\em 예외 코드를 문자열로 변환 \end{DoxyCompactList}\item 
+void \textbf{ println} ()
+\begin{DoxyCompactList}\small\item\em 예외 정보를 콘솔에 출력   $\ast$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \textbf{ Object}}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \textbf{ operator new} (size\+\_\+t size, const char $\ast$p\+Name)
+\item 
+void \textbf{ operator delete} (void $\ast$p\+Allocated)
+\item 
+void \textbf{ operator delete} (void $\ast$p\+Object, const char $\ast$p\+Name)
+\item 
+\textbf{ Object} (const char $\ast$p\+Class\+Name="{}Object"{})
+\item 
+virtual \textbf{ $\sim$\+Object} ()
+\item 
+int \textbf{ get\+Id} ()
+\item 
+char $\ast$ \textbf{ get\+Name\+Class} ()
+\item 
+char $\ast$ \textbf{ get\+Name\+Object} ()
+\item 
+size\+\_\+t \textbf{ get\+Size\+Slot} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \textbf{ Object}}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bfseries s\+\_\+counter\+Id} = 0
+\item 
+static \textbf{ IMemory\+Manager} $\ast$ {\bfseries s\+\_\+p\+Memory\+Manager} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+예외 클래스 
+
+  $\ast$   $\ast$
+
+예외 정보 저장 및 출력 클래스   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\label{class_exception_aa458e388c0b1d0906eedf84205cf8b19} 
+\index{Exception@{Exception}!ECode@{ECode}}
+\index{ECode@{ECode}!Exception@{Exception}}
+\doxysubsubsection{ECode}
+{\footnotesize\ttfamily enum class \textbf{ Exception\+::\+ECode}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+예외 코드 집합 
+
+  $\ast$   $\ast$
+
+예외 종류를 모아놓은 상수 집합   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_exception_ae9a1b387acaa919fdd742f391f6016cb} 
+\index{Exception@{Exception}!Exception@{Exception}}
+\index{Exception@{Exception}!Exception@{Exception}}
+\doxysubsubsection{Exception()}
+{\footnotesize\ttfamily Exception\+::\+Exception (\begin{DoxyParamCaption}\item[{\textbf{ ECode}}]{e\+Code,  }\item[{const char $\ast$}]{p\+Name\+Object,  }\item[{const char $\ast$}]{p\+Name\+Class = {\ttfamily "{}Exception"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+예외 생성자 
+
+  $\ast$   $\ast$
+
+예외를 발생 시 예외 코드, 객체 이름, 클래스 이름을 저장 
+\begin{DoxyParams}{Parameters}
+{\em e\+Code} & 예외 코드 \\
+\hline
+{\em p\+Name\+Object} & 예외가 발생한 객체 이름 \\
+\hline
+{\em p\+Name\+Class} & 예외 클래스명 (기본값\+: "{}\+Exception"{})   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/21   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_exception_ad1ba411de295ef2eeb02ba26284a829a} 
+\index{Exception@{Exception}!````~Exception@{$\sim$Exception}}
+\index{````~Exception@{$\sim$Exception}!Exception@{Exception}}
+\doxysubsubsection{$\sim$Exception()}
+{\footnotesize\ttfamily virtual Exception\+::$\sim$\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+소멸자 
+
+  $\ast$   $\ast$
+
+문자열 배열 삭제   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_exception_ac39983725564309e08b4148250f1c07f} 
+\index{Exception@{Exception}!getECode@{getECode}}
+\index{getECode@{getECode}!Exception@{Exception}}
+\doxysubsubsection{getECode()}
+{\footnotesize\ttfamily \textbf{ ECode} Exception\+::get\+ECode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+예외 코드 반환 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+예외 코드   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_exception_ab91ed9eb9cabbe5ed7d07808772197b1} 
+\index{Exception@{Exception}!getECodeAsString@{getECodeAsString}}
+\index{getECodeAsString@{getECodeAsString}!Exception@{Exception}}
+\doxysubsubsection{getECodeAsString()}
+{\footnotesize\ttfamily const char $\ast$ Exception\+::get\+ECode\+As\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+예외 코드를 문자열로 변환 
+
+  $\ast$   $\ast$
+
+예외 코드를 switch문을 이용해 문자열로 변환 \begin{DoxyReturn}{Returns}
+예외 메시지 문자열   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_exception_a1992627738eabe498c4e1a48bc668a71} 
+\index{Exception@{Exception}!getNameClass@{getNameClass}}
+\index{getNameClass@{getNameClass}!Exception@{Exception}}
+\doxysubsubsection{getNameClass()}
+{\footnotesize\ttfamily const char $\ast$ Exception\+::get\+Name\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+예외 클래스 이름 반환 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+클래스 이름 문자열   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_exception_ae285712feb96e0bceb49a0a177f4b196} 
+\index{Exception@{Exception}!getNameObject@{getNameObject}}
+\index{getNameObject@{getNameObject}!Exception@{Exception}}
+\doxysubsubsection{getNameObject()}
+{\footnotesize\ttfamily const char $\ast$ Exception\+::get\+Name\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+오류가 발생한 객체 이름 반환 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+객체 이름 문자열   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_exception_a6cb175e72790ae210511ccd5bac1818d} 
+\index{Exception@{Exception}!println@{println}}
+\index{println@{println}!Exception@{Exception}}
+\doxysubsubsection{println()}
+{\footnotesize\ttfamily void Exception\+::println (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+예외 정보를 콘솔에 출력   $\ast$ 
+
+  $\ast$   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Exception.\+h\end{DoxyCompactItemize}

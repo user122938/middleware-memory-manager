@@ -18,10 +18,9 @@ private:
 public:
 	/**
 	*
-	*
- 	* @brief 카메라 생성자
-	* @datails 부모 생성자에 이름("Recorder") 전달
- 	* @date 2024-05-19
+ 	* @brief Recorder 생성자
+	* @datails 부모 클래스 생성자에 이름("Recorder") 전달
+ 	* @date 2024-05-21
  	* @version 0.21
  	*
 	*/
@@ -29,11 +28,18 @@ public:
 		Object(pName)
 	{
 	}
+
+	/**
+	* 
+ 	* @brief Recorder 소멸자
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+	*/
 	virtual ~Recorder() {
 	}
 
 	/**
-	*
 	*
  	* @brief Recorder 실행 함수
 	* @datails data배열에 0~19까지(NUM_RECORDERS만큼)의 값을 저장하고 합계 출력

@@ -1,0 +1,227 @@
+\doxysection{Slot\+Index Class Reference}
+\label{class_slot_index}\index{SlotIndex@{SlotIndex}}
+
+
+페이지 내부에 할당되는 슬롯의 정보를 저장하는 클래스  
+
+
+
+
+{\ttfamily \#include $<$Slot\+Index.\+h$>$}
+
+Inheritance diagram for Slot\+Index\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_slot_index}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Slot\+Index} ()
+\begin{DoxyCompactList}\small\item\em 슬롯 생성자 \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Slot\+Index} ()
+\begin{DoxyCompactList}\small\item\em 슬롯 소멸자   $\ast$ \end{DoxyCompactList}\item 
+void \textbf{ set\+PMemory} (void $\ast$p\+Memory)
+\begin{DoxyCompactList}\small\item\em 슬롯의 시작 주소를 설정하는 함수 \end{DoxyCompactList}\item 
+void $\ast$ \textbf{ get\+PMemory} ()
+\begin{DoxyCompactList}\small\item\em 슬롯의 시작 주소를 반환하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+Name\+Object} (const char $\ast$p\+Name\+Object)
+\begin{DoxyCompactList}\small\item\em 슬롯의 할당된 객체의 이름을 설정하는 함수 \end{DoxyCompactList}\item 
+char $\ast$ \textbf{ get\+Name\+Object} ()
+\begin{DoxyCompactList}\small\item\em 슬롯에 할당된 객체의 이름을 반환하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+BAllocated} (bool b\+Allocated)
+\begin{DoxyCompactList}\small\item\em 슬롯의 할당여부를 설정하는 함수 \end{DoxyCompactList}\item 
+bool \textbf{ is\+Allocated} ()
+\begin{DoxyCompactList}\small\item\em 슬롯의 할당여부를 반환하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+페이지 내부에 할당되는 슬롯의 정보를 저장하는 클래스 
+
+  $\ast$   $\ast$
+
+슬롯의 주소, 이름, 할당 상태를 저장하고 반환한다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_slot_index_a87984d11f1c4dc4736d064495798acb0} 
+\index{SlotIndex@{SlotIndex}!SlotIndex@{SlotIndex}}
+\index{SlotIndex@{SlotIndex}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{SlotIndex()}
+{\footnotesize\ttfamily Slot\+Index\+::\+Slot\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯 생성자 
+
+  $\ast$   $\ast$
+
+슬롯의 주소, 이름, 할당 상태를 값이 없는 상태로 초기화한다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_slot_index_a52827ff016d2d8e605ef79274d2cc2b8} 
+\index{SlotIndex@{SlotIndex}!````~SlotIndex@{$\sim$SlotIndex}}
+\index{````~SlotIndex@{$\sim$SlotIndex}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{$\sim$SlotIndex()}
+{\footnotesize\ttfamily Slot\+Index\+::$\sim$\+Slot\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯 소멸자   $\ast$ 
+
+  $\ast$   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_slot_index_a98b8fa0183acc878b5758b1bb0d75f7d} 
+\index{SlotIndex@{SlotIndex}!getNameObject@{getNameObject}}
+\index{getNameObject@{getNameObject}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{getNameObject()}
+{\footnotesize\ttfamily char $\ast$ Slot\+Index\+::get\+Name\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+슬롯에 할당된 객체의 이름을 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+슬롯에 할당된 객체의 이름   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ ISlot\+Index} \doxyref{}{p.}{class_i_slot_index_ae0a29a88a2e39e954278fe2c9806e214}.
+
+\label{class_slot_index_a64ba21092c68810f174ac2495cb55719} 
+\index{SlotIndex@{SlotIndex}!getPMemory@{getPMemory}}
+\index{getPMemory@{getPMemory}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{getPMemory()}
+{\footnotesize\ttfamily void $\ast$ Slot\+Index\+::get\+PMemory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯의 시작 주소를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+슬롯의 시작 주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_slot_index_ad442fb5b14d19a3599ed2545e0a75566} 
+\index{SlotIndex@{SlotIndex}!isAllocated@{isAllocated}}
+\index{isAllocated@{isAllocated}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{isAllocated()}
+{\footnotesize\ttfamily bool Slot\+Index\+::is\+Allocated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯의 할당여부를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+슬롯의 할당여부   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_slot_index_abbf9e5e89ec6e4dbcb2065ef5c3c0d1e} 
+\index{SlotIndex@{SlotIndex}!setBAllocated@{setBAllocated}}
+\index{setBAllocated@{setBAllocated}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{setBAllocated()}
+{\footnotesize\ttfamily void Slot\+Index\+::set\+BAllocated (\begin{DoxyParamCaption}\item[{bool}]{b\+Allocated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯의 할당여부를 설정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em b\+Allocated} & 슬롯의 할당여부   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_slot_index_af2f4786491383ca2d029f56891e904fc} 
+\index{SlotIndex@{SlotIndex}!setNameObject@{setNameObject}}
+\index{setNameObject@{setNameObject}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{setNameObject()}
+{\footnotesize\ttfamily void Slot\+Index\+::set\+Name\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯의 할당된 객체의 이름을 설정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em p\+Name\+Object} & 슬롯의 할당된 객체의 이름   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_slot_index_a5fdab3560affb869cda0dc085275db48} 
+\index{SlotIndex@{SlotIndex}!setPMemory@{setPMemory}}
+\index{setPMemory@{setPMemory}!SlotIndex@{SlotIndex}}
+\doxysubsubsection{setPMemory()}
+{\footnotesize\ttfamily void Slot\+Index\+::set\+PMemory (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Memory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯의 시작 주소를 설정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em p\+Memory} & 슬롯의 시작 주소   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Slot\+Index.\+h\end{DoxyCompactItemize}

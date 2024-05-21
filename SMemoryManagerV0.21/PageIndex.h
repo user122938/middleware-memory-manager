@@ -28,9 +28,27 @@ private:
 	int numSlotsAvailable;
 
 public:
+	/**
+ 	*
+ 	* @brief malloc함수를 통해 PageIndex 생성
+	* @param size PageIndex 크기
+	* @return PageIndex 메모리 주소
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+ 	*/
 	void* operator new(size_t size) {
 		return malloc(size);
 	}
+	
+	/**
+ 	*
+ 	* @brief free함수를 통해 PageIndex 할당 해제
+	* @param pObject PageIndex 메모리 주소
+ 	* @date 2024-05-21
+ 	* @version 0.21
+ 	*
+ 	*/
 	void operator delete(void* pObject) {
 		free(pObject);
 	}

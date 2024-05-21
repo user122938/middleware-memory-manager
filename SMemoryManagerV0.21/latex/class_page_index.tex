@@ -1,0 +1,468 @@
+\doxysection{Page\+Index Class Reference}
+\label{class_page_index}\index{PageIndex@{PageIndex}}
+
+
+페이지 내 Slot 할당, 해제 클래스  
+
+
+
+
+{\ttfamily \#include $<$Page\+Index.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \textbf{ operator new} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em malloc함수를 통해 \doxyref{Page\+Index}{p.}{class_page_index} 생성 \end{DoxyCompactList}\item 
+void \textbf{ operator delete} (void $\ast$p\+Object)
+\begin{DoxyCompactList}\small\item\em free함수를 통해 \doxyref{Page\+Index}{p.}{class_page_index} 할당 해제 \end{DoxyCompactList}\item 
+int \textbf{ get\+Id} ()
+\begin{DoxyCompactList}\small\item\em 페이지 아이디를 반환하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+PPage} (char $\ast$p\+Page)
+\begin{DoxyCompactList}\small\item\em Page\+Index의 시작주소를 반환하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+Size\+Page} (size\+\_\+t size\+Page)
+\begin{DoxyCompactList}\small\item\em 페이지 크기를 지정하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+Num\+Consecutive\+Pages} (int num\+Consecutive\+Pages)
+\begin{DoxyCompactList}\small\item\em 페이지 뒤에 연속된 비어있는 페이지 갯수 값을 지정하는 함수 \end{DoxyCompactList}\item 
+int \textbf{ get\+Num\+Consecutive\+Pages} ()
+\begin{DoxyCompactList}\small\item\em 페이지 뒤에 연속된 비어있는 페이지 갯수 값을 반환하는 함수 \end{DoxyCompactList}\item 
+bool \textbf{ is\+Allocated} ()
+\begin{DoxyCompactList}\small\item\em 페이지 할당 상태를 반환하는 함수 \end{DoxyCompactList}\item 
+void \textbf{ set\+BAllocated} (bool b\+Allocated)
+\begin{DoxyCompactList}\small\item\em 페이지 할당 상태를 지정하는 함수 \end{DoxyCompactList}\item 
+size\+\_\+t \textbf{ get\+Size\+Slot} ()
+\begin{DoxyCompactList}\small\item\em 페이지의 슬롯 크기를 반환하는 함수 \end{DoxyCompactList}\item 
+\textbf{ Page\+Index} ()
+\begin{DoxyCompactList}\small\item\em \doxyref{Page\+Index}{p.}{class_page_index} 생성자 \end{DoxyCompactList}\item 
+\textbf{ $\sim$\+Page\+Index} ()
+\begin{DoxyCompactList}\small\item\em 페이지 소멸자   $\ast$ \end{DoxyCompactList}\item 
+void \textbf{ initialize} (size\+\_\+t size\+Slot)
+\begin{DoxyCompactList}\small\item\em 페이지 초기화 함수 \end{DoxyCompactList}\item 
+void \textbf{ finalize} ()
+\begin{DoxyCompactList}\small\item\em 페이지 할당 해제 함수   $\ast$ \end{DoxyCompactList}\item 
+void $\ast$ \textbf{ allocate} (size\+\_\+t size, const char $\ast$p\+Name\+Object)
+\begin{DoxyCompactList}\small\item\em 슬롯 할당 함수   $\ast$ \end{DoxyCompactList}\item 
+bool \textbf{ dellocate} (void $\ast$p\+Memory)
+\begin{DoxyCompactList}\small\item\em 슬롯 할당 해제 함수   $\ast$ \end{DoxyCompactList}\item 
+\textbf{ Slot\+Index} $\ast$ \textbf{ find\+ASlot\+Index} (void $\ast$p\+Memory)
+\begin{DoxyCompactList}\small\item\em 메모리 주소에 해당하는 Slot\+Index를 찾는 함수 \end{DoxyCompactList}\item 
+void \textbf{ show\+Status} ()
+\begin{DoxyCompactList}\small\item\em 페이지 내부 할당 상태 출력 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+페이지 내 Slot 할당, 해제 클래스 
+
+  $\ast$   $\ast$
+
+Slot\+Index배열에 Slot\+Index객체를 할당, 해제 및 할당 상태를 출력할 수 있다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/02   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_page_index_a1a3d4796d3906e36c4f0df4f06f7f397} 
+\index{PageIndex@{PageIndex}!PageIndex@{PageIndex}}
+\index{PageIndex@{PageIndex}!PageIndex@{PageIndex}}
+\doxysubsubsection{PageIndex()}
+{\footnotesize\ttfamily Page\+Index\+::\+Page\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxyref{Page\+Index}{p.}{class_page_index} 생성자 
+
+  $\ast$   $\ast$
+
+객체 아이디를 설정하고 나머지 값은 정의되지 않은 값으로 초기화한다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_ab6e7076257368f2be3528b52857fad46} 
+\index{PageIndex@{PageIndex}!````~PageIndex@{$\sim$PageIndex}}
+\index{````~PageIndex@{$\sim$PageIndex}!PageIndex@{PageIndex}}
+\doxysubsubsection{$\sim$PageIndex()}
+{\footnotesize\ttfamily Page\+Index\+::$\sim$\+Page\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 소멸자   $\ast$ 
+
+  $\ast$   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_page_index_a535792bcdeefbcd33ee35a7fc467e5b2} 
+\index{PageIndex@{PageIndex}!allocate@{allocate}}
+\index{allocate@{allocate}!PageIndex@{PageIndex}}
+\doxysubsubsection{allocate()}
+{\footnotesize\ttfamily void $\ast$ Page\+Index\+::allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{p\+Name\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯 할당 함수   $\ast$ 
+
+  $\ast$   $\ast$
+
+할당 가능한 슬롯을 찾아 객체 이름을 설정하고 할당 상태를 변경한다. 
+\begin{DoxyParams}{Parameters}
+{\em size} & 할당할 슬롯 크기 \\
+\hline
+{\em p\+Name\+Object} & 할당할 객체 이름 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+할당된 슬롯의 메모리 주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a1caaca177b35ddc2ad3a62a006b0e751} 
+\index{PageIndex@{PageIndex}!dellocate@{dellocate}}
+\index{dellocate@{dellocate}!PageIndex@{PageIndex}}
+\doxysubsubsection{dellocate()}
+{\footnotesize\ttfamily bool Page\+Index\+::dellocate (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Memory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+슬롯 할당 해제 함수   $\ast$ 
+
+  $\ast$   $\ast$
+
+Slot메모리 주소를 받아 해당 \doxyref{Slot\+Index}{p.}{class_slot_index} 할당 상태를 변경하고 할당 가능한 슬롯의 개수를 증가시킨다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Memory} & 할당 해제할 Slot의 메모리 주소 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+페이지 내 모든 슬롯이 비어있는지 여부   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a836b44ae1d00840f54f0aa47f0d75a2d} 
+\index{PageIndex@{PageIndex}!finalize@{finalize}}
+\index{finalize@{finalize}!PageIndex@{PageIndex}}
+\doxysubsubsection{finalize()}
+{\footnotesize\ttfamily void Page\+Index\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 할당 해제 함수   $\ast$ 
+
+  $\ast$   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_ae494bb04dcf03ab2afa0d33434645291} 
+\index{PageIndex@{PageIndex}!findASlotIndex@{findASlotIndex}}
+\index{findASlotIndex@{findASlotIndex}!PageIndex@{PageIndex}}
+\doxysubsubsection{findASlotIndex()}
+{\footnotesize\ttfamily \textbf{ Slot\+Index} $\ast$ Page\+Index\+::find\+ASlot\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Memory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+메모리 주소에 해당하는 Slot\+Index를 찾는 함수 
+
+  $\ast$   $\ast$
+
+메모리 주소를 받아 Slot 번호를 찾고 해당하는 Slot\+Index를 반환한다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Memory} & 메모리 주소 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+메모리 주소에 해당하는 \doxyref{Slot\+Index}{p.}{class_slot_index}   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a4ffc28f0be6857c56ecb7cb436e4b20e} 
+\index{PageIndex@{PageIndex}!getId@{getId}}
+\index{getId@{getId}!PageIndex@{PageIndex}}
+\doxysubsubsection{getId()}
+{\footnotesize\ttfamily int Page\+Index\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 아이디를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+\doxyref{Page\+Index}{p.}{class_page_index} 아이디   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a2ca3784c043261a22bcd63f89e4a0b17} 
+\index{PageIndex@{PageIndex}!getNumConsecutivePages@{getNumConsecutivePages}}
+\index{getNumConsecutivePages@{getNumConsecutivePages}!PageIndex@{PageIndex}}
+\doxysubsubsection{getNumConsecutivePages()}
+{\footnotesize\ttfamily int Page\+Index\+::get\+Num\+Consecutive\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 뒤에 연속된 비어있는 페이지 갯수 값을 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+페이지 뒤에 연속된 비어있는 페이지 갯수 값   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a9969132ac8a0d54fb718f96ea77c6b13} 
+\index{PageIndex@{PageIndex}!getSizeSlot@{getSizeSlot}}
+\index{getSizeSlot@{getSizeSlot}!PageIndex@{PageIndex}}
+\doxysubsubsection{getSizeSlot()}
+{\footnotesize\ttfamily size\+\_\+t Page\+Index\+::get\+Size\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지의 슬롯 크기를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+페이지의 슬롯 크기   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a7e029926d13f78b4f27f61d23613b351} 
+\index{PageIndex@{PageIndex}!initialize@{initialize}}
+\index{initialize@{initialize}!PageIndex@{PageIndex}}
+\doxysubsubsection{initialize()}
+{\footnotesize\ttfamily void Page\+Index\+::initialize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+Slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 초기화 함수 
+
+  $\ast$   $\ast$
+
+페이지 내 슬롯의 크기를 설정하고 슬롯 인덱스 배열을 할당한다. 
+\begin{DoxyParams}{Parameters}
+{\em size\+Slot} & 슬롯 크기   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_aa047db07d881c51943bc16b50820a7a3} 
+\index{PageIndex@{PageIndex}!isAllocated@{isAllocated}}
+\index{isAllocated@{isAllocated}!PageIndex@{PageIndex}}
+\doxysubsubsection{isAllocated()}
+{\footnotesize\ttfamily bool Page\+Index\+::is\+Allocated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 할당 상태를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+페이지 할당 상태   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_af1634e298e3b7c1a9676cc8a33c46287} 
+\index{PageIndex@{PageIndex}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!PageIndex@{PageIndex}}
+\doxysubsubsection{operator delete()}
+{\footnotesize\ttfamily void Page\+Index\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+free함수를 통해 \doxyref{Page\+Index}{p.}{class_page_index} 할당 해제 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & \doxyref{Page\+Index}{p.}{class_page_index} 메모리 주소   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/21   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_aca55d00b24c0d47a80d4d2a33d300411} 
+\index{PageIndex@{PageIndex}!operator new@{operator new}}
+\index{operator new@{operator new}!PageIndex@{PageIndex}}
+\doxysubsubsection{operator new()}
+{\footnotesize\ttfamily void $\ast$ Page\+Index\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+malloc함수를 통해 \doxyref{Page\+Index}{p.}{class_page_index} 생성 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em size} & \doxyref{Page\+Index}{p.}{class_page_index} 크기 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Page\+Index}{p.}{class_page_index} 메모리 주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/21   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a9658f22352b7fa7e0a20a509a9a7fbd8} 
+\index{PageIndex@{PageIndex}!setBAllocated@{setBAllocated}}
+\index{setBAllocated@{setBAllocated}!PageIndex@{PageIndex}}
+\doxysubsubsection{setBAllocated()}
+{\footnotesize\ttfamily void Page\+Index\+::set\+BAllocated (\begin{DoxyParamCaption}\item[{bool}]{b\+Allocated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 할당 상태를 지정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em b\+Allocated} & 페이지 할당 상태   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a90003eeba260523814dd4c7f45620ab3} 
+\index{PageIndex@{PageIndex}!setNumConsecutivePages@{setNumConsecutivePages}}
+\index{setNumConsecutivePages@{setNumConsecutivePages}!PageIndex@{PageIndex}}
+\doxysubsubsection{setNumConsecutivePages()}
+{\footnotesize\ttfamily void Page\+Index\+::set\+Num\+Consecutive\+Pages (\begin{DoxyParamCaption}\item[{int}]{num\+Consecutive\+Pages }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 뒤에 연속된 비어있는 페이지 갯수 값을 지정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em num\+Consecutive\+Pages} & 페이지 뒤에 연속된 비어있는 페이지 갯수 값   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_aebf74da9421f27e39f0ebcb4b760b3f7} 
+\index{PageIndex@{PageIndex}!setPPage@{setPPage}}
+\index{setPPage@{setPPage}!PageIndex@{PageIndex}}
+\doxysubsubsection{setPPage()}
+{\footnotesize\ttfamily void Page\+Index\+::set\+PPage (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Page\+Index의 시작주소를 반환하는 함수 
+
+  $\ast$   $\ast$ \begin{DoxyReturn}{Returns}
+\doxyref{Page\+Index}{p.}{class_page_index} 시작주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_aaf0709b38b94c830b7a3ae6b8407ee78} 
+\index{PageIndex@{PageIndex}!setSizePage@{setSizePage}}
+\index{setSizePage@{setSizePage}!PageIndex@{PageIndex}}
+\doxysubsubsection{setSizePage()}
+{\footnotesize\ttfamily void Page\+Index\+::set\+Size\+Page (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+Page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 크기를 지정하는 함수 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em size\+Page} & 페이지 크기   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_page_index_a8f787e302ca6c8e8be7ebf7a922d190c} 
+\index{PageIndex@{PageIndex}!showStatus@{showStatus}}
+\index{showStatus@{showStatus}!PageIndex@{PageIndex}}
+\doxysubsubsection{showStatus()}
+{\footnotesize\ttfamily void Page\+Index\+::show\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+페이지 내부 할당 상태 출력 함수 
+
+  $\ast$   $\ast$
+
+반복문으로 Slot\+Index배열의 할당 상태(클래스 및 객체 이름, 객체 아이디)를 출력   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/02   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Page\+Index.\+h\item 
+Page\+Index.\+cpp\end{DoxyCompactItemize}

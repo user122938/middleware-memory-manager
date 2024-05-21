@@ -1,0 +1,301 @@
+\doxysection{Memory\+Manager Class Reference}
+\label{class_memory_manager}\index{MemoryManager@{MemoryManager}}
+
+
+메모리 할당, 해제 관리 클래스  
+
+
+
+
+{\ttfamily \#include $<$Memory\+Manager.\+h$>$}
+
+Inheritance diagram for Memory\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_memory_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \textbf{ operator new} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em malloc함수를 통해 \doxyref{Memory\+Manager}{p.}{class_memory_manager} 생성 \end{DoxyCompactList}\item 
+void \textbf{ operator delete} (void $\ast$p\+Object)
+\begin{DoxyCompactList}\small\item\em free함수를 통해 \doxyref{Memory\+Manager}{p.}{class_memory_manager} 할당 해제 \end{DoxyCompactList}\item 
+\textbf{ Memory\+Manager} (char $\ast$p\+Buffer, size\+\_\+t size\+Buffer, size\+\_\+t size\+Page)
+\begin{DoxyCompactList}\small\item\em 메모리 관리 객체 생성자   $\ast$ \end{DoxyCompactList}\item 
+virtual \textbf{ $\sim$\+Memory\+Manager} ()
+\begin{DoxyCompactList}\small\item\em 메모리 관리 객체 소멸자   $\ast$ \end{DoxyCompactList}\item 
+void $\ast$ \textbf{ allocate} (size\+\_\+t size\+Memory, const char $\ast$p\+Name)
+\begin{DoxyCompactList}\small\item\em 메모리에 객체를 할당하는 함수   $\ast$ \end{DoxyCompactList}\item 
+void \textbf{ dellocate} (void $\ast$p\+Object)
+\begin{DoxyCompactList}\small\item\em 객체를 할당 해제하는 함수   $\ast$ \end{DoxyCompactList}\item 
+\textbf{ Slot\+Index} $\ast$ \textbf{ find\+ASlot\+Index} (void $\ast$p\+Object)
+\begin{DoxyCompactList}\small\item\em 객체 주소에 해당하는 Slot\+Index를 찾는 함수 \end{DoxyCompactList}\item 
+\textbf{ Page\+Index} \textbf{ find\+APage\+Index} (void $\ast$p\+Object)
+\begin{DoxyCompactList}\small\item\em 객체 주소에 해당하는 Page\+Index를 찾는 함수 \end{DoxyCompactList}\item 
+void \textbf{ show\+Status} ()
+\begin{DoxyCompactList}\small\item\em 메모리 할당 상태 출력 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+메모리 할당, 해제 관리 클래스 
+
+  $\ast$   $\ast$
+
+메모리 공간을 페이지 단위로 나누어 Page\+Index배열을 생성하고 객체를 할당, 해제한다.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\label{class_memory_manager_a656d849b6bdbb69bffa695745aedf40b} 
+\index{MemoryManager@{MemoryManager}!MemoryManager@{MemoryManager}}
+\index{MemoryManager@{MemoryManager}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{MemoryManager()}
+{\footnotesize\ttfamily Memory\+Manager\+::\+Memory\+Manager (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Buffer,  }\item[{size\+\_\+t}]{size\+Buffer,  }\item[{size\+\_\+t}]{size\+Page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+메모리 관리 객체 생성자   $\ast$ 
+
+  $\ast$   $\ast$
+
+메모리 공간을 페이지 크기 만큼 나누어 Page\+Index배열을 생성하고 초기화한다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Buffer} & 메모리 시작주소 \\
+\hline
+{\em size\+Buffer} & 메모리 크기 \\
+\hline
+{\em size\+Page} & 한 페이지 크기   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_memory_manager_a069aa716f72688713e925ddcfd712b83} 
+\index{MemoryManager@{MemoryManager}!````~MemoryManager@{$\sim$MemoryManager}}
+\index{````~MemoryManager@{$\sim$MemoryManager}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{$\sim$MemoryManager()}
+{\footnotesize\ttfamily virtual Memory\+Manager\+::$\sim$\+Memory\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+메모리 관리 객체 소멸자   $\ast$ 
+
+  $\ast$   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\label{class_memory_manager_a99f700f2015fc5299e2a3806820e6345} 
+\index{MemoryManager@{MemoryManager}!allocate@{allocate}}
+\index{allocate@{allocate}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{allocate()}
+{\footnotesize\ttfamily void $\ast$ Memory\+Manager\+::allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size\+Memory,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+메모리에 객체를 할당하는 함수   $\ast$ 
+
+  $\ast$   $\ast$
+
+객체 크기를 16배수의 slot으로 일반화하고 할당할 Page\+Index를 뒤에서부터 찾아 할당한다. 
+\begin{DoxyParams}{Parameters}
+{\em size\+Memory} & 할당할 객체 크기 \\
+\hline
+{\em p\+Name} & 할당할 객체 이름 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+할당된 객체의 메모리 주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IMemory\+Manager} \doxyref{}{p.}{class_i_memory_manager_a6d76bcd35045bc0d449d53215d47c531}.
+
+\label{class_memory_manager_a59388a9ad9badcaace174104572ef675} 
+\index{MemoryManager@{MemoryManager}!dellocate@{dellocate}}
+\index{dellocate@{dellocate}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{dellocate()}
+{\footnotesize\ttfamily void Memory\+Manager\+::dellocate (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+객체를 할당 해제하는 함수   $\ast$ 
+
+  $\ast$   $\ast$
+
+객체 주소에 해당하는 Page\+Index를 찾아 객체를 할당 해제 후 빈 페이지를 정리한다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 할당 해제할 객체 주소   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IMemory\+Manager} \doxyref{}{p.}{class_i_memory_manager_ade19fd55d5a5ca8ae25317cdfb2728e8}.
+
+\label{class_memory_manager_aa3b66743ea2444656f904bbafdae9734} 
+\index{MemoryManager@{MemoryManager}!findAPageIndex@{findAPageIndex}}
+\index{findAPageIndex@{findAPageIndex}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{findAPageIndex()}
+{\footnotesize\ttfamily \textbf{ Page\+Index} Memory\+Manager\+::find\+APage\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+객체 주소에 해당하는 Page\+Index를 찾는 함수 
+
+  $\ast$   $\ast$
+
+객체 주소를 받아 페이지 번호를 찾고 해당하는 Page\+Index를 반환한다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 객체 주소 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+객체 주소에 해당하는 \doxyref{Page\+Index}{p.}{class_page_index}   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IMemory\+Manager} \doxyref{}{p.}{class_i_memory_manager_af1d89b30eb9ac9e0eff0b7e619e071cb}.
+
+\label{class_memory_manager_abfc9d2252bbc9ee85b2e4a6a82b7e46c} 
+\index{MemoryManager@{MemoryManager}!findASlotIndex@{findASlotIndex}}
+\index{findASlotIndex@{findASlotIndex}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{findASlotIndex()}
+{\footnotesize\ttfamily \textbf{ Slot\+Index} $\ast$ Memory\+Manager\+::find\+ASlot\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+객체 주소에 해당하는 Slot\+Index를 찾는 함수 
+
+  $\ast$   $\ast$
+
+객체 주소에 해당하는 Page\+Index를 찾고 Page\+Index의 검색함수를 호출해 Slot\+Index를 찾고 반환한다. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & 객체 주소 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+객체 주소에 해당하는 \doxyref{Slot\+Index}{p.}{class_slot_index}   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IMemory\+Manager} \doxyref{}{p.}{class_i_memory_manager_aae5dcf56c836253642eb54f83802c5b1}.
+
+\label{class_memory_manager_a3c86434d47c50f837a315c7a50e55851} 
+\index{MemoryManager@{MemoryManager}!operator delete@{operator delete}}
+\index{operator delete@{operator delete}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{operator delete()}
+{\footnotesize\ttfamily void Memory\+Manager\+::operator delete (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+free함수를 통해 \doxyref{Memory\+Manager}{p.}{class_memory_manager} 할당 해제 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em p\+Object} & \doxyref{Memory\+Manager}{p.}{class_memory_manager} 메모리 주소   $\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyDate}{Date}
+2024-\/05-\/21   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_memory_manager_a75d6b16ae7c715adb35373cba7ba5873} 
+\index{MemoryManager@{MemoryManager}!operator new@{operator new}}
+\index{operator new@{operator new}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{operator new()}
+{\footnotesize\ttfamily void $\ast$ Memory\+Manager\+::operator new (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+malloc함수를 통해 \doxyref{Memory\+Manager}{p.}{class_memory_manager} 생성 
+
+  $\ast$   $\ast$
+\begin{DoxyParams}{Parameters}
+{\em size} & \doxyref{Memory\+Manager}{p.}{class_memory_manager} 크기 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxyref{Memory\+Manager}{p.}{class_memory_manager} 메모리 주소   $\ast$ 
+\end{DoxyReturn}
+\begin{DoxyDate}{Date}
+2024-\/05-\/21   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+\label{class_memory_manager_a6e3325ab55cda124e3e7f4d62e7ae286} 
+\index{MemoryManager@{MemoryManager}!showStatus@{showStatus}}
+\index{showStatus@{showStatus}!MemoryManager@{MemoryManager}}
+\doxysubsubsection{showStatus()}
+{\footnotesize\ttfamily void Memory\+Manager\+::show\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+메모리 할당 상태 출력 함수 
+
+  $\ast$   $\ast$
+
+반복문으로 Page\+Index배열의 할당 상태(슬롯 크기, 연결된 페이지)를 출력, 페이지 할당 상태 출력함수 호출.   $\ast$ \begin{DoxyDate}{Date}
+2024-\/05-\/02   $\ast$ 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+21   $\ast$   ~\newline
+ 
+\end{DoxyVersion}
+
+
+Implements \textbf{ IMemory\+Manager} \doxyref{}{p.}{class_i_memory_manager_a9d01c4204362a7ed4bc64280aa2f9548}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Memory\+Manager.\+h\end{DoxyCompactItemize}
