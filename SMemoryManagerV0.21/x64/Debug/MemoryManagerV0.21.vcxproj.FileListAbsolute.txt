@@ -1,0 +1,2 @@
+C:\Users\Owner\Documents\명지대학교\2024년-1학기\middleware-memory-manager\MemoryManagerV0.21\MemoryManagerV0.21\x64\Debug\MemoryManagerV0.21.exe
+C:\Users\Owner\Documents\명지대학교\2024년-1학기\middleware-memory-manager\SMemoryManagerV0.21\x64\Debug\MemoryManagerV0.21.lib

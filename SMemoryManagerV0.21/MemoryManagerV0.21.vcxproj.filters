@@ -54,9 +54,18 @@
     <ClInclude Include="IObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+<<<<<<< HEAD
+<<<<<<< HEAD:MemoryManagerV0.21/MemoryManagerV0.21/MemoryManagerV0.21.vcxproj.filters
+=======
+    <ClInclude Include="Test.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+=======
+>>>>>>> c065cd1ed99242fe7d4e9c0508b146b93c374315
     <ClInclude Include="Camera64.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+>>>>>>> 844389d308651d6f3bd85d2c9b91026c12f3d45e:SMemoryManagerV0.21/MemoryManagerV0.21.vcxproj.filters
     <ClInclude Include="ExceptionManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -98,9 +107,18 @@
     <ClCompile Include="IObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
+<<<<<<< HEAD:MemoryManagerV0.21/MemoryManagerV0.21/MemoryManagerV0.21.vcxproj.filters
+=======
+    <ClCompile Include="Test.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+=======
+>>>>>>> c065cd1ed99242fe7d4e9c0508b146b93c374315
     <ClCompile Include="Camera64.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+>>>>>>> 844389d308651d6f3bd85d2c9b91026c12f3d45e:SMemoryManagerV0.21/MemoryManagerV0.21.vcxproj.filters
     <ClCompile Include="ExceptionManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
